@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  koyotecoind The koyotecoin core server.
+#
+#
+# chkconfig: 345 80 20
+# description: koyotecoind
+# processname: koyotecoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/koyotecoind, see below
+if [ -f /etc/sysconfig/koyotecoind ]; then
+        . /etc/sysconfig/koyotecoind
+fi
+
+RETVAL=0
+
+prog=koyotecoind
+# you can override the lockfile via KOYOTECOIND_LOCKFILE in /etc/sysconfig/koyotecoind
+lockfile=${KOYOTECOIND_LOCKFILE-/var/lock/subsys/koyotecoind}
+
+# koyotecoind defaults to /usr/bin/koyotecoind, override with KOYOTECOIND_BIN
+koyotecoind=${KOYOTECOIND_BIN-/usr/bin/koyotecoind}
+
+# koyotecoind opts default to -disablewallet, override with KOYOTECOIND_OPTS
+koyotecoind_opts=${KOYOTECOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $koyotecoind $koyotecoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -t600
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

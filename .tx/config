@@ -1,0 +1,7 @@
+[main]
+host = https://www.transifex.com
+
+[o:koyotecoin:p:koyotecoin:r:qt-translation-024x]
+file_filter = src/qt/locale/koyotecoin_<lang>.xlf
+source_file = src/qt/locale/koyotecoin_en.xlf
+source_lang = en

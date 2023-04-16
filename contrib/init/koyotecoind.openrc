@@ -1,0 +1,93 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/koyotecoin/.koyotecoin" ]; then
+	KOYOTECOIND_DEFAULT_DATADIR="/var/lib/koyotecoin/.koyotecoin"
+else
+	KOYOTECOIND_DEFAULT_DATADIR="/var/lib/koyotecoind"
+fi
+
+KOYOTECOIND_CONFIGFILE=${KOYOTECOIND_CONFIGFILE:-/etc/koyotecoin/koyotecoin.conf}
+KOYOTECOIND_PIDDIR=${KOYOTECOIND_PIDDIR:-/var/run/koyotecoind}
+KOYOTECOIND_PIDFILE=${KOYOTECOIND_PIDFILE:-${KOYOTECOIND_PIDDIR}/koyotecoind.pid}
+KOYOTECOIND_DATADIR=${KOYOTECOIND_DATADIR:-${KOYOTECOIND_DEFAULT_DATADIR}}
+KOYOTECOIND_USER=${KOYOTECOIND_USER:-${KOYOTECOIN_USER:-koyotecoin}}
+KOYOTECOIND_GROUP=${KOYOTECOIND_GROUP:-koyotecoin}
+KOYOTECOIND_BIN=${KOYOTECOIND_BIN:-/usr/bin/koyotecoind}
+KOYOTECOIND_NICE=${KOYOTECOIND_NICE:-${NICELEVEL:-0}}
+KOYOTECOIND_OPTS="${KOYOTECOIND_OPTS:-${KOYOTECOIN_OPTS}}"
+
+name="Koyotecoin Core Daemon"
+description="Koyotecoin cryptocurrency P2P network daemon"
+
+command="/usr/bin/koyotecoind"
+command_args="-pid=\"${KOYOTECOIND_PIDFILE}\" \
+		-conf=\"${KOYOTECOIND_CONFIGFILE}\" \
+		-datadir=\"${KOYOTECOIND_DATADIR}\" \
+		-daemon \
+		${KOYOTECOIND_OPTS}"
+
+required_files="${KOYOTECOIND_CONFIGFILE}"
+start_stop_daemon_args="-u ${KOYOTECOIND_USER} \
+			-N ${KOYOTECOIND_NICE} -w 2000"
+pidfile="${KOYOTECOIND_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${KOYOTECOIND_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${KOYOTECOIND_USER}:${KOYOTECOIND_GROUP}" \
+	"${KOYOTECOIND_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${KOYOTECOIND_USER}:${KOYOTECOIND_GROUP}" \
+	"${KOYOTECOIND_PIDDIR}"
+
+	checkpath -f \
+	-o "${KOYOTECOIND_USER}:${KOYOTECOIND_GROUP}" \
+	-m 0660 \
+	"${KOYOTECOIND_CONFIGFILE}"
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if grep -qs '^rpcuser=' "${KOYOTECOIND_CONFIGFILE}" && \
+		! grep -qs '^rpcpassword=' "${KOYOTECOIND_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run koyotecoind."
+		eerror "The setting must appear in ${KOYOTECOIND_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Koyotecoin Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

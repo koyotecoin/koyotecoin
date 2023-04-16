@@ -1,0 +1,33 @@
+# /etc/conf.d/koyotecoind: config file for /etc/init.d/koyotecoind
+
+# Config file location
+#KOYOTECOIND_CONFIGFILE="/etc/koyotecoin/koyotecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $KOYOTECOIND_USER)
+#KOYOTECOIND_PIDDIR="/var/run/koyotecoind"
+
+# What filename to give the pidfile
+#KOYOTECOIND_PIDFILE="${KOYOTECOIND_PIDDIR}/koyotecoind.pid"
+
+# Where to write koyotecoind data (be mindful that the blockchain is large)
+#KOYOTECOIND_DATADIR="/var/lib/koyotecoind"
+
+# User and group to own koyotecoind process
+#KOYOTECOIND_USER="koyotecoin"
+#KOYOTECOIND_GROUP="koyotecoin"
+
+# Path to koyotecoind executable
+#KOYOTECOIND_BIN="/usr/bin/koyotecoind"
+
+# Nice value to run koyotecoind under
+#KOYOTECOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#KOYOTECOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for koyotecoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+KOYOTECOIND_SIGTERM_TIMEOUT=600
