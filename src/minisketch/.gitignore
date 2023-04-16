@@ -1,12 +1,12 @@
-#*.o
-#*.lo
-#*.la
-#*.dll
-#*.dylib
-#*.so.*
-#.*
-#*.a
-#*~
+*.o
+*.lo
+*.la
+*.dll
+*.dylib
+*.so.*
+.*
+*.a
+*~
 
 Makefile
 Makefile.in
