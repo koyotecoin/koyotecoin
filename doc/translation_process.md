@@ -1,14 +1,10 @@
 # Translations
 
-The Koyotecoin-Core project has been designed to support multiple localihowlions. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations, Koyotecoin-Core makes use of the Transifex online translation management tool.
+The Koyotecoin-Core project has been designed to support multiple localihowlions. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations.
 
-### Helping to translate (using Transifex)
-
-Transifex is setup to monitor the GitHub repo for updates, and when code containing new translations is found, Transifex will process any changes. It may take several hours after a pull-request has been merged, to appear in the Transifex web interface.
+### Helping to translate
 
 Multiple language support is critical in assisting Koyotecoin’s global adoption, and growth. One of Koyotecoin’s greatest strengths is cross-border money transfers, any help making that easier is greatly appreciated.
-
-See the [Transifex Koyotecoin project](https://www.transifex.com/koyotecoin/koyotecoin/) to assist in translations. You should also join the translation mailing list for announcements - see details below.
 
 ### Writing code with translations
 
@@ -29,56 +25,6 @@ make translate
 ```cpp
 QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
 ```
-
-### Creating a pull-request
-
-For general PRs, you shouldn’t include any updates to the translation source files. They will be updated periodically, primarily around pre-releases, allowing time for any new phrases to be translated before public releases. This is also important in avoiding translation related merge conflicts.
-
-When an updated source file is merged into the GitHub repo, Transifex will automatically detect it (although it can take several hours). Once processed, the new strings will show up as "Remaining" in the Transifex web interface and are ready for translators.
-
-To create the pull-request, use the following commands:
-
-```
-git add src/qt/koyotecoinstrings.cpp src/qt/locale/koyotecoin_en.ts
-git commit
-```
-
-### Creating a Transifex account
-
-Visit the [Transifex Signup](https://www.transifex.com/signup/) page to create an account. Take note of your username and password, as they will be required to configure the command-line tool.
-
-You can find the Koyotecoin translation project at [https://www.transifex.com/koyotecoin/koyotecoin/](https://www.transifex.com/koyotecoin/koyotecoin/).
-
-### Installing the Transifex client command-line tool
-
-The client is used to fetch updated translations. If you are having problems, or need more details, see [https://docs.transifex.com/client/installing-the-client](https://docs.transifex.com/client/installing-the-client)
-
-`pip install transifex-client`
-
-Setup your Transifex client config as follows. Please _ignore the token field_.
-
-```ini
-nano ~/.transifexrc
-
-[https://www.transifex.com]
-hostname = https://www.transifex.com
-password = PASSWORD
-token =
-username = USERNAME
-```
-
-The Transifex Koyotecoin project config file is included as part of the repo. It can be found at `.tx/config`, however you shouldn’t need to change anything.
-
-### Synchronising translations
-
-To assist in updating translations, a helper script is available in the [maintainer-tools repo](https://github.com/koyotecoin/koyotecoin-maintainer-tools). To use it and commit the result, simply do:
-
-```
-python3 ../koyotecoin-maintainer-tools/update-translations.py
-git commit -a
-```
-
-**Do not directly download translations** one by one from the Transifex website, as we do a few post-processing steps before committing the translations.
 
 ### Handling Plurals (in source files)
 

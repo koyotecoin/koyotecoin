@@ -44,13 +44,8 @@
   - `nMinimumChainWork` with the "chainwork" value of RPC `getblockheader` using the same height as that selected for the previous step.
 
 * Clear the release notes and move them to the wiki (see "Write the release notes" below).
-* Translations on Transifex:
-  - Pull translations from Transifex into the master branch.
-  - Create [a new resource](https://www.transifex.com/koyotecoin/koyotecoin/content/) named after the major version with the slug `[koyotecoin.qt-translation-<RRR>x]`, where `RRR` is the major branch number padded with zeros. Use `src/qt/locale/koyotecoin_en.xlf` to create it.
-  - In the project workflow settings, ensure that [Translation Memory Fill-up](https://docs.transifex.com/translation-memory/enabling-autofill) is enabled and that [Translation Memory Context Matching](https://docs.transifex.com/translation-memory/translation-memory-with-context) is disabled.
-  - Update the Transifex slug in [`.tx/config`](/.tx/config) to the slug of the resource created in the first step. This identifies which resource the translations will be synchronized from.
-  - Make an announcement that translators can start translating for the new version. You can use one of the [previous announcements](https://www.transifex.com/koyotecoin/koyotecoin/announcements/) as a template.
-  - Change the auto-update URL for the resource to `master`, e.g. `https://raw.githubusercontent.com/koyotecoin/koyotecoin/master/src/qt/locale/koyotecoin_en.xlf`. (Do this only after the previous steps, to prevent an auto-update from interfering.)
+* Translations:
+  - Pull translations into the master branch.
 
 #### After branch-off (on the major release branch)
 
@@ -58,7 +53,7 @@
 - Create the draft, named "_version_ Release Notes Draft", as a [collaborative wiki](https://github.com/koyotecoin/koyotecoin-devwiki/wiki/_new).
 - Clear the release notes: `cp doc/release-notes-empty-template.md doc/release-notes.md`
 - Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/koyotecoin/koyotecoin/issues/17079) for an example) and provide a link to it in the release announcements where useful.
-- Translations on Transifex
+- Translations
   - Change the auto-update URL for the new major version's resource away from `master` and to the branch, e.g. `https://raw.githubusercontent.com/koyotecoin/koyotecoin/<branch>/src/qt/locale/koyotecoin_en.xlf`. Do not forget this or it will keep tracking the translations on master instead, drifting away from the specific major release.
 
 #### Before final release

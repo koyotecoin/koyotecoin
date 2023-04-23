@@ -371,4 +371,4 @@ Thanks to everyone who directly contributed to this release:
 - Yancy Ribbens
 
 As well as to everyone that helped with translations on
-[Transifex](https://www.transifex.com/koyotecoin/koyotecoin/).
+[Koyotecoin](https://github.com/koyotecoin/koyotecoin/).
