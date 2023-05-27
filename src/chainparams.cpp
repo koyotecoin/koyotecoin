@@ -123,7 +123,7 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed.kyc.genisyskernel.dev."); // Eduardo Doege
+        vSeeds.emplace_back("seeds.kyc.koyotecoin.org."); // Koyotecoin
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 45);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 20);
@@ -217,7 +217,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("seed.test.kyc.genisyskernel.dev."); // Eduardo Doege
+        vSeeds.emplace_back("seeds.test.koyotecoin.org."); // Koyotecoin
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 78);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 80);
@@ -267,7 +267,7 @@ public:
             bin = ParseHex("045d0beba4043a692571cd0f4e6c8a91ba8b9baf60d05d0f6744b1f33440fb0f027f34167a158e645e506de5964562d493ac9b7ae5baf9159a225b89af5b69eec0");
 
             // Hardcoded nodes can be removed once there are more DNS seeds
-            vSeeds.emplace_back("seed.sig.test.kyc.genisyskernel.dev."); // Eduardo Doege
+            vSeeds.emplace_back("seeds.sig.kyc.koyotecoin.org."); // Koyotecoin
 
             consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
             consensus.defaultAssumeValid = uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431");
@@ -422,7 +422,7 @@ public:
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();
         vSeeds.emplace_back("dummySeed.invalid.");
-        vSeeds.emplace_back("seed.reg.test.kyc.genisyskernel.dev."); // Eduardo Doege
+        vSeeds.emplace_back("seeds.reg.kyc.koyotecoin.org."); // Koyotecoin
 
         fDefaultConsistencyChecks = true;
         fRequireStandard = true;
