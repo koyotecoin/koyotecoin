@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>729</width>
-    <height>150</height>
+    <height>153</height>
    </rect>
   </property>
   <property name="focusPolicy">
@@ -159,13 +159,29 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,1,0">
+    <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,0,1,0">
      <item>
-      <widget class="KoyotecoinAmountField" name="payAmount" native="true">
+      <widget class="KoyotecoinAmountField" name="payAmount">
        <property name="toolTip">
         <string>The amount to send in the selected unit</string>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item>
       <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
@@ -223,7 +239,7 @@
   </customwidget>
   <customwidget>
    <class>KoyotecoinAmountField</class>
-   <extends>QWidget</extends>
+   <extends>QLineEdit</extends>
    <header>qt/koyotecoinamountfield.h</header>
    <container>1</container>
   </customwidget>
