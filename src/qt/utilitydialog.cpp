@@ -54,7 +54,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(pare
         // ui->scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         text = version + "\n" + QString::fromStdString(FormatParagraph(licenseInfo));
         ui->aboutMessage->setText(version + "<br><br>" + licenseInfoHTML);
-        ui->helpMessage->setVisible(false);
+        // ui->helpMessage->setVisible(false);
     //
     // Tests
     // QGroupBox groupBox(ui->QDialog->document());
@@ -66,7 +66,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(pare
     } else {
         setWindowTitle(tr("Command-line options"));
         QString header = "Usage:  koyotecoin-qt [command-line options]                     \n";
-        QTextCursor cursor(ui->helpMessage->document());
+        // QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();
         cursor.insertText(header);
@@ -106,8 +106,8 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(pare
             }
         }
 
-        ui->helpMessage->moveCursor(QTextCursor::Start);
-        ui->scrollArea->setVisible(false);
+        // ui->helpMessage->moveCursor(QTextCursor::Start);
+        // ui->scrollArea->setVisible(false);
         ui->aboutLogo->setVisible(false);
         ui->aboutLogoHowloshi->setVisible(false);
     }
