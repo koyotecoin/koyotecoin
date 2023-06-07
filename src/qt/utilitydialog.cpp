@@ -36,7 +36,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(pare
 {
     ui->setupUi(this);
 
-    QString version = "<br>" + QString{PACKAGE_NAME} + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
+    QString version = QString{PACKAGE_NAME} + " " + tr("version") + " " + QString::fromStdString(FormatFullVersion());
 
     if (about) {
         setWindowTitle(tr("About %1").arg(PACKAGE_NAME));
@@ -56,6 +56,11 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(pare
         ui->aboutMessage->setText(version + "<br><br>" + licenseInfoHTML);
         ui->aboutMessage->setWordWrap(true);
         ui->helpMessage->setVisible(false);
+
+        // Set window size maximum and minimum
+        setMaximumSize(780, 400);
+        setMinimumSize(780, 400);
+        
 
     } else {
         setWindowTitle(tr("Command-line options"));
@@ -103,7 +108,7 @@ HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(pare
 
         ui->helpMessage->moveCursor(QTextCursor::Start);
         ui->scrollArea->setVisible(false);
-        ui->aboutLogo->setVisible(false);
+        // ui->aboutLogo->setVisible(false);
     }
 
     GUIUtil::handleCloseWindowShortcut(this);
