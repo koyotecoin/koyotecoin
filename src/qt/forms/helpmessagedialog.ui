@@ -193,7 +193,6 @@
  </widget>
  <resources>
   <include location="../koyotecoin.qrc"/>
-  <include location="../../../koyotecoin/src/qt/koyotecoin.qrc"/>
  </resources>
  <connections>
   <connection>
