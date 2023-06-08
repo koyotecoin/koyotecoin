@@ -151,8 +151,8 @@ ShutdownWindow::ShutdownWindow(QWidget* parent, Qt::WindowFlags f) : QWidget(par
     setLayout(layout);
 
     // Set window size maximum and minimum
-    setMaximumSize(640, 480);
-    setMinimumSize(640, 480);
+    setMaximumSize(400, 100);
+    setMinimumSize(400, 100);
 
     GUIUtil::handleCloseWindowShortcut(this);
 }
