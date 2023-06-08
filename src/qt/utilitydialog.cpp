@@ -150,6 +150,10 @@ ShutdownWindow::ShutdownWindow(QWidget* parent, Qt::WindowFlags f) : QWidget(par
         tr("Do not shut down the computer until this window disappears.")));
     setLayout(layout);
 
+    // Set window size maximum and minimum
+    setMaximumSize(200, 200);
+    setMinimumSize(200, 200);
+
     GUIUtil::handleCloseWindowShortcut(this);
 }
 
