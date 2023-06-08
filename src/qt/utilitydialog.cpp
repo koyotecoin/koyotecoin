@@ -30,6 +30,7 @@
 #include <QTextTable>
 #include <QVBoxLayout>
 #include <QSize>
+#include <QtDebug>
 
 /** "Help message" or "About" dialog box */
 HelpMessageDialog::HelpMessageDialog(QWidget* parent, bool about) : QDialog(parent, GUIUtil::dialog_flags),
@@ -152,7 +153,7 @@ ShutdownWindow::ShutdownWindow(QWidget* parent, Qt::WindowFlags f) : QWidget(par
         tr("Do not shut down the computer until this window disappears.")));
     setLayout(layout);
 
-    qDebug() << "Window Size: " << windowSize.width() << "x" << windowSize.height();
+    qInfo() << "Window Size: " << windowSize.width() << "x" << windowSize.height();
 
     // Set window size maximum and minimum
     // setMaximumSize(200, 200);
