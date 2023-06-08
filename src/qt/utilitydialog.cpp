@@ -151,10 +151,10 @@ ShutdownWindow::ShutdownWindow(QWidget* parent, Qt::WindowFlags f) : QWidget(par
     layout->addWidget(new QLabel(
         tr("%1 is shutting down…").arg(PACKAGE_NAME) + "<br /><br />" +
         tr("Do not shut down the computer until this window disappears.")));
+    layout->addWidget(new QLabel(windowSize.width()));
+    layout->addWidget(new QLabel(windowSize.height()));
     setLayout(layout);
-
-    qInfo() << "Window Size: " << windowSize.width() << "x" << windowSize.height();
-
+    
     // Set window size maximum and minimum
     // setMaximumSize(200, 200);
     // setMinimumSize(200, 200);
