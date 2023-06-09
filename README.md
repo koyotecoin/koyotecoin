@@ -67,5 +67,7 @@ Project
 The Koyotecoin project is a fork of Bitcoin that was developed with the aim of providing an educational and fun experience of the real functioning of cryptocurrencies. Based on a more educational approach, with fun, meme and learning.
 
 [Bitcoin Website](https://bitcoin.org)
+
 [Bitcoin Core Website](https://bitcoincore.org)
+
 [Bitcoin Project](https://github.com/bitcoin/bitcoin)
