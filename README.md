@@ -60,3 +60,8 @@ Changes to translations as well as new translations can be submitted directly to
 Translations will be periodically reviewed and merged into the git repository. See the [translation process](doc/translation_process.md) for details on how this works.
 
 **Important**: Please make sure to update only the translation files and avoid making changes to the code or other non-related files.
+
+Koyotecoin Project
+-------
+
+The Koyotecoin project is a fork of Bitcoin that was developed with the aim of providing an educational and fun experience of the real functioning of cryptocurrencies. Based on a more educational approach, with fun, meme and learning.
