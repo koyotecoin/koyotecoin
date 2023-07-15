@@ -72,7 +72,7 @@ public:
         // consensus.script_flag_exceptions.emplace( // Taproot exception
         //     uint256S("0x0000000000000000000f14c35b2d841e986ab5441de8c585d5ffe55ea1e395ad"), SCRIPT_VERIFY_P2SH | SCRIPT_VERIFY_WITNESS);
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431");
+        consensus.BIP34Hash = uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56");
         consensus.BIP65Height = 0;
         consensus.BIP66Height = 0;
         consensus.CSVHeight = 0;
@@ -97,7 +97,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
-        consensus.defaultAssumeValid = uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431");
+        consensus.defaultAssumeValid = uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -115,8 +115,8 @@ public:
 
         genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
-        assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc4604e141d3f010a00962aee2736c739758fca04b9fb2a45fab7a3c1cee14201"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -142,7 +142,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431")},
+                {0, uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56")},
             }};
 
         m_assumeutxo_data = MapAssumeutxo{
@@ -198,7 +198,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 0; // No activation delay
 
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
-        consensus.defaultAssumeValid = uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431");
+        consensus.defaultAssumeValid = uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56");
 
         pchMessageStart[0] = 0xf1;
         pchMessageStart[1] = 0xe1;
@@ -211,9 +211,8 @@ public:
 
         genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
-        assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
-
+        assert(consensus.hashGenesisBlock == uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc4604e141d3f010a00962aee2736c739758fca04b9fb2a45fab7a3c1cee14201"));
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
@@ -236,7 +235,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431")},
+                {0, uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56")},
             }};
 
         m_assumeutxo_data = MapAssumeutxo{
@@ -270,7 +269,7 @@ public:
             vSeeds.emplace_back("seeds.sig.kyc.koyotecoin.org."); // Koyotecoin
 
             consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
-            consensus.defaultAssumeValid = uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431");
+            consensus.defaultAssumeValid = uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56");
             m_assumed_blockchain_size = 1;
             m_assumed_chain_state_size = 0;
             chainTxData = ChainTxData{
@@ -342,9 +341,8 @@ public:
 
         genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
-        assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
-
+        assert(consensus.hashGenesisBlock == uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc4604e141d3f010a00962aee2736c739758fca04b9fb2a45fab7a3c1cee14201"));
         vFixedSeeds.clear();
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 111);
@@ -416,9 +414,8 @@ public:
 
         genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
-        assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
-
+        assert(consensus.hashGenesisBlock == uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc4604e141d3f010a00962aee2736c739758fca04b9fb2a45fab7a3c1cee14201"));
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();
         vSeeds.emplace_back("dummySeed.invalid.");
@@ -431,7 +428,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431")},
+                {0, uint256S("0x0000000087cfd8210192140f7765e4ade804bf5e3ffa4b1768d5fde6824a1f56")},
             }};
 
         m_assumeutxo_data = MapAssumeutxo{
