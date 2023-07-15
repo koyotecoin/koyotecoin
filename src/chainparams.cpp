@@ -66,7 +66,7 @@ public:
         strNetworkID = CBaseChainParams::MAIN;
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
-        consensus.nSubsidyHalvingInterval = 850000;
+        consensus.nSubsidyHalvingInterval = 525000;
         // consensus.script_flag_exceptions.emplace( // BIP16 exception
         //     uint256S("0x00000000000002dc756eebf4f49723ed8d30cc28a5f108eb94b1ba88ac4f9c22"), SCRIPT_VERIFY_NONE);
         // consensus.script_flag_exceptions.emplace( // Taproot exception
@@ -113,7 +113,7 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 6;
 
-        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 25 * COIN);
+        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
         assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
@@ -169,7 +169,7 @@ public:
         strNetworkID = CBaseChainParams::TESTNET;
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
-        consensus.nSubsidyHalvingInterval = 850000;
+        consensus.nSubsidyHalvingInterval = 525000;
         // consensus.script_flag_exceptions.emplace( // BIP16 exception
         //     uint256S("0x00000000dd30457c001f4095d208cc1296b0eed002427aa599874af7a432b105"), SCRIPT_VERIFY_NONE);
         consensus.BIP34Height = 0;
@@ -209,7 +209,7 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 6;
 
-        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 25 * COIN);
+        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
         assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
@@ -305,7 +305,7 @@ public:
         strNetworkID = CBaseChainParams::SIGNET;
         consensus.signet_blocks = true;
         consensus.signet_challenge.assign(bin.begin(), bin.end());
-        consensus.nSubsidyHalvingInterval = 850000;
+        consensus.nSubsidyHalvingInterval = 525000;
         consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256{};
         consensus.BIP65Height = 1;
@@ -340,7 +340,7 @@ public:
         nDefaultPort = 38111;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 25 * COIN);
+        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
         assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));
@@ -414,7 +414,7 @@ public:
 
         UpdateActivationParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 25 * COIN);
+        genesis = CreateGenesisBlock(1672773305, 3255714, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000000054ce0f4dcc03b139ad9efa188650ea14d0421c845642571eaedc2431"));
         assert(genesis.hashMerkleRoot == uint256S("0x9ec3f1c327553890e8dfdf444988223373dbc5ebabe714728fc11b40ee195a70"));

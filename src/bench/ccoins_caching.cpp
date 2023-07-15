@@ -26,7 +26,7 @@ static void CCoinsCaching(benchmark::Bench& bench)
     CCoinsView coinsDummy;
     CCoinsViewCache coins(&coinsDummy);
     std::vector<CMutableTransaction> dummyTransactions =
-        SetupDummyInputs(keystore, coins, {11 * COIN, 25 * COIN, 21 * COIN, 22 * COIN});
+        SetupDummyInputs(keystore, coins, {11 * COIN, 100 * COIN, 21 * COIN, 22 * COIN});
 
     CMutableTransaction t1;
     t1.vin.resize(3);

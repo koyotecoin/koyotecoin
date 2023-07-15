@@ -73,9 +73,9 @@ class InvalidBlockRequestTest(KoyotecoinTestFramework):
         self.log.info("Test merkle root malleability.")
 
         tx1 = create_tx_with_script(
-            block1.vtx[0], 0, script_sig=bytes([OP_TRUE]), amount=25 * COIN)
+            block1.vtx[0], 0, script_sig=bytes([OP_TRUE]), amount=100 * COIN)
         tx2 = create_tx_with_script(
-            tx1, 0, script_sig=bytes([OP_TRUE]), amount=25 * COIN)
+            tx1, 0, script_sig=bytes([OP_TRUE]), amount=100 * COIN)
         block2 = create_block(tip, create_coinbase(
             height), block_time, txlist=[tx1, tx2])
         block_time += 1
@@ -128,7 +128,7 @@ class InvalidBlockRequestTest(KoyotecoinTestFramework):
         # Complete testing of CVE-2018-17144, by checking for the inflation bug.
         # Create a block that spends the output of a tx in a previous block.
         tx3 = create_tx_with_script(
-            tx2, 0, script_sig=bytes([OP_TRUE]), amount=25 * COIN)
+            tx2, 0, script_sig=bytes([OP_TRUE]), amount=100 * COIN)
         tx3.vin.append(tx3.vin[0])  # Duplicates input
         tx3.rehash()
         block4 = create_block(tip, create_coinbase(

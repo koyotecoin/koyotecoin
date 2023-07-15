@@ -665,9 +665,9 @@ BOOST_AUTO_TEST_CASE(knapsack_solver_test)
         for (int i = 0; i < RUN_TESTS; i++) {
             // picking 50 from 100 coins doesn't depend on the shuffle,
             // but does depend on randomness in the stochastic approximation code
-            const auto result25 = KnapsackSolver(GroupCoins(available_coins.All()), 25 * COIN, CENT);
+            const auto result25 = KnapsackSolver(GroupCoins(available_coins.All()), 100 * COIN, CENT);
             BOOST_CHECK(result25);
-            const auto result26 = KnapsackSolver(GroupCoins(available_coins.All()), 25 * COIN, CENT);
+            const auto result26 = KnapsackSolver(GroupCoins(available_coins.All()), 100 * COIN, CENT);
             BOOST_CHECK(result26);
             BOOST_CHECK(!EqualResult(*result25, *result26));
 
