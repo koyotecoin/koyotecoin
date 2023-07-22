@@ -2,7 +2,6 @@ Koyotecoin Core integration/staging tree
 =====================================
 
 Koyotecoin is an open source censorship-resistant peer-to-peer immutable network for education, meme and fun.
-https://koyotecoin.org
 
 For an immediately usable, binary version of the Koyotecoin Core software, see
 https://koyotecoin.org/download/.
