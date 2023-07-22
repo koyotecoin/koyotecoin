@@ -165,11 +165,11 @@ You can also manually configure your node to be reachable from the Tor network.
 Add these lines to your `/etc/tor/torrc` (or equivalent config file):
 
     HiddenServiceDir /var/lib/tor/koyotecoin-service/
-    HiddenServicePort 8111 127.0.0.1:8334
+    HiddenServicePort 8111 127.0.0.1:8112
 
 The directory can be different of course, but virtual port numbers should be equal to
 your koyotecoind's P2P listen port (8111 by default), and target addresses and ports
-should be equal to binding address and port for inbound Tor connections (127.0.0.1:8334 by default).
+should be equal to binding address and port for inbound Tor connections (127.0.0.1:8112 by default).
 
     -externalip=X   You can tell koyotecoin about its publicly reachable addresses using
                     this option, and this can be an onion address. Given the above

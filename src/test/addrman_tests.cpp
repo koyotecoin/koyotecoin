@@ -118,11 +118,11 @@ BOOST_AUTO_TEST_CASE(addrman_ports)
     BOOST_CHECK(addrman->Add({CAddress(addr1, NODE_NONE)}, source));
     BOOST_CHECK_EQUAL(addrman->size(), 1U);
 
-    CService addr1_port = ResolveService("250.1.1.1", 8334);
+    CService addr1_port = ResolveService("250.1.1.1", 8112);
     BOOST_CHECK(addrman->Add({CAddress(addr1_port, NODE_NONE)}, source));
     BOOST_CHECK_EQUAL(addrman->size(), 2U);
     auto addr_ret2 = addrman->Select().first;
-    BOOST_CHECK(addr_ret2.ToString() == "250.1.1.1:8111" || addr_ret2.ToString() == "250.1.1.1:8334");
+    BOOST_CHECK(addr_ret2.ToString() == "250.1.1.1:8111" || addr_ret2.ToString() == "250.1.1.1:8112");
 
     // Test: Add same IP but diff port to tried table; this converts the entry with
     // the specified port to tried, but not the other.
@@ -973,7 +973,7 @@ BOOST_AUTO_TEST_CASE(addrman_update_address)
     BOOST_CHECK_EQUAL(addrman->size(), 1U);
 
     // Updating an addrman entry with a different port doesn't change it
-    CAddress addr_diff_port{CAddress(ResolveService("250.1.1.1", 8334), NODE_NONE)};
+    CAddress addr_diff_port{CAddress(ResolveService("250.1.1.1", 8112), NODE_NONE)};
     addr_diff_port.nTime = start_time;
     addrman->Connected(addr_diff_port);
     addrman->SetServices(addr_diff_port, NODE_NETWORK_LIMITED);

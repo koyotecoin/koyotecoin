@@ -180,7 +180,7 @@ class ZMQTest (KoyotecoinTestFramework):
         # Invalid zmq arguments don't take down the node, see #17185.
         self.restart_node(0, ["-zmqpubrawtx=foo", "-zmqpubhashtx=bar"])
 
-        address = 'tcp://127.0.0.1:28332'
+        address = 'tcp://127.0.0.1:28110'
         subs = self.setup_zmq_test([(topic, address) for topic in ["hashblock", "hashtx", "rawblock", "rawtx"]])
 
         hashblock = subs[0]
@@ -550,7 +550,7 @@ class ZMQTest (KoyotecoinTestFramework):
         # chain lengths on node0 and node1; for this test we only need node0, so
         # we can disable syncing blocks on the setup)
         subscribers = self.setup_zmq_test([
-            ("hashblock", "tcp://127.0.0.1:28334"),
+            ("hashblock", "tcp://127.0.0.1:28112"),
             ("hashblock", "tcp://127.0.0.1:28335"),
         ], sync_blocks=False)
 
@@ -568,7 +568,7 @@ class ZMQTest (KoyotecoinTestFramework):
         self.log.info("Testing IPv6")
         # Set up subscriber using IPv6 loopback address
         subscribers = self.setup_zmq_test([
-            ("hashblock", "tcp://[::1]:28332")
+            ("hashblock", "tcp://[::1]:28110")
         ], ipv6=True)
 
         # Generate 1 block in nodes[0]
