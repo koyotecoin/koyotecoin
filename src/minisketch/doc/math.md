@@ -73,7 +73,7 @@ Interestingly, only *2n* coefficients of *S(M)* were needed for solving
 the set of equations above. This means we have our answer: the
 coefficients *1* through *2n* of *S(M)*, or the list
 *[m<sub>1</sub> + m<sub>2</sub> + ..., m<sub>1</sub><sup>2</sup> + m<sub>2</sub><sup>2</sup> + ..., ..., m<sub>1</sub><sup>2n</sup> + m<sub>2</sub><sup>2n</sup> + ...]*
-functions as a sketch, howlisfying the two properties we want:
+functions as a sketch, satisfying the two properties we want:
 
 * Sketches can be combined to form the sketch of their symmetric difference, by simply pairwise adding the list elements together.
 * With *2n* list elements we can efficiently recover *n* elements from a sketch.
