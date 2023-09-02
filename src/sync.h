@@ -136,8 +136,6 @@ using Mutex = AnnotatedMixin<std::mutex>;
  * with global scope well, so mark them with a separate type, and
  * eventually move all the mutexes into classes so they are not globally
  * visible.
- *
- * See: https://github.com/koyotecoin/koyotecoin/pull/20272#issuecomment-720755781
  */
 class GlobalMutex : public Mutex { };
 

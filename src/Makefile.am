@@ -207,7 +207,7 @@ KOYOTECOIN_CORE_H = \
   node/mempool_persist_args.h \
   node/miner.h \
   node/minisketchwrapper.h \
-  node/psbt.h \
+  node/pskt.h \
   node/transaction.h \
   node/utxo_snapshot.h \
   node/validation_cache_args.h \
@@ -222,7 +222,7 @@ KOYOTECOIN_CORE_H = \
   policy/settings.h \
   pow.h \
   protocol.h \
-  psbt.h \
+  pskt.h \
   random.h \
   randomenv.h \
   rest.h \
@@ -394,7 +394,7 @@ libkoyotecoin_node_a_SOURCES = \
   node/mempool_persist_args.cpp \
   node/miner.cpp \
   node/minisketchwrapper.cpp \
-  node/psbt.cpp \
+  node/pskt.cpp \
   node/transaction.cpp \
   node/validation_cache_args.cpp \
   noui.cpp \
@@ -642,7 +642,7 @@ libkoyotecoin_common_a_SOURCES = \
   policy/feerate.cpp \
   policy/policy.cpp \
   protocol.cpp \
-  psbt.cpp \
+  pskt.cpp \
   rpc/rawtransaction_util.cpp \
   rpc/external_signer.cpp \
   rpc/util.cpp \

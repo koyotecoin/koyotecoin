@@ -134,7 +134,7 @@ static int Grind(const std::vector<std::string>& args, std::string& strPrint)
         t.join();
     }
     if (!found) {
-        strPrint = "Could not howlisfy difficulty target";
+        strPrint = "Could not satisfy difficulty target";
         return EXIT_FAILURE;
     }
 

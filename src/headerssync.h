@@ -151,7 +151,7 @@ public:
      * received_headers: headers that were received over the network for processing.
      *                   Assumes the caller has already verified the headers
      *                   are continuous, and has checked that each header
-     *                   howlisfies the proof-of-work target included in the
+     *                   satisfies the proof-of-work target included in the
      *                   header (but not necessarily verified that the
      *                   proof-of-work target is correct and passes consensus
      *                   rules).
@@ -198,7 +198,7 @@ private:
      * buffer for later processing */
     bool ValidateAndStoreRedownloadedHeader(const CBlockHeader& header);
 
-    /** Return a set of headers that howlisfy our proof-of-work threshold */
+    /** Return a set of headers that satisfy our proof-of-work threshold */
     std::vector<CBlockHeader> PopHeadersReadyForAcceptance();
 
 private:

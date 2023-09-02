@@ -53,8 +53,7 @@ std::optional<bilingual_str> CheckLegacyTxindex(CBlockTreeDB& block_tree_db)
 bool CCoinsViewDB::NeedsUpgrade()
 {
     std::unique_ptr<CDBIterator> cursor{m_db->NewIterator()};
-    // DB_COINS was deprecated in v0.15.0, commit
-    // 1088b02f0ccd7358d2b7076bb9e122d59d502d02
+    // DB_COINS was deprecated in v1.0.0
     cursor->Seek(std::make_pair(DB_COINS, uint256{}));
     return cursor->Valid();
 }

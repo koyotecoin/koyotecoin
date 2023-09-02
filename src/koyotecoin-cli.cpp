@@ -464,8 +464,8 @@ public:
         if (!batch[ID_NETWORKINFO]["error"].isNull()) return batch[ID_NETWORKINFO];
 
         const UniValue& networkinfo{batch[ID_NETWORKINFO]["result"]};
-        if (networkinfo["version"].getInt<int>() < 209900) {
-            throw std::runtime_error("-netinfo requires koyotecoind server to be running v0.21.0 and up");
+        if (networkinfo["version"].getInt<int>() < 100) {
+            throw std::runtime_error("-netinfo requires koyotecoind server to be running v1.0.0 and up");
         }
         const int64_t time_now{TicksSinceEpoch<std::chrono::seconds>(CliClock::now())};
 
@@ -654,7 +654,7 @@ public:
         "           peer selection (only displayed if the -asmap config option is set)\n"
         "  id       Peer index, in increasing order of peer connections since node startup\n"
         "  address  IP address and port of the peer\n"
-        "  version  Peer version and subversion concatenated, e.g. \"70016/Howloshi:21.0.0/\"\n\n"
+        "  version  Peer version and subversion concatenated, e.g. \"100/Howloshi:1.0.0/\"\n\n"
         "* The peer counts table displays the number of peers for each reachable network as well as\n"
         "  the number of block relay peers and manual peers.\n\n"
         "* The local addresses table lists each local address broadcast by the node, the port, and the score.\n\n"

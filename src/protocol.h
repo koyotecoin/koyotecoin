@@ -110,7 +110,7 @@ extern const char* GETBLOCKS;
 /**
  * The getheaders message requests a headers message that provides block
  * headers starting from a particular point in the block chain.
- * @since protocol version 31800.
+ * @since protocol version 100.
  */
 extern const char* GETHEADERS;
 /**
@@ -120,7 +120,7 @@ extern const char* TX;
 /**
  * The headers message sends one or more block headers to a node which
  * previously requested certain headers with a getheaders message.
- * @since protocol version 31800.
+ * @since protocol version 100.
  */
 extern const char* HEADERS;
 /**
@@ -160,7 +160,7 @@ extern const char* NOTFOUND;
  * transactions and requested merkle blocks through the provided filter.
  * @since protocol version 70001 as described by BIP37.
  *   Only available with service bit NODE_BLOOM since protocol version
- *   70011 as described by BIP111.
+ *   100 as described by BIP111.
  */
 extern const char* FILTERLOAD;
 /**
@@ -168,7 +168,7 @@ extern const char* FILTERLOAD;
  * previously-set bloom filter, such as a new public key.
  * @since protocol version 70001 as described by BIP37.
  *   Only available with service bit NODE_BLOOM since protocol version
- *   70011 as described by BIP111.
+ *   100 as described by BIP111.
  */
 extern const char* FILTERADD;
 /**
@@ -176,19 +176,19 @@ extern const char* FILTERADD;
  * bloom filter.
  * @since protocol version 70001 as described by BIP37.
  *   Only available with service bit NODE_BLOOM since protocol version
- *   70011 as described by BIP111.
+ *   100 as described by BIP111.
  */
 extern const char* FILTERCLEAR;
 /**
  * Indicates that a node prefers to receive new block announcements via a
  * "headers" message rather than an "inv".
- * @since protocol version 70012 as described by BIP130.
+ * @since protocol version 100 as described by BIP130.
  */
 extern const char* SENDHEADERS;
 /**
  * The feefilter message tells the receiving peer not to inv us any txs
  * which do not meet the specified min fee rate.
- * @since protocol version 70013 as described by BIP133
+ * @since protocol version 100 as described by BIP133
  */
 extern const char* FEEFILTER;
 /**
@@ -196,25 +196,25 @@ extern const char* FEEFILTER;
  * Indicates that a node is willing to provide blocks via "cmpctblock" messages.
  * May indicate that a node prefers to receive new block announcements via a
  * "cmpctblock" message rather than an "inv", depending on message contents.
- * @since protocol version 70014 as described by BIP 152
+ * @since protocol version 100 as described by BIP 152
  */
 extern const char* SENDCMPCT;
 /**
  * Contains a CBlockHeaderAndShortTxIDs object - providing a header and
  * list of "short txids".
- * @since protocol version 70014 as described by BIP 152
+ * @since protocol version 100 as described by BIP 152
  */
 extern const char* CMPCTBLOCK;
 /**
  * Contains a BlockTransactionsRequest
  * Peer should respond with "blocktxn" message.
- * @since protocol version 70014 as described by BIP 152
+ * @since protocol version 100 as described by BIP 152
  */
 extern const char* GETBLOCKTXN;
 /**
  * Contains a BlockTransactions.
  * Sent in response to a "getblocktxn" message.
- * @since protocol version 70014 as described by BIP 152
+ * @since protocol version 100 as described by BIP 152
  */
 extern const char* BLOCKTXN;
 /**
@@ -256,7 +256,7 @@ extern const char* CFCHECKPT;
 /**
  * Indicates that a node prefers to relay transactions via wtxid, rather than
  * txid.
- * @since protocol version 70016 as described by BIP 339.
+ * @since protocol version 100 as described by BIP 339.
  */
 extern const char* WTXIDRELAY;
 }; // namespace NetMsgType
@@ -274,7 +274,7 @@ enum ServiceFlags : uint64_t {
     NODE_NETWORK = (1 << 0),
     // NODE_BLOOM means the node is capable and willing to handle bloom-filtered connections.
     // Koyotecoin Core nodes used to support this by default, without advertising this bit,
-    // but no longer do as of protocol version 70011 (= NO_BLOOM_VERSION)
+    // but no longer do as of protocol version 100 (= NO_BLOOM_VERSION)
     NODE_BLOOM = (1 << 2),
     // NODE_WITNESS indicates that a node can be asked for blocks and transactions including
     // witness data.

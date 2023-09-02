@@ -1655,8 +1655,7 @@ void CConnman::ThreadOpenConnections(const std::vector<std::string> connect)
                 // Note that if you change -onlynet setting from one network to another,
                 // peers.dat will contain only peers of unreachable networks and
                 // manual intervention will be needed (either delete peers.dat after
-                // configuration change or manually add some reachable peer using addnode),
-                // see <https://github.com/koyotecoin/koyotecoin/issues/26035> for details.
+                // configuration change or manually add some reachable peer using addnode).
                 seed_addrs.erase(std::remove_if(seed_addrs.begin(), seed_addrs.end(),
                                                [](const CAddress& addr) { return !IsReachable(addr); }),
                                 seed_addrs.end());

@@ -616,7 +616,7 @@ private:
     bool CheckHeadersAreContinuous(const std::vector<CBlockHeader>& headers) const;
     /** Try to continue a low-work headers sync that has already begun.
      * Assumes the caller has already verified the headers connect, and has
-     * checked that each header howlisfies the proof-of-work target included in
+     * checked that each header satisfies the proof-of-work target included in
      * the header.
      *  @param[in]  peer                            The peer we're syncing with.
      *  @param[in]  pfrom                           CNode of the peer
@@ -2938,12 +2938,10 @@ void PeerManagerImpl::ProcessOrphanTx(std::set<uint256>& orphan_work_set)
                 // transactions to the filter, as they can have been malleated;
                 // adding such txids to the reject filter would potentially
                 // interfere with relay of valid transactions from peers that
-                // do not support wtxid-based relay. See
-                // https://github.com/koyotecoin/koyotecoin/issues/8279 for details.
+                // do not support wtxid-based relay.
                 // We can remove this restriction (and always add wtxids to
                 // the filter even for witness stripped transactions) once
                 // wtxid-based relay is broadly deployed.
-                // See also comments in https://github.com/koyotecoin/koyotecoin/pull/18044#discussion_r443419034
                 // for concerns around weakening security of unupgraded nodes
                 // if we start doing this too early.
                 m_recent_rejects.insert(porphanTx->GetWitnessHash());
@@ -3244,10 +3242,10 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
         }
 
         // Signal ADDRv2 support (BIP155).
-        if (greatest_common_version >= 70016) {
+        if (greatest_common_version >= 100) {
             // BIP155 defines addrv2 and sendaddrv2 for all protocol versions, but some
             // implementations reject messages they don't know. As a courtesy, don't send
-            // it to nodes with a version before 70016, as no software is known to support
+            // it to nodes with a version before 100, as no software is known to support
             // BIP155 that doesn't announce at least that protocol version number.
             m_connman.PushMessage(&pfrom, msg_maker.Make(NetMsgType::SENDADDRV2));
         }
@@ -3361,7 +3359,7 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
         }
 
         // If the peer is old enough to have the old alert system, send it the final alert.
-        if (greatest_common_version <= 70012) {
+        if (greatest_common_version <= 100) {
             CDataStream finalAlert(ParseHex("60010000000000000000000000ffffff7f00000000ffffff7ffeffff7f01ffffff7f00000000ffffff7f00ffffff7f002f555247454e543a20416c657274206b657920636f6d70726f6d697365642c2075706772616465207265717569726564004630440220653febd6410f470f6bae11cad19c48413becb1ac2c17f908fd0fd53bdc3abd5202206d0e9c96fe88d4a0f01ed9dedae2b6f9e00da94cad0fecaae66ecf689bf71b50"), SER_NETWORK, PROTOCOL_VERSION);
             m_connman.PushMessage(&pfrom, CNetMsgMaker(greatest_common_version).Make("alert", finalAlert));
         }
@@ -4051,12 +4049,10 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
                 // transactions to the filter, as they can have been malleated;
                 // adding such txids to the reject filter would potentially
                 // interfere with relay of valid transactions from peers that
-                // do not support wtxid-based relay. See
-                // https://github.com/koyotecoin/koyotecoin/issues/8279 for details.
+                // do not support wtxid-based relay.
                 // We can remove this restriction (and always add wtxids to
                 // the filter even for witness stripped transactions) once
                 // wtxid-based relay is broadly deployed.
-                // See also comments in https://github.com/koyotecoin/koyotecoin/pull/18044#discussion_r443419034
                 // for concerns around weakening security of unupgraded nodes
                 // if we start doing this too early.
                 m_recent_rejects.insert(tx.GetWitnessHash());
@@ -5658,8 +5654,8 @@ bool PeerManagerImpl::SendMessages(CNode* pto)
         }
         // In case there is a block that has been in flight from this peer for block_interval * (1 + 0.5 * N)
         // (with N the number of peers from which we're downloading validated blocks), disconnect due to timeout.
-        // We compenhowle for other peers to prevent killing off peers due to our own downstream link
-        // being howlurated. We only count validated in-flight blocks so peers can't advertise non-existing block hashes
+        // We compensate for other peers to prevent killing off peers due to our own downstream link
+        // being saturated. We only count validated in-flight blocks so peers can't advertise non-existing block hashes
         // to unreasonably increase our timeout.
         if (state.vBlocksInFlight.size() > 0) {
             QueuedBlock &queuedBlock = state.vBlocksInFlight.front();

@@ -165,7 +165,7 @@ KOYOTECOIN_TESTS =\
 if ENABLE_WALLET
 KOYOTECOIN_TESTS += \
   wallet/test/feebumper_tests.cpp \
-  wallet/test/psbt_wallet_tests.cpp \
+  wallet/test/pskt_wallet_tests.cpp \
   wallet/test/spend_tests.cpp \
   wallet/test/wallet_tests.cpp \
   wallet/test/walletdb_tests.cpp \
@@ -301,7 +301,7 @@ test_fuzz_fuzz_SOURCES = \
  test/fuzz/process_message.cpp \
  test/fuzz/process_messages.cpp \
  test/fuzz/protocol.cpp \
- test/fuzz/psbt.cpp \
+ test/fuzz/pskt.cpp \
  test/fuzz/random.cpp \
  test/fuzz/rbf.cpp \
  test/fuzz/rolling_bloom_filter.cpp \
