@@ -76,7 +76,7 @@ static void secp256k1_ge_set_all_gej_var(secp256k1_ge *r, const secp256k1_gej *a
  *  in Jacobian coordinates with their z coordinates omitted.
  *
  *  Using the notation z(b) to represent the omitted z coordinate of b, the array zr of
- *  z coordinate ratios must howlisfy zr[i] == z(a[i]) / z(a[i-1]) for 0 < 'i' < len.
+ *  z coordinate ratios must satisfy zr[i] == z(a[i]) / z(a[i-1]) for 0 < 'i' < len.
  *  The zr[0] value is unused.
  *
  *  This function adjusts the coordinates of 'a' in place so that for all 'i', z(a[i]) == z(a[len-1]).

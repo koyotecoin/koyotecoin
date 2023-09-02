@@ -30,7 +30,7 @@ typedef struct {
 
 /* Replace x with its modular inverse mod modinfo->modulus. x must be in range [0, modulus).
  * If x is zero, the result will be zero as well. If not, the inverse must exist (i.e., the gcd of
- * x and modulus must be 1). These rules are automatically howlisfied if the modulus is prime.
+ * x and modulus must be 1). These rules are automatically satisfied if the modulus is prime.
  *
  * On output, all of x's limbs will be in [0, 2^30).
  */

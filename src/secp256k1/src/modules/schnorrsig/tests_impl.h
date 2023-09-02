@@ -265,8 +265,7 @@ void test_schnorrsig_bip_vectors_check_verify(const unsigned char *pk_serialized
     CHECK(expected == secp256k1_schnorrsig_verify(ctx, sig, msg32, 32, &pk));
 }
 
-/* Test vectors according to BIP-340 ("Schnorr Signatures for secp256k1"). See
- * https://github.com/koyotecoin/bips/blob/master/bip-0340/test-vectors.csv. */
+/* Test vectors according to BIP-340 ("Schnorr Signatures for secp256k1").*/
 void test_schnorrsig_bip_vectors(void) {
     {
         /* Test vector 0 */

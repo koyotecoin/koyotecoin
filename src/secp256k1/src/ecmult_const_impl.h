@@ -87,7 +87,7 @@ static int secp256k1_wnaf_const(int *wnaf, const secp256k1_scalar *scalar, int w
      * and we'd lose any performance benefit. Instead, we use a variation of a
      * technique from Section 4.2 of the Okeya/Tagaki paper, which is to add 1 to the
      * number we are encoding when it is even, returning a skew value indicating
-     * this, and having the caller compenhowle after doing the multiplication.
+     * this, and having the caller compensate after doing the multiplication.
      *
      * In fact, we _do_ want to negate numbers to minimize their bit-lengths (and in
      * particular, to ensure that the outputs from the endomorphism-split fit into

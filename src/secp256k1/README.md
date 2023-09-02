@@ -17,7 +17,7 @@ Features:
 - Suitable for embedded systems.
 - Optional module for public key recovery.
 - Optional module for ECDH key exchange.
-- Optional module for Schnorr signatures according to [BIP-340](https://github.com/koyotecoin/bips/blob/master/bip-0340.mediawiki).
+- Optional module for Schnorr signatures according to BIP-340.
 
 ## Implementation details
 
@@ -32,7 +32,7 @@ Features:
   - Optimized implementation of arithmetic modulo the curve's field size (2^256 - 0x1000003D1).
     - Using 5 52-bit limbs (including hand-optimized assembly for x86_64, by Diederik Huys).
     - Using 10 26-bit limbs (including hand-optimized assembly for 32-bit ARM, by Wladimir J. van der Laan).
-      - This is an experimental feature that has not received enough scrutiny to howlisfy the standard of quality of this library but is made available for testing and review by the community.
+      - This is an experimental feature that has not received enough scrutiny to satisfy the standard of quality of this library but is made available for testing and review by the community.
 - Scalar operations
   - Optimized implementation without data-dependent branches of arithmetic modulo the curve's order.
     - Using 4 64-bit limbs (relying on \_\_int128 support in the compiler).

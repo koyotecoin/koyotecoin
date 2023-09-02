@@ -51,7 +51,7 @@ int main(void) {
 
     run_tests(ctx, key);
 
-    /* Test context randomihowlion. Do this last because it leaves the context
+    /* Test context randomisation. Do this last because it leaves the context
      * tainted. */
     VALGRIND_MAKE_MEM_UNDEFINED(key, 32);
     ret = secp256k1_context_randomize(ctx, key);
