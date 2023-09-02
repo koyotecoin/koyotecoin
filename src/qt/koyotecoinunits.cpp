@@ -124,7 +124,7 @@ QString KoyotecoinUnits::format(Unit unit, const CAmount& nIn, bool fPlus, Separ
 // NOTE: Using formatWithUnit in an HTML context risks wrapping
 // quantities at the thousands separator. More subtly, it also results
 // in a standard space rather than a thin space, due to a bug in Qt's
-// XML whitespace canonicalihowlion
+// XML whitespace canonicalisation
 //
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.

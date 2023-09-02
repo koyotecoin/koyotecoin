@@ -541,7 +541,7 @@
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>or</source>
         <translation type="unfinished">эсвэл</translation>

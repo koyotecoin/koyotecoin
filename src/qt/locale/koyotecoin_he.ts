@@ -442,7 +442,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">הגיזום הוגדר כפחות מהמינימום של  %d MiB. נא להשתמש במספר גבוה יותר.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">גיזום: הסינכרון האחרון של הארנק עובר את היקף הנתונים שנגזמו. יש לבצע חידוש אידקסציה (נא להוריד את כל שרשרת הבלוקים שוב במקרה של צומת מקוצצת)</translation>
     </message>
     <message>
@@ -1570,7 +1570,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ג״ב</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">הסינכרון הראשוני הוא תובעני ועלול לחשוף בעיות חומרה במחשב שהיו חבויות עד כה. כל פעם שתריץ %1 התהליך ימשיך בהורדה מהנקודה שבה הוא עצר לאחרונה.</translation>
     </message>
     <message>
@@ -1995,7 +1995,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">שיח</translation>
@@ -2053,16 +2053,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">שידור העיסקה נכשל: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT הועתקה ללוח הגזירים.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT הועתקה ללוח הגזירים.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
         <translation type="unfinished">שמירת נתוני העיסקה</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT נשמרה לדיסק.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT נשמרה לדיסק.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -2759,7 +2759,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">אפשר ״החלפה-על ידי עמלה״</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">באמצעות עמלה-ניתנת-לשינוי (BIP-125) תוכלו להגדיל עמלת עסקה גם לאחר שליחתה. ללא אפשרות זו, עמלה גבוהה יותר יכולה להיות מומלצת כדי להקטין את הסיכון בעיכוב אישור העסקה.</translation>
     </message>
     <message>
@@ -2815,8 +2815,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">י&amp;צירת לא חתומה</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">יוצר עסקת ביטקוין חתומה חלקית (PSBT) לשימוש עם ארנק %1 לא מחובר למשל, או עם PSBT ארנק חומרה תואם.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">יוצר עסקת ביטקוין חתומה חלקית (PSKT) לשימוש עם ארנק %1 לא מחובר למשל, או עם PSKT ארנק חומרה תואם.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -2839,8 +2839,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">שמירת נתוני העיסקה</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT נשמרה</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT נשמרה</translation>
     </message>
     <message>
         <source>or</source>
@@ -2851,9 +2851,9 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">תוכלו להגדיל את העמלה מאוחר יותר (איתות Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">בבקשה לסקור את העיסקה המוצעת. הדבר יצור עיסקת ביטקוין חתומה חלקית (PSBT) אשר ניתן לשמור או להעתיק ואז לחתום עם למשל ארנק לא מקוון %1, או עם ארנק חומרה תואם-PSBT.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">בבקשה לסקור את העיסקה המוצעת. הדבר יצור עיסקת ביטקוין חתומה חלקית (PSKT) אשר ניתן לשמור או להעתיק ואז לחתום עם למשל ארנק לא מקוון %1, או עם ארנק חומרה תואם-PSKT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3552,24 +3552,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">שגיאה</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">לא ניתן לפענח PSBT מתוך לוח הגזירים (base64 שגוי)  </translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">לא ניתן לפענח PSKT מתוך לוח הגזירים (base64 שגוי)  </translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">טעינת נתוני עיסקה</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">עיסקה חתומה חלקית  (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">עיסקה חתומה חלקית  (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">קובץ PSBT צריך להיות קטמן מ 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">קובץ PSKT צריך להיות קטמן מ 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">לא מצליח לפענח PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">לא מצליח לפענח PSKT</translation>
     </message>
 </context>
 <context>
@@ -3612,8 +3612,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">לא ניתן לשמור את העסקה כטיוטה.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT הועתקה</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT הועתקה</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

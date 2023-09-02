@@ -3,29 +3,29 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef KOYOTECOIN_QT_PSBTOPERATIONSDIALOG_H
-#define KOYOTECOIN_QT_PSBTOPERATIONSDIALOG_H
+#ifndef KOYOTECOIN_QT_PSKTOPERATIONSDIALOG_H
+#define KOYOTECOIN_QT_PSKTOPERATIONSDIALOG_H
 
 #include <QDialog>
 
-#include <psbt.h>
+#include <pskt.h>
 #include <qt/clientmodel.h>
 #include <qt/walletmodel.h>
 
 namespace Ui {
-class PSBTOperationsDialog;
+class PSKTOperationsDialog;
 }
 
 /** Dialog showing transaction details. */
-class PSBTOperationsDialog : public QDialog
+class PSKTOperationsDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit PSBTOperationsDialog(QWidget* parent, WalletModel* walletModel, ClientModel* clientModel);
-    ~PSBTOperationsDialog();
+    explicit PSKTOperationsDialog(QWidget* parent, WalletModel* walletModel, ClientModel* clientModel);
+    ~PSKTOperationsDialog();
 
-    void openWithPSBT(PartiallySignedTransaction psbtx);
+    void openWithPSKT(PartiallySignedTransaction psktx);
 
 public Q_SLOTS:
     void signTransaction();
@@ -34,7 +34,7 @@ public Q_SLOTS:
     void saveTransaction();
 
 private:
-    Ui::PSBTOperationsDialog* m_ui;
+    Ui::PSKTOperationsDialog* m_ui;
     PartiallySignedTransaction m_transaction_data;
     WalletModel* m_wallet_model;
     ClientModel* m_client_model;
@@ -45,11 +45,11 @@ private:
         ERR
     };
 
-    size_t couldSignInputs(const PartiallySignedTransaction &psbtx);
+    size_t couldSignInputs(const PartiallySignedTransaction &psktx);
     void updateTransactionDisplay();
-    std::string renderTransaction(const PartiallySignedTransaction &psbtx);
+    std::string renderTransaction(const PartiallySignedTransaction &psktx);
     void showStatus(const QString &msg, StatusLevel level);
-    void showTransactionStatus(const PartiallySignedTransaction &psbtx);
+    void showTransactionStatus(const PartiallySignedTransaction &psktx);
 };
 
-#endif // KOYOTECOIN_QT_PSBTOPERATIONSDIALOG_H
+#endif // KOYOTECOIN_QT_PSKTOPERATIONSDIALOG_H

@@ -96,7 +96,7 @@ public:
     bool getUseEmbeddedMonospacedFont() const { return m_use_embedded_monospaced_font; }
     bool getCoinControlFeatures() const { return fCoinControlFeatures; }
     bool getSubFeeFromAmount() const { return m_sub_fee_from_amount; }
-    bool getEnablePSKYControls() const { return m_enable_psbt_controls; }
+    bool getEnablePSKYControls() const { return m_enable_pskt_controls; }
     const QString& getOverriddenByCommandLine() { return strOverriddenByCommandLine; }
 
     /* Explicit setters */
@@ -120,7 +120,7 @@ private:
     bool m_use_embedded_monospaced_font;
     bool fCoinControlFeatures;
     bool m_sub_fee_from_amount;
-    bool m_enable_psbt_controls;
+    bool m_enable_pskt_controls;
 
     //! In-memory settings for display. These are stored persistently by the
     //! koyotecoin node but it's also nice to store them in memory to prevent them

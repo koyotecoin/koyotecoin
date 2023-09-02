@@ -291,7 +291,7 @@
         <translation type="unfinished">reindex-chainstate tùy chọn không tương thích với -txindex. Vui lòng tạp thời vô hiệu hóa txindex trong khi sử dụng -reindex-chainstate, hoặc thay thế -reindex-chainstate bởi -reindex để tái thiết lập đẩy đủ tất cả các chỉ số.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Giả sử hợp lệ: lần đồng bộ ví gần nhất vượt ra ngoài dữ liệu khả dụng của khối. Bạn cần phải chờ quá trình xác thực nền tảng của chuối để tải về nhiều khối hơn.</translation>
     </message>
     <message>
@@ -436,8 +436,8 @@
         <translation type="unfinished">Kết nối với mạng Koyotecoin thông qua một proxy SOCKS5 riêng cho các dịch vụ Tor hành.</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Tải PSBT từ &amp;khay nhớ tạm…</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Tải PSKT từ &amp;khay nhớ tạm…</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -865,14 +865,14 @@
         <translation type="unfinished">&amp;Chi tiêu thay đổi chưa được xác nhận</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Bật điều khiển &amp;PSBT</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Bật điều khiển &amp;PSKT</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Có hiển thị các điều khiển PSBT hay không.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Có hiển thị các điều khiển PSKT hay không.</translation>
     </message>
     <message>
         <source>Third-party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -905,7 +905,7 @@
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Cannot sign inputs while wallet is locked.</source>
         <translation type="unfinished">Không thể ký đầu vào khi ví bị khóa.</translation>
@@ -1001,9 +1001,9 @@
         <translation type="unfinished">Bạn có muốn tạo giao dịch này không?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Vui lòng xem lại giao dịch của bạn. Bạn có thể tạo và gửi giao dịch này hoặc tạo Giao dịch Koyotecoin được ký một phần (PSBT), bạn có thể lưu hoặc sao chép và sau đó ký bằng, ví dụ: ví %1 ngoại tuyến hoặc ví phần cứng tương thích với PSBT.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Vui lòng xem lại giao dịch của bạn. Bạn có thể tạo và gửi giao dịch này hoặc tạo Giao dịch Koyotecoin được ký một phần (PSKT), bạn có thể lưu hoặc sao chép và sau đó ký bằng, ví dụ: ví %1 ngoại tuyến hoặc ví phần cứng tương thích với PSKT.</translation>
     </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>

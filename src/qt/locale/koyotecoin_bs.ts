@@ -1258,7 +1258,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
-        <translation type="unfinished">Ako ste odlučili ograničiti skladištenje lanca blokova (obrezivanje), povijesni podaci i dalje se moraju preuzeti i obraditi, ali će se nakon toga izbrihowli kako bi se smanjila upotreba diska.</translation>
+        <translation type="unfinished">Ako ste odlučili ograničiti skladištenje lanca blokova (obrezivanje), povijesni podaci i dalje se moraju preuzeti i obraditi, ali će se nakon toga izbrisati kako bi se smanjila upotreba diska.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1319,7 +1319,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Progress increase per hour</source>
-        <translation type="unfinished">Povećanje napretka po howlu</translation>
+        <translation type="unfinished">Povećanje napretka po satu</translation>
     </message>
     <message>
         <source>Estimated time left until synced</source>

@@ -522,7 +522,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">剪定設定が、設定可能最小値の %d MiBより低く設定されています。より大きい値を使用してください。</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">剪定: 最後のウォレット同期ポイントが、剪定されたデータを越えています。-reindex を実行する必要があります (剪定されたノードの場合、ブロックチェーン全体を再ダウンロードします)</translation>
     </message>
     <message>
@@ -1178,8 +1178,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">メッセージを検証して、指定された Koyotecoin アドレスで署名されたことを確認する</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">PSBTをファイルから読む…(&amp;L)</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">PSKTをファイルから読む…(&amp;L)</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1296,8 +1296,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">部分的に署名されたビットコインのトランザクションを読み込み</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">PSBTをクリップボードから読む…</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">PSKTをクリップボードから読む…</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1967,7 +1967,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">この設定を元に戻すには、ブロックチェーン全体を再ダウンロードする必要があります。先にチェーン全体をダウンロードしてから、剪定する方が高速です。一部の高度な機能を無効にします。</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">この初回同期には多大なリソースを消費し、あなたのコンピュータでこれまで見つからなかったハードウェア上の問題が発生する場合があります。%1 を実行する度に、中断された時点からダウンロードを再開します。</translation>
     </message>
     <message>
@@ -2201,14 +2201,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">未承認のお釣りを使用する(&amp;S)</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">PSBT コントロールを有効にする</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">PSKT コントロールを有効にする</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">PSBTコントロールを表示するか否か</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">PSKTコントロールを表示するか否か</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2493,7 +2493,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">ダイアログ</translation>
@@ -2555,8 +2555,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">トランザクションのブロードキャストが失敗しました: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBTをクリップボードにコピーしました.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKTをクリップボードにコピーしました.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2564,12 +2564,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">部分的に署名されたトランザクション（バイナリ）</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBTはディスクに保存されました。</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKTはディスクに保存されました。</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3494,7 +3494,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Replace-By-Fee を有効化する</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Replace-By-Fee(手数料の上乗せ: BIP-125)機能を有効にすることで、トランザクション送信後でも手数料を上乗せすることができます。この機能を利用しない場合、予め手数料を多めに見積もっておかないと取引が遅れる可能性があります。</translation>
     </message>
     <message>
@@ -3564,8 +3564,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">未署名で作成</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">オフライン%1ウォレットまたはPSBTに対応したハードウェアウォレットと合わせて使用するためのPSBT(部分的に署名されたトランザクション)を作成します。</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">オフライン%1ウォレットまたはPSKTに対応したハードウェアウォレットと合わせて使用するためのPSKT(部分的に署名されたトランザクション)を作成します。</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3603,12 +3603,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">部分的に署名されたトランザクション（バイナリ）</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBTは保存されました</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKTは保存されました</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3623,9 +3623,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">手数料は後から上乗せ可能です(Replace-By-Fee(手数料の上乗せ: BIP-125)機能が有効)。</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">トランザクション提案を確認してください。これにより、部分的に署名されたビットコイン・トランザクション（PSBT）が作成されます。これを保存するかコピーして例えばオフラインの %1 ウォレットやPSBTを扱えるハードウェアウォレットで残りの署名が出来ます。</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">トランザクション提案を確認してください。これにより、部分的に署名されたビットコイン・トランザクション（PSKT）が作成されます。これを保存するかコピーして例えばオフラインの %1 ウォレットやPSKTを扱えるハードウェアウォレットで残りの署名が出来ます。</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3633,9 +3633,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">この取引を作成しますか？</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">取引を確認してください。 この取引を作成して送信するか、部分的に署名されたビットコイン取引（Partially Signed Koyotecoin Transaction: PSBT）を作成できます。これを保存またはコピーして、オフラインの %1 ウォレットやPSBT互換のハードウェアウォレットなどで署名できます。</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">取引を確認してください。 この取引を作成して送信するか、部分的に署名されたビットコイン取引（Partially Signed Koyotecoin Transaction: PSKT）を作成できます。これを保存またはコピーして、オフラインの %1 ウォレットやPSKT互換のハードウェアウォレットなどで署名できます。</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4391,24 +4391,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">エラー</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">クリップボードのPSBTをデコードできません（無効なbase64）</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">クリップボードのPSKTをデコードできません（無効なbase64）</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">トランザクションデータのロード</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">部分的に署名されたトランザクション (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">部分的に署名されたトランザクション (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">PSBTファイルは、100MBより小さい必要があります。</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">PSKTファイルは、100MBより小さい必要があります。</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">PSBTファイルを復号できません</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">PSKTファイルを復号できません</translation>
     </message>
 </context>
 <context>
@@ -4455,8 +4455,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">トランザクションのひな型を作成できませんでした。</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBTがコピーされました</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKTがコピーされました</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

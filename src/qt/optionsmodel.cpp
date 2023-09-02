@@ -70,8 +70,7 @@ static void UpdateRwSetting(interfaces::Node& node, OptionsModel::OptionID optio
         // Write certain old settings as strings, even though they are numbers,
         // because Koyotecoin 22.x releases try to read these specific settings as
         // strings in addOverriddenOption() calls at startup, triggering
-        // uncaught exceptions in UniValue::get_str(). These errors were fixed
-        // in later releases by https://github.com/koyotecoin/koyotecoin/pull/24498.
+        // uncaught exceptions in UniValue::get_str().
         // If new numeric settings are added, they can be written as numbers
         // instead of strings, because koyotecoin 22.x will not try to read these.
         node.updateRwSetting(SettingName(option), value.getValStr());
@@ -185,10 +184,10 @@ bool OptionsModel::Init(bilingual_str& error)
         settings.setValue("fCoinControlFeatures", false);
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
 
-    if (!settings.contains("enable_psbt_controls")) {
-        settings.setValue("enable_psbt_controls", false);
+    if (!settings.contains("enable_pskt_controls")) {
+        settings.setValue("enable_pskt_controls", false);
     }
-    m_enable_psbt_controls = settings.value("enable_psbt_controls", false).toBool();
+    m_enable_pskt_controls = settings.value("enable_pskt_controls", false).toBool();
 
     // These are shared with the core or have a command-line parameter
     // and we want command-line parameters to overwrite the GUI settings.
@@ -423,7 +422,7 @@ QVariant OptionsModel::getOption(OptionID option) const
     case CoinControlFeatures:
         return fCoinControlFeatures;
     case EnablePSKYControls:
-        return settings.value("enable_psbt_controls");
+        return settings.value("enable_pskt_controls");
     case Prune:
         return PruneEnabled(setting());
     case PruneSize:
@@ -576,8 +575,8 @@ bool OptionsModel::setOption(OptionID option, const QVariant& value)
         Q_EMIT coinControlFeaturesChanged(fCoinControlFeatures);
         break;
     case EnablePSKYControls:
-        m_enable_psbt_controls = value.toBool();
-        settings.setValue("enable_psbt_controls", m_enable_psbt_controls);
+        m_enable_pskt_controls = value.toBool();
+        settings.setValue("enable_pskt_controls", m_enable_pskt_controls);
         break;
     case Prune:
         if (changed()) {
@@ -650,8 +649,7 @@ void OptionsModel::checkAndMigrate()
     int settingsVersion = settings.contains(strSettingsVersionKey) ? settings.value(strSettingsVersionKey).toInt() : 0;
     if (settingsVersion < CLIENT_VERSION)
     {
-        // -dbcache was bumped from 100 to 300 in 0.13
-        // see https://github.com/koyotecoin/koyotecoin/pull/8273
+        // -dbcache was bumped from 100 to 300.
         // force people to upgrade to the new value if they are using 100MB
         if (settingsVersion < 130000 && settings.contains("nDatabaseCache") && settings.value("nDatabaseCache").toLongLong() == 100)
             settings.setValue("nDatabaseCache", (qint64)nDefaultDbCache);
@@ -713,6 +711,5 @@ void OptionsModel::checkAndMigrate()
     // parameter interaction code to update other settings. This is particularly
     // important for the -listen setting, which should cause -listenonion, -upnp,
     // and other settings to default to false if it was set to false.
-    // (https://github.com/koyotecoin/gui/issues/567).
     node().initParameterInteraction();
 }

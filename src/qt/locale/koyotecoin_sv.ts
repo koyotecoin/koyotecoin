@@ -422,7 +422,7 @@ Försök igen.</translation>
         <translation type="unfinished">Gallring konfigurerad under miniminivån %d MiB. Använd ett högre värde.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Gallring: senaste plånbokssynkroniseringen ligger utanför gallrade data. Du måste använda -reindex (ladda ner hela blockkedjan igen om noden gallrats)</translation>
     </message>
     <message>
@@ -966,8 +966,8 @@ Försök igen.</translation>
         <translation type="unfinished">Verifiera meddelanden för att vara säker på att de signerades med angivna Koyotecoin-adresser</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Ladda PSBT från fil…</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Ladda PSKT från fil…</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1078,15 +1078,15 @@ Försök igen.</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction</source>
-        <translation type="unfinished">Läs in Delvis signerad Koyotecoin transaktion (PSBT)</translation>
+        <translation type="unfinished">Läs in Delvis signerad Koyotecoin transaktion (PSKT)</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Ladda PSBT från &amp;urklipp...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Ladda PSKT från &amp;urklipp...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
-        <translation type="unfinished">Läs in Delvis signerad Koyotecoin transaktion (PSBT) från urklipp</translation>
+        <translation type="unfinished">Läs in Delvis signerad Koyotecoin transaktion (PSKT) från urklipp</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -1748,7 +1748,7 @@ Försök igen.</translation>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Denna första synkronisering är väldigt krävande, och kan påvisa hårdvaruproblem hos din dator som tidigare inte vihowl sig. Varje gång du kör %1, kommer nerladdningen att fortsätta där den avslutades.</translation>
     </message>
     <message>
@@ -1942,9 +1942,9 @@ Försök igen.</translation>
         <translation type="unfinished">&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Aktivera &amp;PSBT-kontroll</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Aktivera &amp;PSKT-kontroll</translation>
     </message>
     <message>
         <source>Automatically open the Koyotecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
@@ -2176,7 +2176,7 @@ Försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Sign Tx</source>
         <translation type="unfinished">Signera transaktion</translation>
@@ -2214,16 +2214,16 @@ Försök igen.</translation>
         <translation type="unfinished">Ett fel uppstod när transaktionen behandlades.</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT kopierad till urklipp.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT kopierad till urklipp.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
         <translation type="unfinished">Spara transaktionsdetaljer</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT sparad till disk.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT sparad till disk.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -2963,7 +2963,7 @@ Försök igen.</translation>
         <translation type="unfinished">Aktivera Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Med Replace-By-Fee (BIP-125) kan du höja transaktionsavgiften efter att transaktionen skickats. Om du väljer bort det kan en högre avgift rekommenderas för att kompensera för ökad risk att transaktionen fördröjs.</translation>
     </message>
     <message>
@@ -3019,8 +3019,8 @@ Försök igen.</translation>
         <translation type="unfinished">Sk&amp;apa Osignerad</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Skapar en delvis signerad Koyotecoin transaktion (PSBT) att använda vid t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Skapar en delvis signerad Koyotecoin transaktion (PSKT) att använda vid t.ex. en offline %1 plånbok, eller en PSKT-kompatibel hårdvaruplånbok.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3043,8 +3043,8 @@ Försök igen.</translation>
         <translation type="unfinished">Spara transaktionsdetaljer</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT sparad</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT sparad</translation>
     </message>
     <message>
         <source>or</source>
@@ -3055,9 +3055,9 @@ Försök igen.</translation>
         <translation type="unfinished">Du kan höja avgiften senare (signalerar Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Verifiera ditt transaktionsförslag. Det kommer skapas en delvis signerad Koyotecoin transaktion (PSBT) som du kan spara eller kopiera och sen signera med t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Verifiera ditt transaktionsförslag. Det kommer skapas en delvis signerad Koyotecoin transaktion (PSKT) som du kan spara eller kopiera och sen signera med t.ex. en offline %1 plånbok, eller en PSKT-kompatibel hårdvaruplånbok.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3767,24 +3767,24 @@ Gå till Fil &gt; Öppna plånbok för att läsa in en plånbok.
         <translation type="unfinished">Fel</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Kan inte läsa in PSBT från urklipp (ogiltig base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Kan inte läsa in PSKT från urklipp (ogiltig base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Läs in transaktionsdata</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Delvis signerad transaktion (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Delvis signerad transaktion (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">PSBT-filen måste vara mindre än 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">PSKT-filen måste vara mindre än 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Kan inte läsa in PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Kan inte läsa in PSKT</translation>
     </message>
 </context>
 <context>
@@ -3823,8 +3823,8 @@ Gå till Fil &gt; Öppna plånbok för att läsa in en plånbok.
         <translation type="unfinished">Bekräfta avgiftshöjning</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT kopierad</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT kopierad</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

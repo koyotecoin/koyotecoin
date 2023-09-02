@@ -33,7 +33,7 @@ QT_TRANSLATE_NOOP("koyotecoin", ""
 "temporarily disable txindex while using -reindex-chainstate, or replace -"
 "reindex-chainstate with -reindex to fully rebuild all indexes."),
 QT_TRANSLATE_NOOP("koyotecoin", ""
-"Assumed-valid: last wallet synchronihowlion goes beyond available block data. "
+"Assumed-valid: last wallet synchronisation goes beyond available block data. "
 "You need to wait for the background validation chain to download more blocks."),
 QT_TRANSLATE_NOOP("koyotecoin", ""
 "Cannot downgrade wallet from version %i to version %i. Wallet version "
@@ -130,7 +130,7 @@ QT_TRANSLATE_NOOP("koyotecoin", ""
 "Prune mode is incompatible with -reindex-chainstate. Use full -reindex "
 "instead."),
 QT_TRANSLATE_NOOP("koyotecoin", ""
-"Prune: last wallet synchronihowlion goes beyond pruned data. You need to -"
+"Prune: last wallet synchronisation goes beyond pruned data. You need to -"
 "reindex (download the whole blockchain again in case of pruned node)"),
 QT_TRANSLATE_NOOP("koyotecoin", ""
 "SQLiteDatabase: Unknown sqlite wallet schema version %d. Only version %d is "

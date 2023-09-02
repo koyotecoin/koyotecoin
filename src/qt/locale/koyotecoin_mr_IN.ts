@@ -213,8 +213,8 @@
         <translation type="unfinished">&amp;संदेश सत्यापित करा...</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">फाइलमधून PSBT &amp;लोड करा...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">फाइलमधून PSKT &amp;लोड करा...</translation>
     </message>
     <message>
         <source>Close Wallet…</source>

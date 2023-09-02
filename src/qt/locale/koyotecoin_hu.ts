@@ -516,7 +516,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Nyesés konfigurálásának megkísérlése a minimális %d MiB alá. Kérjük, használjon egy magasabb értéket.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Nyesés: az utolsó tárcaszinkronizálás meghaladja a nyesett adatokat. Szükséges a -reindex használata (nyesett csomópont esetében a teljes blokklánc ismételt letöltése).</translation>
     </message>
     <message>
@@ -1188,8 +1188,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Üzenetek ellenőrzése, hogy valóban a megjelölt Koyotecoin-címekkel vannak-e aláírva</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">PSBT betöltése &amp;fájlból…</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">PSKT betöltése &amp;fájlból…</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1303,15 +1303,15 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction</source>
-        <translation type="unfinished">Részlegesen aláírt Koyotecoin tranzakció (PSBT) betöltése</translation>
+        <translation type="unfinished">Részlegesen aláírt Koyotecoin tranzakció (PSKT) betöltése</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">PSBT betöltése &amp;vágólapról...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">PSKT betöltése &amp;vágólapról...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
-        <translation type="unfinished">Részlegesen aláírt Koyotecoin tranzakció (PSBT) betöltése vágólapról</translation>
+        <translation type="unfinished">Részlegesen aláírt Koyotecoin tranzakció (PSKT) betöltése vágólapról</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -1981,7 +1981,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Az első szinkronizáció nagyon erőforrás-igényes és felszínre hozhat a számítógépében eddig rejtve maradt hardver problémákat. Minden %1 indításnál a program onnan folytatja a letöltést, ahol legutóbb abbahagyta.</translation>
     </message>
     <message>
@@ -2219,14 +2219,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">A jóváhagyatlan visszajáró el&amp;költése</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">&amp;PSBT vezérlők engedélyezése</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">&amp;PSKT vezérlők engedélyezése</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Láthatóak legyenek-e a PSBT vezérlők.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Láthatóak legyenek-e a PSKT vezérlők.</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2503,7 +2503,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Párbeszéd</translation>
@@ -2565,8 +2565,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tranzakció szétküldése sikertelen: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT vágólapra másolva.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT vágólapra másolva.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2574,12 +2574,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
-        <translation type="unfinished">Részlegesen Aláírt Tranzakció (PSBT bináris)</translation>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
+        <translation type="unfinished">Részlegesen Aláírt Tranzakció (PSKT bináris)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT háttértárolóra mentve.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT háttértárolóra mentve.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3489,7 +3489,7 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 howloshi kvB-n
         <translation type="unfinished">Replace-By-Fee bekapcsolása</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">A Replace-By-Fee (BIP-125) funkciót használva küldés után is megemelheti a tranzakciós díjat. Ha ezt nem szeretné akkor magasabb díjat érdemes használni, hogy kisebb legyen a késedelem.</translation>
     </message>
     <message>
@@ -3559,8 +3559,8 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 howloshi kvB-n
         <translation type="unfinished">&amp;Aláíratlan Létrehozása</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Létrehoz egy Részlegesen Aláírt Koyotecoin Tranzakciót (PSBT) melyet offline %1 tárcával vagy egy PSBT kompatibilis hardver tárcával használhat.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Létrehoz egy Részlegesen Aláírt Koyotecoin Tranzakciót (PSKT) melyet offline %1 tárcával vagy egy PSKT kompatibilis hardver tárcával használhat.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3598,11 +3598,11 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 howloshi kvB-n
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
-        <translation type="unfinished">Részlegesen Aláírt Tranzakció (PSBT bináris)</translation>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
+        <translation type="unfinished">Részlegesen Aláírt Tranzakció (PSKT bináris)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
+        <source>PSKT saved</source>
         <translation type="unfinished">PBST elmentve</translation>
     </message>
     <message>
@@ -3618,9 +3618,9 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 howloshi kvB-n
         <translation type="unfinished">Később növelheti a tranzakció díját (Replace-By-Fee-t jelez, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Kérjük nézze át a tranzakciós javaslatot. Ez létrehoz egy Részlegesen Aláírt Koyotecoin Tranzakciót (PSBT) amit elmenthet vagy kimásolhat amit később aláírhatja offline %1 tárcával vagy egy PSBT kompatibilis hardvertárcával.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Kérjük nézze át a tranzakciós javaslatot. Ez létrehoz egy Részlegesen Aláírt Koyotecoin Tranzakciót (PSKT) amit elmenthet vagy kimásolhat amit később aláírhatja offline %1 tárcával vagy egy PSKT kompatibilis hardvertárcával.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3628,9 +3628,9 @@ Megjegyzés: Mivel a díj bájtonként van kiszámítva, egy "100 howloshi kvB-n
         <translation type="unfinished">Biztosan létrehozza ezt a tranzakciót?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Kérjük nézze át a tranzakció részleteit. Véglegesítheti és elküldheti ezt a tranzakciót vagy létrehozhat egy Részlegesen Aláírt Koyotecoin Tranzakciót (PSBT) amit elmentve vagy átmásolva aláírhat egy offline %1 tárcával, vagy PSBT-t támogató hardvertárcával.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Kérjük nézze át a tranzakció részleteit. Véglegesítheti és elküldheti ezt a tranzakciót vagy létrehozhat egy Részlegesen Aláírt Koyotecoin Tranzakciót (PSKT) amit elmentve vagy átmásolva aláírhat egy offline %1 tárcával, vagy PSKT-t támogató hardvertárcával.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4387,24 +4387,24 @@ A "Fájl &gt; Tárca megnyitása" menüben tölthet be egyet.
         <translation type="unfinished">Hiba</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">PSBT sikertelen dekódolása a vágólapról (érvénytelen base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">PSKT sikertelen dekódolása a vágólapról (érvénytelen base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Tranzakció adatainak betöltése</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Részlegesen Aláírt Tranzakció (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Részlegesen Aláírt Tranzakció (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">A PSBT fájlnak kisebbnek kell lennie, mint 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">A PSKT fájlnak kisebbnek kell lennie, mint 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">PSBT dekódolása sikertelen</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">PSKT dekódolása sikertelen</translation>
     </message>
 </context>
 <context>
@@ -4451,8 +4451,8 @@ A "Fájl &gt; Tárca megnyitása" menüben tölthet be egyet.
         <translation type="unfinished">Tranzakciós piszkozat létrehozása sikertelen.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT másolva</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT másolva</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

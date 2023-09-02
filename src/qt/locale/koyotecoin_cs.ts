@@ -517,7 +517,7 @@ Ověřuji peněženku.</translation>
         <translation type="unfinished">Režim pročištění je nekompatibilní s parametrem -reindex-chainstate. Místo toho použij plný -reindex.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Prořezávání: poslední synchronizace peněženky proběhla před už prořezanými daty. Je třeba provést -reindex (tedy v případě prořezávacího režimu stáhnout znovu celý blockchain)</translation>
     </message>
     <message>
@@ -645,7 +645,7 @@ Ověřuji peněženku.</translation>
         <translation type="unfinished">Parametr -reindex-chainstate není kompatibilní s parametrem -txindex. Při použití -reindex-chainstate dočasně zakažte parametr -txindex nebo nahraďte parametr -reindex-chainstate parametrem -reindex pro úplné opětovné sestavení všech indexů.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Předpokládaná platnost: poslední synchronizace peněženky přesahuje dostupná data bloků. Je potřeba počkat až ověření řetězců v pozadí stáhne další bloky.</translation>
     </message>
     <message>
@@ -1329,8 +1329,8 @@ Nelze obnovit zálohu peněženky.</translation>
         <translation type="unfinished">Ověř zprávy, aby ses ujistil, že byly podepsány danými koyotecoinovými adresami</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Načíst PSBT ze souboru...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Načíst PSKT ze souboru...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1449,8 +1449,8 @@ Nelze obnovit zálohu peněženky.</translation>
         <translation type="unfinished">Načíst částečně podepsanou Koyotecoinovou transakci</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Načíst PSBT ze &amp;schránky</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Načíst PSKT ze &amp;schránky</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -2190,7 +2190,7 @@ Nelze obnovit zálohu peněženky.</translation>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Prvotní synchronizace je velice náročná, a mohou se tak díky ní začít na tvém počítači projevovat dosud skryté hardwarové problémy. Pokaždé, když spustíš %1, bude stahování pokračovat tam, kde skončilo.</translation>
     </message>
     <message>
@@ -2440,14 +2440,14 @@ Nelze obnovit zálohu peněženky.</translation>
         <translation type="unfinished">&amp;Utrácet i ještě nepotvrzené drobné</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Povolit &amp;PSBT kontrolu</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Povolit &amp;PSKT kontrolu</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Zobrazit ovládací prvky PSBT.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Zobrazit ovládací prvky PSKT.</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2748,7 +2748,7 @@ Nelze obnovit zálohu peněženky.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Sign Tx</source>
         <translation type="unfinished">Podephowl transakci</translation>
@@ -2806,8 +2806,8 @@ Nelze obnovit zálohu peněženky.</translation>
         <translation type="unfinished">Odeslání transakce se nezdařilo: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT zkopírována do schránky.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT zkopírována do schránky.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2815,12 +2815,12 @@ Nelze obnovit zálohu peněženky.</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">částečně podepsaná transakce (binární)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT uložena na disk.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT uložena na disk.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3744,7 +3744,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Povolit možnost dodatečně transakci navýšit poplatek (tzv. „replace-by-fee“)</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">S dodatečným navýšením poplatku (BIP-125, tzv. „Replace-By-Fee“) můžete zvýšit poplatek i po odeslání. Bez dodatečného navýšení bude navrhnut vyšší transakční poplatek, tak aby kompenzoval zvýšené riziko prodlení transakce.</translation>
     </message>
     <message>
@@ -3814,8 +3814,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Vytvořit bez podpisu</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Vytvořit částečně podepsanou Koyotecoin transakci (Partially Signed Koyotecoin Transaction - PSBT) k použtí kupříkladu s offline %1 peněženkou nebo s jinou kompatibilní PSBT hardware peněženkou.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Vytvořit částečně podepsanou Koyotecoin transakci (Partially Signed Koyotecoin Transaction - PSKT) k použtí kupříkladu s offline %1 peněženkou nebo s jinou kompatibilní PSKT hardware peněženkou.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3853,12 +3853,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">částečně podepsaná transakce (binární)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT uložena</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT uložena</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3873,9 +3873,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Poplatek můžete navýšit později (vysílá se "Replace-By-Fee" - nahrazení poplatkem, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Zkontrolujte prosím svůj návrh transakce. Výsledkem bude částečně podepsaná koyotecoinová transakce (PSBT), kterou můžete uložit nebo kopírovat a poté podephowl např. pomocí offline %1 peněženky nebo hardwarové peněženky kompatibilní s PSBT.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Zkontrolujte prosím svůj návrh transakce. Výsledkem bude částečně podepsaná koyotecoinová transakce (PSKT), kterou můžete uložit nebo kopírovat a poté podephowl např. pomocí offline %1 peněženky nebo hardwarové peněženky kompatibilní s PSKT.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3883,9 +3883,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Přejete si vytvořit tuto transakci?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Prosím ověř svojí transakci. Můžeš vytvořit a odeslat tuto transakci nebo vytvořit Částečně Podepsanou Koyotecoinovou Transakci (PSBT), kterou můžeš uložit nebo zkopírovat a poté podephowl např. v offline %1 peněžence, nebo hardwarové peněžence kompatibilní s PSBT.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Prosím ověř svojí transakci. Můžeš vytvořit a odeslat tuto transakci nebo vytvořit Částečně Podepsanou Koyotecoinovou Transakci (PSKT), kterou můžeš uložit nebo zkopírovat a poté podephowl např. v offline %1 peněžence, nebo hardwarové peněžence kompatibilní s PSKT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4640,24 +4640,24 @@ Přejděte do Soubor &gt; Otevřít peněženku pro načtení peněženky.
         <translation type="unfinished">Chyba</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Nelze dekódovat PSBT ze schránky (neplatné kódování base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Nelze dekódovat PSKT ze schránky (neplatné kódování base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Načíst data o transakci</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Částečně podepsaná transakce (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Částečně podepsaná transakce (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">Soubor PSBT musí být menší než 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">Soubor PSKT musí být menší než 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Nelze dekódovat PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Nelze dekódovat PSKT</translation>
     </message>
 </context>
 <context>
@@ -4704,8 +4704,8 @@ Přejděte do Soubor &gt; Otevřít peněženku pro načtení peněženky.
         <translation type="unfinished">Nelze navrhnout transakci.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT zkopírována</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT zkopírována</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

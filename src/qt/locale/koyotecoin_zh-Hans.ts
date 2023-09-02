@@ -533,7 +533,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">修剪模式与 -reindex-chainstate 不兼容。请进行一次完整的 -reindex 。</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">修剪:上次同步钱包的位置已经超出（落后于）现有修剪后数据的范围。你需要进行-reindex（对于已经启用修剪节点，就需要重新下载整个区块链）</translation>
     </message>
     <message>
@@ -661,7 +661,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">-reindex-chainstate 与 -txindex 不兼容。请在进行 -reindex-chainstate 时临时禁用 txindex ，或者改用 -reindex （而不是 -reindex-chainstate ）来完整地重建所有索引。</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">假定有效（assume-valid）: 上次同步钱包时进度越过了现有的区块数据。你需要等待后台验证链下载更多的区块。</translation>
     </message>
     <message>
@@ -1345,8 +1345,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">从文件加载PSBT(&amp;L)...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">从文件加载PSKT(&amp;L)...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1460,15 +1460,15 @@ Unable to restore backup of wallet.</source>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction</source>
-        <translation type="unfinished">加载部分签名比特币交易（PSBT）</translation>
+        <translation type="unfinished">加载部分签名比特币交易（PSKT）</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">从剪贴板加载PSBT(&amp;C)...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">从剪贴板加载PSKT(&amp;C)...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
-        <translation type="unfinished">从剪贴板中加载部分签名比特币交易（PSBT）</translation>
+        <translation type="unfinished">从剪贴板中加载部分签名比特币交易（PSKT）</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -2194,7 +2194,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">取消此设置需要重新下载整个区块链。先完整下载整条链再进行修剪会更快。这会禁用一些高级功能。</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">初始化同步过程是非常吃力的，同时可能会暴露您之前没有注意到的电脑硬件问题。你每次启动%1时，它都会从之前中断的地方继续下载。</translation>
     </message>
     <message>
@@ -2440,14 +2440,14 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">动用尚未确认的找零资金(&amp;S)</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">启用&amp;PSBT控件</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">启用&amp;PSKT控件</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">是否要显示PSBT控件</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">是否要显示PSKT控件</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2748,7 +2748,7 @@ Unable to restore backup of wallet.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">会话</translation>
@@ -2810,8 +2810,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">交易广播失败: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">已复制PSBT到剪贴板</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">已复制PSKT到剪贴板</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2819,12 +2819,12 @@ Unable to restore backup of wallet.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">部分签名交易(二进制)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT已保存到硬盘</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT已保存到硬盘</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3768,7 +3768,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">启用手续费追加</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">手续费追加（Replace-By-Fee，BIP-125）可以让你在送出交易后继续追加手续费。不用这个功能的话，建议付比较高的手续费来降低交易延迟的风险。</translation>
     </message>
     <message>
@@ -3838,8 +3838,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">创建未签名交易(&amp;E)</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">创建一个“部分签名比特币交易”（PSBT），以用于诸如离线%1钱包，或是兼容PSBT的硬件钱包这类用途。</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">创建一个“部分签名比特币交易”（PSKT），以用于诸如离线%1钱包，或是兼容PSKT的硬件钱包这类用途。</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3877,12 +3877,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">部分签名交易(二进制)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">已保存PSBT</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">已保存PSKT</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3897,9 +3897,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">你可以后来再追加手续费（打上支持BIP-125手续费追加的标记）</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">请务必仔细检查您的交易请求。这会产生一个部分签名比特币交易(PSBT)，可以把保存下来或复制出去，然后就可以对它进行签名，比如用离线%1钱包，或是用兼容PSBT的硬件钱包。</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">请务必仔细检查您的交易请求。这会产生一个部分签名比特币交易(PSKT)，可以把保存下来或复制出去，然后就可以对它进行签名，比如用离线%1钱包，或是用兼容PSKT的硬件钱包。</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3907,9 +3907,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">要创建这笔交易吗？</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">请务必仔细检查您的交易。你可以创建并发送这笔交易；也可以创建一个“部分签名比特币交易(PSBT)”，它可以被保存下来或被复制出去，然后就可以对它进行签名，比如用离线%1钱包，或是用兼容PSBT的硬件钱包。</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">请务必仔细检查您的交易。你可以创建并发送这笔交易；也可以创建一个“部分签名比特币交易(PSKT)”，它可以被保存下来或被复制出去，然后就可以对它进行签名，比如用离线%1钱包，或是用兼容PSKT的硬件钱包。</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4672,24 +4672,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">错误</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">无法从剪贴板解码PSBT(Base64值无效)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">无法从剪贴板解码PSKT(Base64值无效)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">加载交易数据</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">部分签名交易 (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">部分签名交易 (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">PSBT文件必须小于100MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">PSKT文件必须小于100MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">无法解码PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">无法解码PSKT</translation>
     </message>
 </context>
 <context>
@@ -4736,8 +4736,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">无法起草交易。</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">已复制PSBT</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">已复制PSKT</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

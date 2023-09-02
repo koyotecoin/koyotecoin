@@ -450,7 +450,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <context-group purpose="location"><context context-type="linenumber">320</context></context-group>
       </trans-unit>
       <trans-unit id="_msg101">
-        <source xml:space="preserve">&amp;Load PSBT from file…</source>
+        <source xml:space="preserve">&amp;Load PSKT from file…</source>
         <context-group purpose="location"><context context-type="linenumber">321</context></context-group>
       </trans-unit>
       <trans-unit id="_msg102">
@@ -575,7 +575,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <context-group purpose="location"><context context-type="linenumber">322</context></context-group>
       </trans-unit>
       <trans-unit id="_msg131">
-        <source xml:space="preserve">Load PSBT from &amp;clipboard…</source>
+        <source xml:space="preserve">Load PSKT from &amp;clipboard…</source>
         <context-group purpose="location"><context context-type="linenumber">323</context></context-group>
       </trans-unit>
       <trans-unit id="_msg132">
@@ -1365,7 +1365,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <context-group purpose="location"><context context-type="linenumber">248</context></context-group>
       </trans-unit>
       <trans-unit id="_msg301">
-        <source xml:space="preserve">This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source xml:space="preserve">This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <context-group purpose="location"><context context-type="linenumber">216</context></context-group>
       </trans-unit>
       <trans-unit id="_msg302">
@@ -1620,14 +1620,14 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <context-group purpose="location"><context context-type="linenumber">251</context></context-group>
       </trans-unit>
       <trans-unit id="_msg357">
-        <source xml:space="preserve">Enable &amp;PSBT controls</source>
+        <source xml:space="preserve">Enable &amp;PSKT controls</source>
         <context-group purpose="location"><context context-type="linenumber">258</context></context-group>
-        <note annotates="source" from="developer">An options window setting to enable PSBT controls.</note>
+        <note annotates="source" from="developer">An options window setting to enable PSKT controls.</note>
       </trans-unit>
       <trans-unit id="_msg358">
-        <source xml:space="preserve">Whether to show PSBT controls.</source>
+        <source xml:space="preserve">Whether to show PSKT controls.</source>
         <context-group purpose="location"><context context-type="linenumber">261</context></context-group>
-        <note annotates="source" from="developer">Tooltip text for options window setting that enables PSBT controls.</note>
+        <note annotates="source" from="developer">Tooltip text for options window setting that enables PSKT controls.</note>
       </trans-unit>
       <trans-unit id="_msg359">
         <source xml:space="preserve">External Signer (e.g. hardware wallet)</source>
@@ -1956,8 +1956,8 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
       </trans-unit>
     </group>
   </body></file>
-  <file original="../forms/psbtoperationsdialog.ui" datatype="x-trolltech-designer-ui" source-language="en"><body>
-    <group restype="x-trolltech-linguist-context" resname="PSBTOperationsDialog">
+  <file original="../forms/psktoperationsdialog.ui" datatype="x-trolltech-designer-ui" source-language="en"><body>
+    <group restype="x-trolltech-linguist-context" resname="PSKTOperationsDialog">
       <trans-unit id="_msg433">
         <source xml:space="preserve">Dialog</source>
         <context-group purpose="location"><context context-type="linenumber">14</context></context-group>
@@ -1984,8 +1984,8 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
       </trans-unit>
     </group>
   </body></file>
-  <file original="../psbtoperationsdialog.cpp" datatype="cpp" source-language="en"><body>
-    <group restype="x-trolltech-linguist-context" resname="PSBTOperationsDialog">
+  <file original="../psktoperationsdialog.cpp" datatype="cpp" source-language="en"><body>
+    <group restype="x-trolltech-linguist-context" resname="PSKTOperationsDialog">
       <trans-unit id="_msg439">
         <source xml:space="preserve">Failed to load transaction: %1</source>
         <context-group purpose="location"><context context-type="linenumber">61</context></context-group>
@@ -2023,7 +2023,7 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
         <context-group purpose="location"><context context-type="linenumber">126</context></context-group>
       </trans-unit>
       <trans-unit id="_msg448">
-        <source xml:space="preserve">PSBT copied to clipboard.</source>
+        <source xml:space="preserve">PSKT copied to clipboard.</source>
         <context-group purpose="location"><context context-type="linenumber">135</context></context-group>
       </trans-unit>
       <trans-unit id="_msg449">
@@ -2033,10 +2033,10 @@ Signing is only possible with addresses of the type &apos;legacy&apos;.</source>
       <trans-unit id="_msg450">
         <source xml:space="preserve">Partially Signed Transaction (Binary)</source>
         <context-group purpose="location"><context context-type="linenumber">160</context></context-group>
-        <note annotates="source" from="developer">Expanded name of the binary PSBT file format. See: BIP 174.</note>
+        <note annotates="source" from="developer">Expanded name of the binary PSKT file format. See: BIP 174.</note>
       </trans-unit>
       <trans-unit id="_msg451">
-        <source xml:space="preserve">PSBT saved to disk.</source>
+        <source xml:space="preserve">PSKT saved to disk.</source>
         <context-group purpose="location"><context context-type="linenumber">167</context></context-group>
       </trans-unit>
       <trans-unit id="_msg452">
@@ -3259,7 +3259,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of &quot;100 
         <context-group purpose="location"><context context-type="linenumber">1078</context></context-group>
       </trans-unit>
       <trans-unit id="_msg708">
-        <source xml:space="preserve">With Replace-By-Fee (BIP-125) you can increase a transaction&apos;s fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source xml:space="preserve">With Replace-By-Fee (BIP-125) you can increase a transaction&apos;s fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <context-group purpose="location"><context context-type="linenumber">1081</context></context-group>
       </trans-unit>
       <trans-unit id="_msg709">
@@ -3333,7 +3333,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of &quot;100 
         <context-group purpose="location"><context context-type="linenumber">219</context></context-group>
       </trans-unit>
       <trans-unit id="_msg725">
-        <source xml:space="preserve">Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source xml:space="preserve">Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
         <context-group purpose="location"><context context-type="linenumber">220</context></context-group>
       </trans-unit>
       <trans-unit id="_msg726">
@@ -3373,10 +3373,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of &quot;100 
       <trans-unit id="_msg734">
         <source xml:space="preserve">Partially Signed Transaction (Binary)</source>
         <context-group purpose="location"><context context-type="linenumber">430</context></context-group>
-        <note annotates="source" from="developer">Expanded name of the binary PSBT file format. See: BIP 174.</note>
+        <note annotates="source" from="developer">Expanded name of the binary PSKT file format. See: BIP 174.</note>
       </trans-unit>
       <trans-unit id="_msg735">
-        <source xml:space="preserve">PSBT saved</source>
+        <source xml:space="preserve">PSKT saved</source>
         <context-group purpose="location"><context context-type="linenumber">437</context></context-group>
       </trans-unit>
       <trans-unit id="_msg736">
@@ -3392,9 +3392,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of &quot;100 
         <context-group purpose="location"><context context-type="linenumber">370</context></context-group>
       </trans-unit>
       <trans-unit id="_msg739">
-        <source xml:space="preserve">Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source xml:space="preserve">Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
         <context-group purpose="location"><context context-type="linenumber">340</context></context-group>
-        <note annotates="source" from="developer">Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</note>
+        <note annotates="source" from="developer">Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</note>
       </trans-unit>
       <trans-unit id="_msg740">
         <source xml:space="preserve">Do you want to create this transaction?</source>
@@ -3402,9 +3402,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of &quot;100 
         <note annotates="source" from="developer">Message displayed when attempting to create a transaction. Cautionary text to prompt the user to verify that the displayed transaction details represent the transaction the user intends to create.</note>
       </trans-unit>
       <trans-unit id="_msg741">
-        <source xml:space="preserve">Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source xml:space="preserve">Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
         <context-group purpose="location"><context context-type="linenumber">345</context></context-group>
-        <note annotates="source" from="developer">Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</note>
+        <note annotates="source" from="developer">Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</note>
       </trans-unit>
       <trans-unit id="_msg742">
         <source xml:space="preserve">Please, review your transaction.</source>
@@ -4246,7 +4246,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <context-group purpose="location"><context context-type="linenumber">229</context></context-group>
       </trans-unit>
       <trans-unit id="_msg927">
-        <source xml:space="preserve">Unable to decode PSBT from clipboard (invalid base64)</source>
+        <source xml:space="preserve">Unable to decode PSKT from clipboard (invalid base64)</source>
         <context-group purpose="location"><context context-type="linenumber">201</context></context-group>
       </trans-unit>
       <trans-unit id="_msg928">
@@ -4254,15 +4254,15 @@ Go to File &gt; Open Wallet to load a wallet.
         <context-group purpose="location"><context context-type="linenumber">207</context></context-group>
       </trans-unit>
       <trans-unit id="_msg929">
-        <source xml:space="preserve">Partially Signed Transaction (*.psbt)</source>
+        <source xml:space="preserve">Partially Signed Transaction (*.pskt)</source>
         <context-group purpose="location"><context context-type="linenumber">208</context></context-group>
       </trans-unit>
       <trans-unit id="_msg930">
-        <source xml:space="preserve">PSBT file must be smaller than 100 MiB</source>
+        <source xml:space="preserve">PSKT file must be smaller than 100 MiB</source>
         <context-group purpose="location"><context context-type="linenumber">211</context></context-group>
       </trans-unit>
       <trans-unit id="_msg931">
-        <source xml:space="preserve">Unable to decode PSBT</source>
+        <source xml:space="preserve">Unable to decode PSKT</source>
         <context-group purpose="location"><context context-type="linenumber">229</context></context-group>
       </trans-unit>
     </group>
@@ -4314,7 +4314,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <context-group purpose="location"><context context-type="linenumber">547</context></context-group>
       </trans-unit>
       <trans-unit id="_msg942">
-        <source xml:space="preserve">PSBT copied</source>
+        <source xml:space="preserve">PSKT copied</source>
         <context-group purpose="location"><context context-type="linenumber">554</context></context-group>
       </trans-unit>
       <trans-unit id="_msg943">
@@ -4479,7 +4479,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <context-group purpose="location"><context context-type="linenumber">129</context></context-group>
       </trans-unit>
       <trans-unit id="_msg981">
-        <source xml:space="preserve">Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source xml:space="preserve">Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <context-group purpose="location"><context context-type="linenumber">132</context></context-group>
       </trans-unit>
       <trans-unit id="_msg982">
@@ -4607,7 +4607,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <context-group purpose="location"><context context-type="linenumber">31</context></context-group>
       </trans-unit>
       <trans-unit id="_msg1013">
-        <source xml:space="preserve">Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source xml:space="preserve">Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <context-group purpose="location"><context context-type="linenumber">35</context></context-group>
       </trans-unit>
       <trans-unit id="_msg1014">

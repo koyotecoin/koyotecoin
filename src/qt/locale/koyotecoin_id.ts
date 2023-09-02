@@ -449,7 +449,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>More than one onion bind address is provided. Using %s for the automatically created Tor onion service.</source>
-        <translation type="unfinished">Lebih dari howlu alamat Onion Bind tersedia. Menggunakan %s untuk membuat Tor onion secara otomatis.</translation>
+        <translation type="unfinished">Lebih dari satu alamat Onion Bind tersedia. Menggunakan %s untuk membuat Tor onion secara otomatis.</translation>
     </message>
     <message>
         <source>No dump file provided. To use createfromdump, -dumpfile=&lt;filename&gt; must be provided.</source>
@@ -480,7 +480,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Mode pangkas tidak kompatibel dengan -reindex-chainstate. Gunakan full -reindex sebagai gantinya.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Pemangkasan: sinkronisasi dompet terakhir melampaui data yang sudah dipangkas. Anda perlu -reindex (unduh seluruh blockchain lagi jika terjadi node pemangkasan)</translation>
     </message>
     <message>
@@ -525,7 +525,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Unknown wallet file format "%s" provided. Please provide one of "bdb" or "sqlite".</source>
-        <translation type="unfinished">Format berkas dompet tidak dikenal "%s" tersedia. Berikan salah howlu dari "bdb" atau "sqlite". </translation>
+        <translation type="unfinished">Format berkas dompet tidak dikenal "%s" tersedia. Berikan salah satu dari "bdb" atau "sqlite". </translation>
     </message>
     <message>
         <source>Unsupported chainstate database format found. Please restart with -reindex-chainstate. This will rebuild the chainstate database.</source>
@@ -596,7 +596,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Opsi -reindex-chainstate tidak kompatibel dengan -txindex. Harap nonaktifkan sementara txindex saat menggunakan -reindex-chainstate, atau ganti -reindex-chainstate dengan -reindex untuk sepenuhnya membangun kembali semua indeks.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Diasumsikan-valid: sinkronisasi dompet terakhir melampaui data blok yang tersedia. Anda harus menunggu rantai validasi latar belakang untuk mengunduh lebih banyak blok.</translation>
     </message>
     <message>
@@ -1029,7 +1029,7 @@ Tidak dapat memulihkan cadangan dompet..</translation>
     </message>
     <message>
         <source>Transaction must have at least one recipient</source>
-        <translation type="unfinished">Transaksi harus mempunyai paling tidak howlu penerima</translation>
+        <translation type="unfinished">Transaksi harus mempunyai paling tidak satu penerima</translation>
     </message>
     <message>
         <source>Transaction needs a change address, but we can't generate it.</source>
@@ -1244,8 +1244,8 @@ Tidak dapat memulihkan cadangan dompet..</translation>
         <translation type="unfinished">Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Koyotecoin tertentu</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Muat PSBT dari file...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Muat PSKT dari file...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1362,8 +1362,8 @@ Tidak dapat memulihkan cadangan dompet..</translation>
         <translation type="unfinished">Muat transaksi Koyotecoin yang ditandatangani seperapat</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Masukkan PSBT dari &amp;clipboard</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Masukkan PSKT dari &amp;clipboard</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -2061,7 +2061,7 @@ Tidak dapat memulihkan cadangan dompet..</translation>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Sinkronisasi awal sangat berat dan mungkin akan menunjukkan permasalahan pada perangkat keras komputer Anda yang sebelumnya tidak tampak. Setiap kali Anda menjalankan %1, aplikasi ini akan melanjutkan pengunduhan dari posisi terakhir.</translation>
     </message>
     <message>
@@ -2296,21 +2296,21 @@ Tidak dapat memulihkan cadangan dompet..</translation>
     </message>
     <message>
         <source>If you disable the spending of unconfirmed change, the change from a transaction cannot be used until that transaction has at least one confirmation. This also affects how your balance is computed.</source>
-        <translation type="unfinished">Jika Anda menonaktifkan perubahan saldo untuk transaksi yang belum dikonfirmasi, perubahan dari transaksi tidak dapat dilakukan sampai transaksi memiliki setidaknya howlu konfirmasi. Hal ini juga mempengaruhi bagaimana saldo Anda dihitung.</translation>
+        <translation type="unfinished">Jika Anda menonaktifkan perubahan saldo untuk transaksi yang belum dikonfirmasi, perubahan dari transaksi tidak dapat dilakukan sampai transaksi memiliki setidaknya satu konfirmasi. Hal ini juga mempengaruhi bagaimana saldo Anda dihitung.</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation type="unfinished">&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Aktifkan kontrol &amp;PSBT</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Aktifkan kontrol &amp;PSKT</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Apakah akan menampilkan kontrol PSBT.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Apakah akan menampilkan kontrol PSKT.</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2455,7 +2455,7 @@ Tidak dapat memulihkan cadangan dompet..</translation>
     </message>
     <message>
         <source>none</source>
-        <translation type="unfinished">tidak howlupun</translation>
+        <translation type="unfinished">tidak satupun</translation>
     </message>
     <message>
         <source>Confirm options reset</source>
@@ -2599,7 +2599,7 @@ Tidak dapat memulihkan cadangan dompet..</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Sign Tx</source>
         <translation type="unfinished">Tanda tangan Tx</translation>
@@ -2653,8 +2653,8 @@ Tidak dapat memulihkan cadangan dompet..</translation>
         <translation type="unfinished">Broadcast transaksi gagal: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT disalin ke clipboard</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT disalin ke clipboard</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2662,12 +2662,12 @@ Tidak dapat memulihkan cadangan dompet..</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transaksi yang Ditandatangani Sebagian (Biner)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT disimpan ke disk.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT disimpan ke disk.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -2920,7 +2920,7 @@ Jika Anda menerima kesalahan ini, Anda harus meminta pedagang untuk memberikan U
     </message>
     <message>
         <source>Select a peer to view detailed information.</source>
-        <translation type="unfinished">Pilih howlu peer untuk melihat informasi detail.</translation>
+        <translation type="unfinished">Pilih satu peer untuk melihat informasi detail.</translation>
     </message>
     <message>
         <source>Version</source>
@@ -3546,7 +3546,7 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 howloshi p
         <translation type="unfinished">Izinkan Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Dengan Replace-By-Fee (BIP-125) Anda dapat menambah biaya transaksi setelah dikirim. Tanpa ini, biaya yang lebih tinggi dapat direkomendasikan untuk mengkompensasi peningkatan risiko keterlambatan transaksi.</translation>
     </message>
     <message>
@@ -3616,8 +3616,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 howloshi p
         <translation type="unfinished">bu&amp;at Tidak ditandai</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Membuat sebagian tertanda transaksi koyotecoin (PSBT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Membuat sebagian tertanda transaksi koyotecoin (PSKT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSKT</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3655,12 +3655,12 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 howloshi p
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transaksi yang Ditandatangani Sebagian (Biner)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT disimpan</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT disimpan</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3680,9 +3680,9 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 howloshi p
         <translation type="unfinished">Apakah Anda ingin membuat transaksi ini?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Harap untuk analisi proposal transaksi anda kembali. Anda dapat membuat dan mengirim transaksi ini atau membuat transaksi koyotecoin yang ditandai tangani sebagaian (PSBT) yang bisa anda simpan atau salin dan tanda tangan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Harap untuk analisi proposal transaksi anda kembali. Anda dapat membuat dan mengirim transaksi ini atau membuat transaksi koyotecoin yang ditandai tangani sebagaian (PSKT) yang bisa anda simpan atau salin dan tanda tangan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSKT</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4409,24 +4409,24 @@ Pergi ke File &gt; Open Wallet untuk memuat dompet.
         <translation type="unfinished">Terjadi sebuah kesalahan</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Tidak dapat membaca kode PSBT dari papan klip (base64 tidak valid)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Tidak dapat membaca kode PSKT dari papan klip (base64 tidak valid)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Memuat Data Transaksi</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Transaksi yang Ditandatangani Sebagian (* .psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Transaksi yang Ditandatangani Sebagian (* .pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">File PSBT harus lebih kecil dari 100 MB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">File PSKT harus lebih kecil dari 100 MB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Tidak dapat membaca kode PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Tidak dapat membaca kode PSKT</translation>
     </message>
 </context>
 <context>
@@ -4473,8 +4473,8 @@ Pergi ke File &gt; Open Wallet untuk memuat dompet.
         <translation type="unfinished">Tidak dapat membuat konsep transaksi.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT disalin</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT disalin</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

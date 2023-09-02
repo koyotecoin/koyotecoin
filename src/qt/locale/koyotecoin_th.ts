@@ -825,8 +825,8 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">ตรวจสอบ ข้อความ เพื่อให้แน่ใจว่า การเซ็นต์ชื่อ ด้วยที่เก็บ Koyotecoin แล้ว</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;โหลด PSBT จาก ไฟล์...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;โหลด PSKT จาก ไฟล์...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -939,8 +939,8 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">ปัจจุบัน</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">โหลด PSBT จากคลิปบอร์ด...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">โหลด PSKT จากคลิปบอร์ด...</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -1585,8 +1585,8 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">Reverting this setting requires re-downloading the entire blockchain. It is faster to download the full chain first and prune it later. Disables some advanced features</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
-        <translation type="unfinished">This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off</translation>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <translation type="unfinished">This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -1700,9 +1700,9 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">ว&amp;อลเล็ต</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">เปิดใช้งานการควบคุม &amp;PSBT</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">เปิดใช้งานการควบคุม &amp;PSKT</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -1781,7 +1781,7 @@ Signing is only possible with addresses of the type 'legacy'</translation>
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Save…</source>
         <translation type="unfinished">บันทึก…</translation>
@@ -1795,8 +1795,8 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">ข้อผิดพลาดที่ไม่รู้จักของการประมวลผลธุรกรรม</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT คัดลอกไปยังคลิปบอร์ดแล้ว</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT คัดลอกไปยังคลิปบอร์ดแล้ว</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -2384,8 +2384,8 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">เซ็น ล้มเหลว</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT บันทึก</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT บันทึก</translation>
     </message>
     <message>
         <source>or</source>
@@ -2397,9 +2397,9 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">คุณต้องการสร้างธุรกรรมนี้หรือไม่?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">โปรดตรวจสอบธุรกรรมของคุณ คุณสามารถสร้างและส่งธุรกรรมนี้หรือสร้างธุรกรรม Koyotecoin ที่ลงชื่อบางส่วน (PSBT) ซึ่งคุณสามารถบันทึกหรือคัดลอกแล้วลงชื่อเข้าใช้ เช่น วอลเล็ต %1 ออฟไลน์, หรือ PSBT-compatible hardware wallet</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">โปรดตรวจสอบธุรกรรมของคุณ คุณสามารถสร้างและส่งธุรกรรมนี้หรือสร้างธุรกรรม Koyotecoin ที่ลงชื่อบางส่วน (PSKT) ซึ่งคุณสามารถบันทึกหรือคัดลอกแล้วลงชื่อเข้าใช้ เช่น วอลเล็ต %1 ออฟไลน์, หรือ PSKT-compatible hardware wallet</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2791,16 +2791,16 @@ Signing is only possible with addresses of the type 'legacy'</translation>
         <translation type="unfinished">โหลด Transaction Data</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">ธุรกรรมที่ลงนามบางส่วน (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">ธุรกรรมที่ลงนามบางส่วน (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">ไฟล์ PSBT ต้องมีขนาดเล็กกว่า 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">ไฟล์ PSKT ต้องมีขนาดเล็กกว่า 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">ไม่สามารถถอดรหัส PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">ไม่สามารถถอดรหัส PSKT</translation>
     </message>
 </context>
 <context>

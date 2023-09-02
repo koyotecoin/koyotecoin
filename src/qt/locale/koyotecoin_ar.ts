@@ -484,7 +484,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">تم تكوين تقليم أقل من الحد الأدنى %d ميجابايت. من فضلك استعمل رقم أعلى.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">تقليم: اخر مزامنة للمحفظة كانت قبل البيانات الملقمة. تحتاج الى - اعادة فهرسة (قم بتنزيل سلسلة الكتل بأكملها مرة أخرى في حال تم تقليم عقدة)</translation>
     </message>
     <message>
@@ -954,8 +954,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Koyotecoin محدَدة</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">وتحميل PSBT من ملف...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">وتحميل PSKT من ملف...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1763,7 +1763,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">غيغابايت</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">تُعد هذه المزامنة الأولية أمرًا شاقًا للغاية، وقد تعرض جهاز الكمبيوتر الخاص بك للمشاكل الذي لم يلاحظها أحد سابقًا. في كل مرة تقوم فيها بتشغيل %1، سيتابع التحميل من حيث تم التوقف.</translation>
     </message>
     <message>
@@ -2253,7 +2253,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">حوار</translation>
@@ -2311,8 +2311,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">فشل بث المعاملة: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">نسخ PSBT إلى الحافظة.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">نسخ PSKT إلى الحافظة.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2320,12 +2320,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">معاملة موقعة جزئيًا (ثنائي)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">تم حفظ PSBT على القرص.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">تم حفظ PSKT على القرص.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3179,7 +3179,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">تفعيل الإستبدال بواسطة الرسوم</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">مع الإستبدال بواسطة الرسوم (BIP-125) يمكنك زيادة رسوم المعاملة بعد إرسالها. وبدون ذلك، قد نوصي برسوم أعلى للتعويض عن مخاطر تأخير المعاملة المتزايدة.</translation>
     </message>
     <message>
@@ -3268,12 +3268,12 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">معاملة موقعة جزئيًا (ثنائي)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">تم حفظ PSBT</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">تم حفظ PSKT</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -4027,24 +4027,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">خطأ</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">تعذر فك تشفير PSBT من الحافظة (base64 غير صالح)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">تعذر فك تشفير PSKT من الحافظة (base64 غير صالح)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">تحميل بيانات المعاملة</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">معاملة موقعة جزئيا (psbt.*)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">معاملة موقعة جزئيا (pskt.*)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">ملف PSBT يجب أن يكون أصغر من 100 ميجابايت</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">ملف PSKT يجب أن يكون أصغر من 100 ميجابايت</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">غير قادر على فك تشفير PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">غير قادر على فك تشفير PSKT</translation>
     </message>
 </context>
 <context>
@@ -4087,8 +4087,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">لا يمكن صياغة المعاملة</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">تم نسخ PSBT</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">تم نسخ PSKT</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

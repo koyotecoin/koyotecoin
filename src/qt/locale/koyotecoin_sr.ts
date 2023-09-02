@@ -447,7 +447,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Скраћивање је конфигурисано испод минимума од %d MiB. Молимо користите већи број.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Скраћивање: последња синхронизација иде преко одрезаних података. Потребно је урадити ре-индексирање (преузети комплетан ланац блокова поново у случају одсеченог чвора)</translation>
     </message>
     <message>
@@ -891,8 +891,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Верификуј поруке и утврди да ли су потписане од стране спецификованих Биткоин адреса</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Учитава ”PSBT” из датотеке…</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Учитава ”PSKT” из датотеке…</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1658,7 +1658,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Гигабајт</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Првобитна синхронизација веома је захтевна и може изложити ваш рачунар хардверским проблемима који раније нису били примећени. Сваки пут када покренете %1, преузимање ће се наставити тамо где је било прекинуто.</translation>
     </message>
     <message>
@@ -2140,7 +2140,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Дијалог</translation>
@@ -2198,7 +2198,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Неуспело емитовање трансакције: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
+        <source>PSKT copied to clipboard.</source>
         <translation type="unfinished">ПСБТ је копиран у међуспремник.</translation>
     </message>
     <message>
@@ -2207,11 +2207,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Делимично потписана трансакција (бинарна)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
+        <source>PSKT saved to disk.</source>
         <translation type="unfinished">ПСБТ је сачуван на диску.</translation>
     </message>
     <message>
@@ -3104,7 +3104,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Омогући Замени-за-Провизију</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Са Замени-за-Провизију (BIP-125) се може повећати висина провизије за трансакцију након што је послата. Без овога, виша провизија може бити препоручена да се смањи ризик од кашњења трансакције. </translation>
     </message>
     <message>
@@ -3174,8 +3174,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Креирај непотписано</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Креира делимично потписану Биткоин трансакцију (PSBT) за коришћење са нпр. офлајн %1 новчаником, или PSBT компатибилним хардверским новчаником. </translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Креира делимично потписану Биткоин трансакцију (PSKT) за коришћење са нпр. офлајн %1 новчаником, или PSKT компатибилним хардверским новчаником. </translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3213,12 +3213,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Делимично потписана трансакција (бинарна)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT сачуван</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT сачуван</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3233,9 +3233,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Можете повећати провизију касније (сигнали Замени-са-Провизијом, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Молимо, проверите ваш предлог трансакције. Ово ће произвести делимично потписану Биткоин трансакцију (PSBT) коју можете копирати и онда потписати са нпр. офлајн %1 новчаником, или PSBT компатибилним хардверским новчаником.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Молимо, проверите ваш предлог трансакције. Ово ће произвести делимично потписану Биткоин трансакцију (PSKT) коју можете копирати и онда потписати са нпр. офлајн %1 новчаником, или PSKT компатибилним хардверским новчаником.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3954,24 +3954,24 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Грешка</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Није могуће декодирати PSBT из клипборд-а (неважећи base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Није могуће декодирати PSKT из клипборд-а (неважећи base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Учитај Податке Трансакције</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Делимично Потписана Трансакција (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Делимично Потписана Трансакција (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">PSBT фајл мора бити мањи од 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">PSKT фајл мора бити мањи од 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Немогуће декодирати PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Немогуће декодирати PSKT</translation>
     </message>
 </context>
 <context>
@@ -4014,8 +4014,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Није могуће саставити трансакцију.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT је копиран</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT је копиран</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

@@ -983,7 +983,7 @@
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Dialoog</translation>
@@ -1761,7 +1761,7 @@
     </message>
     <message>
         <source>Amount removed from or added to balance.</source>
-        <translation type="unfinished">Jäägile lihowlud või eemaldatud summa.</translation>
+        <translation type="unfinished">Jäägile lisatud või eemaldatud summa.</translation>
     </message>
 </context>
 <context>

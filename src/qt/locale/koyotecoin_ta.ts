@@ -380,7 +380,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ப்ரூனிங் குறைந்தபட்சம் %d MiB க்கு கீழே கட்டமைக்கப்பட்டுள்ளது. அதிக எண்ணிக்கையைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">ப்ரூன்: கடைசி வாலட் ஒத்திசைவு ப்ரூன் தரவுக்கு அப்பாற்பட்டது. நீங்கள் -reindex செய்ய வேண்டும் (ப்ரூன் நோட் உபயோகித்தால் முழு பிளாக்செயினையும் மீண்டும் டவுன்லோட் செய்யவும்)</translation>
     </message>
     <message>
@@ -1351,7 +1351,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">இந்த அமைப்பை மாற்றியமைக்க முழு பிளாக்செயினையும் மீண்டும் டவுன்லோட் செய்ய வேண்டும். முதலில் முழு செயினையும் டவுன்லோட் செய்த பின்னர் ப்ரூன் செய்வது வேகமான செயல் ஆகும். சில மேம்பட்ட அம்சங்களை முடக்கும்.</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">இந்த ஆரம்ப ஒத்திசைவு மிகவும் கோரி வருகிறது, முன்பு கவனிக்கப்படாத உங்கள் கணினியுடன் வன்பொருள் சிக்கல்களை அம்பலப்படுத்தலாம். ஒவ்வொரு முறையும் நீங்கள் %1 ரன் இயங்கும் போது, ​​அது எங்கிருந்து வெளியேறும் என்பதைத் தொடர்ந்து பதிவிறக்கும்.</translation>
     </message>
     <message>
@@ -1748,7 +1748,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Sign Tx</source>
         <translation type="unfinished">கையெழுத்து Tx</translation>
@@ -2364,7 +2364,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">மாற்று-கட்டணத்தை இயக்கு</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">மாற்று-கட்டணத்தின் (பிப்-125) மூலம், ஒரு பரிவர்த்தனையின் கட்டணத்தை அனுப்பிய பின் அதை அதிகரிக்கலாம். இது இல்லை என்றால், பரிவர்த்தனையின் தாமத அபாயத்தை ஈடுசெய்ய அதிக கட்டணம் பரிந்துரைக்கப்படலாம்.</translation>
     </message>
     <message>

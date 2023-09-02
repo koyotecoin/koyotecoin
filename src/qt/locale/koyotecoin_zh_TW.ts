@@ -435,7 +435,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">設定的修剪值小於最小需求的 %d 百萬位元組(MiB)。請指定大一點的數字。</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">修剪模式：錢包的最後同步狀態是在被修剪掉的區塊資料中。你需要用 -reindex 參數執行(會重新下載整個區塊鏈)</translation>
     </message>
     <message>
@@ -972,8 +972,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">驗證訊息是用來確定訊息是用指定的比特幣地址簽名的</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;從檔案載入PSBT...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;從檔案載入PSKT...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1693,7 +1693,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">還原此設置需要重新下載整個區塊鏈。首先下載完整的鏈，然後再修剪它是更快的。禁用某些高級功能。</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">一開始的同步作業非常的耗費資源，並且可能會暴露出之前沒被發現的電腦硬體問題。每次執行 %1 的時候都會繼續先前未完成的下載。</translation>
     </message>
     <message>
@@ -2122,7 +2122,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">對話視窗</translation>
@@ -2160,16 +2160,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">處理交易有未知的錯誤</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT已復製到剪貼簿</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT已復製到剪貼簿</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
         <translation type="unfinished">儲存交易資料</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT已儲存到磁碟。</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT已儲存到磁碟。</translation>
     </message>
     <message>
         <source>Unable to calculate transaction fee or total transaction amount.</source>
@@ -2884,7 +2884,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">啟用手續費追加</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">手續費追加(Replace-By-Fee, BIP-125)可以讓你在送出交易後才來提高手續費。不用這個功能的話，建議付比較高的手續費來降低交易延遲的風險。</translation>
     </message>
     <message>
@@ -2960,8 +2960,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">儲存交易資料</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT已儲存</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT已儲存</translation>
     </message>
     <message>
         <source>or</source>
@@ -3689,24 +3689,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">錯誤</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">無法從剪貼板解碼PSBT（無效的base64）</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">無法從剪貼板解碼PSKT（無效的base64）</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">載入交易資料</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">簽名部分的交易（* .psbt）</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">簽名部分的交易（* .pskt）</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">PSBT檔案必須小於100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">PSKT檔案必須小於100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">無法解碼PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">無法解碼PSKT</translation>
     </message>
 </context>
 <context>
@@ -3749,8 +3749,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">無法草擬交易。</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT已復制</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT已復制</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

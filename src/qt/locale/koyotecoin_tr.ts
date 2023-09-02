@@ -439,7 +439,7 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">Budama, en düşük değer olan %d MiB'den düşük olarak ayarlanmıştır. Lütfen daha yüksek bir sayı kullanınız.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Budama: son cüzdan eşleşmesi budanmış verilerin ötesine gitmektedir. -reindex kullanmanız gerekmektedir (Budanmış düğüm ise tüm blok zincirini tekrar indirmeniz gerekir.)</translation>
     </message>
     <message>
@@ -923,8 +923,8 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">Belirtilen Koyotecoin adresleriyle imzalandıklarından emin olmak için mesajları doğrulayın</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;PSBT'yi dosyadan yükle...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;PSKT'yi dosyadan yükle...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1025,8 +1025,8 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">Kısmen İmzalanmış Koyotecoin İşlemini Yükle </translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">PSBT'yi &amp;panodan yükle...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">PSKT'yi &amp;panodan yükle...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1894,14 +1894,14 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">&amp; Onaylanmamış bozuk parayı harcayın</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">PSBT kontrollerini etkinleştir</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">PSKT kontrollerini etkinleştir</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">PSBT kontrollerinin gösterilip gösterilmeyeceği.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">PSKT kontrollerinin gösterilip gösterilmeyeceği.</translation>
     </message>
     <message>
         <source>Automatically open the Koyotecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
@@ -2133,7 +2133,7 @@ Cüzdan kilidini aç.</translation>
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Diyalog</translation>
@@ -2187,16 +2187,16 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">İşlem ağa duyuruldu! İşlem kodu: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT panoya kopyalandı.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT panoya kopyalandı.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
         <translation type="unfinished">İşlem verilerini kaydet</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT diske kaydedildi.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT diske kaydedildi.</translation>
     </message>
     <message>
         <source>Unable to calculate transaction fee or total transaction amount.</source>
@@ -3001,8 +3001,8 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">İşlem verilerini kaydet</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT kaydedildi.</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT kaydedildi.</translation>
     </message>
     <message>
         <source>or</source>
@@ -3014,9 +3014,9 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">Bu işlemi oluşturmak ister misiniz?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Lütfen işleminizi gözden geçirin. Bu işlemi oluşturabilir ve gönderebilir veya örneğin çevrimdışı bir %1 cüzdanı veya PSBT uyumlu bir donanım cüzdanı gibi kaydedebileceğiniz veya kopyalayabileceğiniz ve ardından imzalayabileceğiniz bir Kısmen İmzalı Koyotecoin İşlemi (PSBT) oluşturabilirsiniz.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Lütfen işleminizi gözden geçirin. Bu işlemi oluşturabilir ve gönderebilir veya örneğin çevrimdışı bir %1 cüzdanı veya PSKT uyumlu bir donanım cüzdanı gibi kaydedebileceğiniz veya kopyalayabileceğiniz ve ardından imzalayabileceğiniz bir Kısmen İmzalı Koyotecoin İşlemi (PSKT) oluşturabilirsiniz.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3749,8 +3749,8 @@ Cüzdan kilidini aç.</translation>
         <translation type="unfinished">Yeni ücret:</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT kopyalandı</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT kopyalandı</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

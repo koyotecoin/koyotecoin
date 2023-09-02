@@ -468,7 +468,7 @@ La signature n'est possible qu'avec les adresses de type "patrimoine".</translat
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
-        <translation type="unfinished">Distribué sous la licence MIT d’utilihowlion d’un logiciel, consultez le fichier joint %s ou %s</translation>
+        <translation type="unfinished">Distribué sous la licence MIT d’utilisation d’un logiciel, consultez le fichier joint %s ou %s</translation>
     </message>
     <message>
         <source>Error reading %s! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
@@ -539,8 +539,8 @@ La signature n'est possible qu'avec les adresses de type "patrimoine".</translat
         <translation type="unfinished">L’élagage est configuré au-dessous du minimum de %d Mio. Veuillez utiliser un nombre plus élevé.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
-        <translation type="unfinished">Élagage : la dernière synchronihowlion de porte-monnaie va par-delà les données élaguées. Vous devez -reindex (réindexer, télécharger de nouveau toute la chaîne de blocs en cas de nœud élagué)</translation>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <translation type="unfinished">Élagage : la dernière synchronisation de porte-monnaie va par-delà les données élaguées. Vous devez -reindex (réindexer, télécharger de nouveau toute la chaîne de blocs en cas de nœud élagué)</translation>
     </message>
     <message>
         <source>SQLiteDatabase: Unknown sqlite wallet schema version %d. Only version %d is supported</source>
@@ -564,7 +564,7 @@ La signature n'est possible qu'avec les adresses de type "patrimoine".</translat
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation type="unfinished">Ceci est une préversion de test — son utilihowlion est entièrement à vos risques — ne l’utilisez pour miner ou pour des applications marchandes</translation>
+        <translation type="unfinished">Ceci est une préversion de test — son utilisation est entièrement à vos risques — ne l’utilisez pour miner ou pour des applications marchandes</translation>
     </message>
     <message>
         <source>This is the maximum transaction fee you pay (in addition to the normal fee) to prioritize partial spend avoidance over regular coin selection.</source>
@@ -712,11 +712,11 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Error initializing block database</source>
-        <translation type="unfinished">Erreur d’initialihowlion de la base de données des blocs</translation>
+        <translation type="unfinished">Erreur d’initialisation de la base de données des blocs</translation>
     </message>
     <message>
         <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished">Erreur d’initialihowlion de l’environnement de la base de données du porte-monnaie %s </translation>
+        <translation type="unfinished">Erreur d’initialisation de l’environnement de la base de données du porte-monnaie %s </translation>
     </message>
     <message>
         <source>Error loading %s</source>
@@ -808,7 +808,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Failed to rescan the wallet during initialization</source>
-        <translation type="unfinished">Échec de réanalyse du porte-monnaie lors de l’initialihowlion</translation>
+        <translation type="unfinished">Échec de réanalyse du porte-monnaie lors de l’initialisation</translation>
     </message>
     <message>
         <source>Failed to verify database</source>
@@ -832,7 +832,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Initialization sanity check failed. %s is shutting down.</source>
-        <translation type="unfinished">Échec d’initialihowlion du test de cohérence. %s est en cours de fermeture.</translation>
+        <translation type="unfinished">Échec d’initialisation du test de cohérence. %s est en cours de fermeture.</translation>
     </message>
     <message>
         <source>Input not found or already spent</source>
@@ -856,7 +856,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Invalid P2P permission: '%s'</source>
-        <translation type="unfinished">L’autorihowlion P2P est invalide : « %s »</translation>
+        <translation type="unfinished">L’autorisation P2P est invalide : « %s »</translation>
     </message>
     <message>
         <source>Invalid amount for -%s=&lt;amount&gt;: '%s'</source>
@@ -1100,7 +1100,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Unsupported logging category %s=%s.</source>
-        <translation type="unfinished">La catégorie de journalihowlion %s=%s n’est pas prise en charge</translation>
+        <translation type="unfinished">La catégorie de journalisation %s=%s n’est pas prise en charge</translation>
     </message>
     <message>
         <source>User Agent comment (%s) contains unsafe characters.</source>
@@ -1235,7 +1235,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
         <translation type="unfinished">Vérifier les messages pour s’assurer qu’ils ont été signés avec les adresses Koyotecoin indiquées</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
+        <source>&amp;Load PSKT from file…</source>
         <translation type="unfinished">&amp;Charger la TBSP d’un fichier…</translation>
     </message>
     <message>
@@ -1272,11 +1272,11 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Syncing Headers (%1%)…</source>
-        <translation type="unfinished">Synchronihowlion des en-têtes (%1%)…</translation>
+        <translation type="unfinished">Synchronisation des en-têtes (%1%)…</translation>
     </message>
     <message>
         <source>Synchronizing with network…</source>
-        <translation type="unfinished">Synchronihowlion avec le réseau…</translation>
+        <translation type="unfinished">Synchronisation avec le réseau…</translation>
     </message>
     <message>
         <source>Indexing blocks on disk…</source>
@@ -1354,7 +1354,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
         <translation type="unfinished">Charger une transaction Koyotecoin signée partiellement</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
+        <source>Load PSKT from &amp;clipboard…</source>
         <translation type="unfinished">Charger la TBSP du &amp;presse-papiers…</translation>
     </message>
     <message>
@@ -1501,7 +1501,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Pre-syncing Headers (%1%)…</source>
-        <translation type="unfinished">Pré-synchronihowlion des en-têtes (%1%)...</translation>
+        <translation type="unfinished">Pré-synchronisation des en-têtes (%1%)...</translation>
     </message>
     <message>
         <source>Error: %1</source>
@@ -2073,12 +2073,12 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
         <translation type="unfinished"> Go</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
-        <translation type="unfinished">Cette synchronihowlion initiale est très exigeante et pourrait exposer des problèmes matériels dans votre ordinateur passés inaperçus auparavant. Chaque fois que vous exécuterez %1, le téléchargement reprendra où il s’était arrêté.</translation>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <translation type="unfinished">Cette synchronisation initiale est très exigeante et pourrait exposer des problèmes matériels dans votre ordinateur passés inaperçus auparavant. Chaque fois que vous exécuterez %1, le téléchargement reprendra où il s’était arrêté.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
-        <translation type="unfinished">Si vous avez choisi de limiter le stockage de la chaîne de blocs (élagage), les données historiques doivent quand même être téléchargées et traitées, mais seront supprimées par la suite pour minimiser l’utilihowlion de votre espace disque.</translation>
+        <translation type="unfinished">Si vous avez choisi de limiter le stockage de la chaîne de blocs (élagage), les données historiques doivent quand même être téléchargées et traitées, mais seront supprimées par la suite pour minimiser l’utilisation de votre espace disque.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2151,7 +2151,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Estimated time left until synced</source>
-        <translation type="unfinished">Temps estimé avant la fin de la synchronihowlion</translation>
+        <translation type="unfinished">Temps estimé avant la fin de la synchronisation</translation>
     </message>
     <message>
         <source>Hide</source>
@@ -2163,11 +2163,11 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>%1 is currently syncing.  It will download headers and blocks from peers and validate them until reaching the tip of the block chain.</source>
-        <translation type="unfinished">%1 est en cours de synchronihowlion. Il téléchargera les en-têtes et les blocs des pairs, et les validera jusqu’à ce qu’il atteigne la fin de la chaîne de blocs.</translation>
+        <translation type="unfinished">%1 est en cours de synchronisation. Il téléchargera les en-têtes et les blocs des pairs, et les validera jusqu’à ce qu’il atteigne la fin de la chaîne de blocs.</translation>
     </message>
     <message>
         <source>Unknown. Syncing Headers (%1, %2%)…</source>
-        <translation type="unfinished">Inconnu. Synchronihowlion des en-têtes (%1, %2 %)…</translation>
+        <translation type="unfinished">Inconnu. Synchronisation des en-têtes (%1, %2 %)…</translation>
     </message>
     </context>
 <context>
@@ -2259,7 +2259,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     <message>
         <source>Maximum database cache size. A larger cache can contribute to faster sync, after which the benefit is less pronounced for most use cases. Lowering the cache size will reduce memory usage. Unused mempool memory is shared for this cache.</source>
         <extracomment>Tooltip text for Options window setting that sets the size of the database cache. Explains the corresponding effects of increasing/decreasing this value.</extracomment>
-        <translation type="unfinished">Taille maximale du cache de la base de données. Un cache plus grand peut accélérer la synchronihowlion, avec des avantages moindres par la suite dans la plupart des cas. Diminuer la taille du cache réduira l’utilihowlion de la mémoire. La mémoire non utilisée de la réserve de mémoire est partagée avec ce cache.</translation>
+        <translation type="unfinished">Taille maximale du cache de la base de données. Un cache plus grand peut accélérer la synchronisation, avec des avantages moindres par la suite dans la plupart des cas. Diminuer la taille du cache réduira l’utilisation de la mémoire. La mémoire non utilisée de la réserve de mémoire est partagée avec ce cache.</translation>
     </message>
     <message>
         <source>MiB</source>
@@ -2311,13 +2311,13 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
         <translation type="unfinished">&amp;Dépenser la monnaie non confirmée</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
         <translation type="unfinished">Activer les contrôles &amp;TBPS</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
         <translation type="unfinished">Affichez ou non les contrôles TBPS.</translation>
     </message>
     <message>
@@ -2480,7 +2480,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     <message>
         <source>Confirm options reset</source>
         <extracomment>Window title text of pop-up window shown when the user has chosen to reset options.</extracomment>
-        <translation type="unfinished">Confirmer la réinitialihowlion des options</translation>
+        <translation type="unfinished">Confirmer la réinitialisation des options</translation>
     </message>
     <message>
         <source>Client restart required to activate changes.</source>
@@ -2612,7 +2612,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Fenêtre de dialogue</translation>
@@ -2674,7 +2674,7 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
         <translation type="unfinished">Échec de diffusion de la transaction : %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
+        <source>PSKT copied to clipboard.</source>
         <translation type="unfinished">La TBSP a été copiée dans le presse-papiers.</translation>
     </message>
     <message>
@@ -2683,11 +2683,11 @@ Impossible de restaurer la sauvegarde du portefeuille.</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transaction signée partiellement (fichier binaire)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
+        <source>PSKT saved to disk.</source>
         <translation type="unfinished">La TBSP a été enregistrée sur le disque.</translation>
     </message>
     <message>
@@ -2920,7 +2920,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <source>Memory usage</source>
-        <translation type="unfinished">Utilihowlion de la mémoire</translation>
+        <translation type="unfinished">Utilisation de la mémoire</translation>
     </message>
     <message>
         <source>Wallet: </source>
@@ -3024,7 +3024,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <source>Permissions</source>
-        <translation type="unfinished">Autorihowlions</translation>
+        <translation type="unfinished">Autorisations</translation>
     </message>
     <message>
         <source>The direction and type of peer connection: %1</source>
@@ -3506,7 +3506,7 @@ Pour plus de précisions sur cette console, tapez %6.
     </message>
     <message>
         <source>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until you have validated the complete chain.</source>
-        <translation type="unfinished">L’utilihowlion de l’option « fallbackfee » (frais de repli) peut avoir comme effet d’envoyer une transaction qui prendra plusieurs heures ou jours pour être confirmée, ou qui ne le sera jamais. Envisagez de choisir vos frais manuellement ou attendez d’avoir validé l’intégralité de la chaîne.</translation>
+        <translation type="unfinished">L’utilisation de l’option « fallbackfee » (frais de repli) peut avoir comme effet d’envoyer une transaction qui prendra plusieurs heures ou jours pour être confirmée, ou qui ne le sera jamais. Envisagez de choisir vos frais manuellement ou attendez d’avoir validé l’intégralité de la chaîne.</translation>
     </message>
     <message>
         <source>Warning: Fee estimation is currently not possible.</source>
@@ -3581,7 +3581,7 @@ Note : Les frais étant calculés par octet, un taux de frais de « 100 howlosh
         <translation type="unfinished">Activer Remplacer-par-des-frais</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Avec Remplacer-par-des-frais (BIP-125), vous pouvez augmenter les frais de transaction après qu’elle est envoyée. Sans cela, des frais plus élevés peuvent être recommandés pour compenser le risque accru de retard transactionnel.</translation>
     </message>
     <message>
@@ -3651,7 +3651,7 @@ Note : Les frais étant calculés par octet, un taux de frais de « 100 howlosh
         <translation type="unfinished">Cr&amp;éer une transaction non signée</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
         <translation type="unfinished">Crée une transaction Koyotecoin signée partiellement (TBSP) à utiliser, par exemple, avec un porte-monnaie %1 hors ligne ou avec un porte-monnaie matériel compatible TBSP.</translation>
     </message>
     <message>
@@ -3690,11 +3690,11 @@ Note : Les frais étant calculés par octet, un taux de frais de « 100 howlosh
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transaction signée partiellement (fichier binaire)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
+        <source>PSKT saved</source>
         <translation type="unfinished">La TBSP a été enregistrée</translation>
     </message>
     <message>
@@ -3710,8 +3710,8 @@ Note : Les frais étant calculés par octet, un taux de frais de « 100 howlosh
         <translation type="unfinished">Vous pouvez augmenter les frais ultérieurement (signale Remplacer-par-des-frais, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">Veuillez réviser votre proposition de transaction. Une transaction Koyotecoin partiellement signée (TBSP) sera produite, que vous pourrez enregistrer ou copier puis signer avec, par exemple, un porte-monnaie %1 hors ligne ou avec un porte-monnaie matériel compatible TBSP.</translation>
     </message>
     <message>
@@ -3720,8 +3720,8 @@ Note : Les frais étant calculés par octet, un taux de frais de « 100 howlosh
         <translation type="unfinished">Voulez-vous créer cette transaction ?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
         <translation type="unfinished">Veuillez réviser votre transaction. Vous pouvez créer et envoyer cette transaction ou créer une transaction Koyotecoin partiellement signée (TBSP), que vous pouvez enregistrer ou copier, et ensuite avec laquelle signer, par ex., un porte-monnaie %1 hors ligne ou avec un porte-monnaie matériel compatible TBSP.</translation>
     </message>
     <message>
@@ -4447,7 +4447,7 @@ Accédez à Fichier &gt; Ouvrir un porte-monnaie pour en charger un.
         <translation type="unfinished">Erreur</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
         <translation type="unfinished">Impossible de décoder la TBSP du presse-papiers (le Base64 est invalide)</translation>
     </message>
     <message>
@@ -4455,15 +4455,15 @@ Accédez à Fichier &gt; Ouvrir un porte-monnaie pour en charger un.
         <translation type="unfinished">Charger les données de la transaction</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Transaction signée partiellement (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Transaction signée partiellement (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
+        <source>PSKT file must be smaller than 100 MiB</source>
         <translation type="unfinished">Le fichier de la TBSP doit être inférieur à 100 Mio</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
+        <source>Unable to decode PSKT</source>
         <translation type="unfinished">Impossible de décoder la TBSP</translation>
     </message>
 </context>
@@ -4511,7 +4511,7 @@ Accédez à Fichier &gt; Ouvrir un porte-monnaie pour en charger un.
         <translation type="unfinished">Impossible de créer une ébauche de la transaction.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
+        <source>PSKT copied</source>
         <translation type="unfinished">La TBPS a été copiée</translation>
     </message>
     <message>

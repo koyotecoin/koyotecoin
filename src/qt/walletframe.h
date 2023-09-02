@@ -83,7 +83,7 @@ public Q_SLOTS:
     void gotoVerifyMessageTab(QString addr = "");
 
     /** Load Partially Signed Koyotecoin Transaction */
-    void gotoLoadPSBT(bool from_clipboard = false);
+    void gotoLoadPSKT(bool from_clipboard = false);
 
     /** Encrypt the wallet */
     void encryptWallet();

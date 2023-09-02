@@ -23,7 +23,7 @@
 #include <interfaces/node.h>
 #include <key_io.h>
 #include <node/interface_ui.h>
-#include <psbt.h>
+#include <pskt.h>
 #include <util/system.h> // for GetBoolArg
 #include <util/translation.h>
 #include <wallet/coincontrol.h>
@@ -539,20 +539,20 @@ bool WalletModel::bumpFee(uint256 hash, uint256& new_hash)
         return false;
     }
 
-    // Short-circuit if we are returning a bumped transaction PSBT to clipboard
+    // Short-circuit if we are returning a bumped transaction PSKT to clipboard
     if (retval == QMessageBox::Save) {
-        PartiallySignedTransaction psbtx(mtx);
+        PartiallySignedTransaction psktx(mtx);
         bool complete = false;
-        const TransactionError err = wallet().fillPSBT(SIGHASH_ALL, false /* sign */, true /* bip32derivs */, nullptr, psbtx, complete);
+        const TransactionError err = wallet().fillPSKT(SIGHASH_ALL, false /* sign */, true /* bip32derivs */, nullptr, psktx, complete);
         if (err != TransactionError::OK || complete) {
             QMessageBox::critical(nullptr, tr("Fee bump error"), tr("Can't draft transaction."));
             return false;
         }
-        // Serialize the PSBT
+        // Serialize the PSKT
         CDataStream ssTx(SER_NETWORK, PROTOCOL_VERSION);
-        ssTx << psbtx;
+        ssTx << psktx;
         GUIUtil::setClipboard(EncodeBase64(ssTx.str()).c_str());
-        Q_EMIT message(tr("PSBT copied"), "Copied to clipboard", CClientUIInterface::MSG_INFORMATION);
+        Q_EMIT message(tr("PSKT copied"), "Copied to clipboard", CClientUIInterface::MSG_INFORMATION);
         return true;
     }
 

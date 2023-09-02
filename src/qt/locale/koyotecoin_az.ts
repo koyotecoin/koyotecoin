@@ -496,8 +496,8 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">Göstərilmiş Koyotecoin ünvanları ilə imzalandıqlarına əmin olmaq üçün ismarıcları doğrulayın</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">PSBT-i fayldan yük&amp;ləyin...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">PSKT-i fayldan yük&amp;ləyin...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -615,12 +615,12 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">Qismən imzalanmış Koyotecoin köçürmələrini yükləyin</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">PSBT-i &amp;mübadilə yaddaşından yükləyin...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">PSKT-i &amp;mübadilə yaddaşından yükləyin...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
-        <translation type="unfinished">Qismən İmzalanmış Koyotecoin Köçürməsini (PSBT) mübadilə yaddaşından yükləmək</translation>
+        <translation type="unfinished">Qismən İmzalanmış Koyotecoin Köçürməsini (PSKT) mübadilə yaddaşından yükləmək</translation>
     </message>
     <message>
         <source>Node window</source>

@@ -558,7 +558,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Режим обрезки несовместим с -reindex-chainstate. Используйте вместо этого полный -reindex.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Обрезка: последняя синхронизация кошелька вышла за рамки обрезанных данных. Необходимо сделать -reindex (снова скачать всю цепочку блоков, если у вас узел с обрезкой)</translation>
     </message>
     <message>
@@ -686,7 +686,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Опция -reindex-chainstate не совместима с -txindex. Пожалуйста, выключите на время txindex, пока используется -reindex-chainstate, либо замените -reindex-chainstate на -reindex для полной перестройки всех индексов.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Предположительно действительный: последняя синхронизация кошелька была с более новым блоком данных, чем имеется у нас. Подождите, пока фоновый процесс проверки цепочки блоков загрузит новые данные.</translation>
     </message>
     <message>
@@ -1370,8 +1370,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Проверить подпись сообщения, чтобы убедиться, что оно подписано конкретным биткоин-адресом</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Загрузить PSBT из файла…</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Загрузить PSKT из файла…</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1487,11 +1487,11 @@ Unable to restore backup of wallet.</source>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction</source>
-        <translation type="unfinished">Загрузить частично подписанную биткоин-транзакцию (PSBT)</translation>
+        <translation type="unfinished">Загрузить частично подписанную биткоин-транзакцию (PSKT)</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Загрузить PSBT из &amp;буфера обмена…</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Загрузить PSKT из &amp;буфера обмена…</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -2231,7 +2231,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Эта первичная синхронизация очень требовательна к ресурсам и может выявить проблемы с аппаратным обеспечением вашего компьютера, которые ранее оставались незамеченными. Каждый раз, когда вы запускаете %1, скачивание будет продолжено с места остановки.</translation>
     </message>
     <message>
@@ -2489,14 +2489,14 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">&amp;Тратить неподтверждённую сдачу</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Включить управление частично подписанными транзакциями (PSBT)</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Включить управление частично подписанными транзакциями (PSKT)</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Показать элементы управления частично подписанными биткоин-транзакциями (PSBT)</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Показать элементы управления частично подписанными биткоин-транзакциями (PSKT)</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2797,7 +2797,7 @@ Unable to restore backup of wallet.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Диалог</translation>
@@ -2859,8 +2859,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Отправка транзакции не удалась: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT скопирована в буфер обмена</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT скопирована в буфер обмена</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2868,12 +2868,12 @@ Unable to restore backup of wallet.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Частично подписанная транзакция (двоичный файл)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT сохранена на диск.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT сохранена на диск.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3822,7 +3822,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Включить Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">С помощью Replace-By-Fee (BIP-125) вы можете увеличить комиссию после отправки транзакции. Если вы выключите эту опцию, рекомендуется увеличить комиссию перед отправкой, чтобы снизить риск задержки транзакции.</translation>
     </message>
     <message>
@@ -3892,8 +3892,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Создать &amp;без подписи</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Создает частично подписанную биткоин-транзакцию (PSBT), чтобы использовать её, например, с офлайновым кошельком %1, или PSBT-совместимым аппаратным кошельком.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Создает частично подписанную биткоин-транзакцию (PSKT), чтобы использовать её, например, с офлайновым кошельком %1, или PSKT-совместимым аппаратным кошельком.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3931,12 +3931,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Частично подписанная транзакция (двоичный файл)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT сохранена</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT сохранена</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3951,9 +3951,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Вы можете увеличить комиссию позже (используется Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Пожалуйста, проверьте черновик вашей транзакции. Будет создана частично подписанная биткоин-транзакция (PSBT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSBT-совместимым аппаратным кошельком.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Пожалуйста, проверьте черновик вашей транзакции. Будет создана частично подписанная биткоин-транзакция (PSKT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSKT-совместимым аппаратным кошельком.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3961,9 +3961,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Вы хотите создать эту транзакцию?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Пожалуйста, проверьте вашу транзакцию. Вы можете создать и отправить эту транзакцию, либо создать частично подписанную биткоин-транзакцию (PSBT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSBT-совместимым аппаратным кошельком.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Пожалуйста, проверьте вашу транзакцию. Вы можете создать и отправить эту транзакцию, либо создать частично подписанную биткоин-транзакцию (PSKT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSKT-совместимым аппаратным кошельком.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4741,24 +4741,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Ошибка</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Не удалось декодировать PSBT из буфера обмена (неверный base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Не удалось декодировать PSKT из буфера обмена (неверный base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Загрузить данные о транзакции</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Частично подписанная транзакция (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Частично подписанная транзакция (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">Файл PSBT должен быть меньше 100 МиБ</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">Файл PSKT должен быть меньше 100 МиБ</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Не удалось декодировать PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Не удалось декодировать PSKT</translation>
     </message>
 </context>
 <context>
@@ -4805,8 +4805,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Не удалось подготовить черновик транзакции.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT скопирована</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT скопирована</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

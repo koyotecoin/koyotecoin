@@ -257,7 +257,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
     <message>
         <source>A fatal error occurred. Check that settings file is writable, or try running with -nosettings.</source>
         <extracomment>Explanatory text shown on startup when the settings file could not be written. Prompts user to check that we have the ability to write to the file. Explains that the user has the option of running without a settings file.</extracomment>
-        <translation type="unfinished">Prišlo je do usodne napake. Preverite, da je v nastavitveno datoteko možno pihowli, ali pa poskusite z -nosettings.</translation>
+        <translation type="unfinished">Prišlo je do usodne napake. Preverite, da je v nastavitveno datoteko možno pisati, ali pa poskusite z -nosettings.</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -397,7 +397,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
     </message>
     <message>
         <source>Settings file could not be written</source>
-        <translation type="unfinished">V nastavitveno datoteko ni bilo mogoče pihowli</translation>
+        <translation type="unfinished">V nastavitveno datoteko ni bilo mogoče pisati</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -500,7 +500,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Način obrezovanja ni združljiv z možnostjo -reindex-chainstate. Namesto tega uporabite polni -reindex.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Obrezovanje: zadnja sinhronizacija denarnice je izven obrezanih podatkov. Izvesti morate -reindex (v primeru obrezanega načina delovanja bo potrebno znova prenesti celotno verigo blokov).</translation>
     </message>
     <message>
@@ -620,7 +620,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Možnost -reindex-chainstate option ni združljiva s -txindex. Prosimo, ali začasno onemogočite txindex in uporabite -reindex-chainstate ali pa namesto reindex-chainstate uporabite -reindex za popolno ponovno tvorbo vseh kazal.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Zadnja sinhronizacija denarnice pade izven obdobja blokov, katerih podatki so na voljo. Potrebno je počakati, da preverjanje v ozadju prenese potrebne bloke.</translation>
     </message>
     <message>
@@ -749,7 +749,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
     </message>
     <message>
         <source>Error: Unable to write record to new wallet</source>
-        <translation type="unfinished">Napaka: zapisa ni mogoče zapihowli v novo denarnico</translation>
+        <translation type="unfinished">Napaka: zapisa ni mogoče zapisati v novo denarnico</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -1188,7 +1188,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Preverite, če je bilo prejeto sporočilo podpisano z določenim koyotecoin-naslovom.</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
+        <source>&amp;Load PSKT from file…</source>
         <translation type="unfinished">&amp;Naloži DPBT iz datoteke...</translation>
     </message>
     <message>
@@ -1217,7 +1217,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Naloži delno podpisano koyotecoin-transakcijo</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
+        <source>Load PSKT from &amp;clipboard…</source>
         <translation type="unfinished">Naloži DPBT z &amp;odložišča...</translation>
     </message>
     <message>
@@ -1935,7 +1935,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Če spremenite to nastavitev, boste morali ponovno naložiti celotno verigo blokov. Hitreje je najprej prenesti celotno verigo in jo obrezati pozneje. Ta nastavitev onemogoči nekatere napredne funkcije.</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Začetna sinhronizacija je zelo zahtevna in lahko odkrije probleme s strojno opremo v vašem računalniku, ki so prej bili neopaženi. Vsakič, ko zaženete %1, bo le-ta nadaljeval s prenosom, kjer je prejšnjič ostal.</translation>
     </message>
     <message>
@@ -2181,13 +2181,13 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Omogoči &amp;trošenje vračila iz še nepotrjenih plačil</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
         <translation type="unfinished">Omogoči nastavitve &amp;DPBT</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
         <translation type="unfinished">Ali naj se prikaže upravljanje z DPBT</translation>
     </message>
     <message>
@@ -2485,7 +2485,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Pogovorno okno</translation>
@@ -2520,11 +2520,11 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
     </message>
     <message>
         <source>Cannot sign inputs while wallet is locked.</source>
-        <translation type="unfinished">Vhodov ni mogoče podpihowli, ko je denarnica zaklenjena.</translation>
+        <translation type="unfinished">Vhodov ni mogoče podpisati, ko je denarnica zaklenjena.</translation>
     </message>
     <message>
         <source>Could not sign any more inputs.</source>
-        <translation type="unfinished">Ne morem podpihowli več kot toliko vhodov.</translation>
+        <translation type="unfinished">Ne morem podpisati več kot toliko vhodov.</translation>
     </message>
     <message>
         <source>Signed %1 inputs, but more signatures are still required.</source>
@@ -2547,7 +2547,7 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
         <translation type="unfinished">Oddaja transakcije v omrežje je spodletela: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
+        <source>PSKT copied to clipboard.</source>
         <translation type="unfinished">DPBT kopirana v odložišče.</translation>
     </message>
     <message>
@@ -2556,11 +2556,11 @@ Podpisovanje je možno le s podedovanimi ("legacy") naslovi.</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Delno podpisana transakcija (binarno)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
+        <source>PSKT saved to disk.</source>
         <translation type="unfinished">DPBT shranjena na disk.</translation>
     </message>
     <message>
@@ -3489,7 +3489,7 @@ Opomba: Ker se provizija izračuna na bajt, bi provizija "100 howloshijev na kvB
         <translation type="unfinished">Omogoči Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">"Replace-By-Fee" (RBF, BIP-125, "Povozi s provizijo") omogoča, da povečate provizijo za transakcijo po tem, ko je bila transakcija že poslana. Če tega ne izberete, se lahko priporoči višja provizija, ker je potem tveganje zamude pri potrjevanju večje.</translation>
     </message>
     <message>
@@ -3555,8 +3555,8 @@ Opomba: Ker se provizija izračuna na bajt, bi provizija "100 howloshijev na kvB
         <translation type="unfinished">Ustvari n&amp;epodpisano</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Ustvari delno podpisano koyotecoin-transakcijo (DPBT, angl. PSBT), ki jo lahko kopirate in potem podpišete n.pr. z nepovezano (offline) %1 denarnico ali pa s hardversko denarnico, ki podpira DPBT.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Ustvari delno podpisano koyotecoin-transakcijo (DPBT, angl. PSKT), ki jo lahko kopirate in potem podpišete n.pr. z nepovezano (offline) %1 denarnico ali pa s hardversko denarnico, ki podpira DPBT.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3594,11 +3594,11 @@ Opomba: Ker se provizija izračuna na bajt, bi provizija "100 howloshijev na kvB
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Delno podpisana transakcija (binarno)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
+        <source>PSKT saved</source>
         <translation type="unfinished">DPBT shranjena</translation>
     </message>
     <message>
@@ -3614,8 +3614,8 @@ Opomba: Ker se provizija izračuna na bajt, bi provizija "100 howloshijev na kvB
         <translation type="unfinished">Provizijo lahko zvišate kasneje (vsebuje Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">Prosimo, preglejte predlog za transakcijo. Ustvarjena bo delno podpisana koyotecoin-transakcija (DPBT), ki jo lahko shranite ali kopirate in potem podpišete n.pr. z nepovezano (offline) %1 denarnico ali pa s hardversko denarnico, ki podpira DPBT.</translation>
     </message>
     <message>
@@ -3624,9 +3624,9 @@ Opomba: Ker se provizija izračuna na bajt, bi provizija "100 howloshijev na kvB
         <translation type="unfinished">Želite ustvariti takšno transakcijo?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Prosimo, preglejte podrobnosti transakcije. Transakcijo lahko ustvarite in pošljete, lahko pa tudi ustvarite delno podpisano koyotecoin-transakcijo (DPBT, angl. PSBT), ki jo lahko shranite ali kopirate na odložišče in kasneje prodpišete n.pr. z nepovezano %1 denarnico ali z denarnico, ki podpiral DPBT.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Prosimo, preglejte podrobnosti transakcije. Transakcijo lahko ustvarite in pošljete, lahko pa tudi ustvarite delno podpisano koyotecoin-transakcijo (DPBT, angl. PSKT), ki jo lahko shranite ali kopirate na odložišče in kasneje prodpišete n.pr. z nepovezano %1 denarnico ali z denarnico, ki podpiral DPBT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3805,7 +3805,7 @@ Opomba: Ker se provizija izračuna na bajt, bi provizija "100 howloshijev na kvB
     </message>
     <message>
         <source>Enter the message you want to sign here</source>
-        <translation type="unfinished">Vnesite sporočilo, ki ga želite podpihowli</translation>
+        <translation type="unfinished">Vnesite sporočilo, ki ga želite podpisati</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -4387,7 +4387,7 @@ Za odpiranje denarnice kliknite Datoteka &gt; Odpri denarnico
         <translation type="unfinished">Ustvari novo denarnico</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
         <translation type="unfinished">Ne morem dekodirati DPBT z odložišča (neveljaven format base64)</translation>
     </message>
     <message>
@@ -4395,15 +4395,15 @@ Za odpiranje denarnice kliknite Datoteka &gt; Odpri denarnico
         <translation type="unfinished">Naloži podatke transakcije</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Delno podpisana transakcija (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Delno podpisana transakcija (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
+        <source>PSKT file must be smaller than 100 MiB</source>
         <translation type="unfinished">Velikost DPBT ne sme presegati 100 MiB.</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
+        <source>Unable to decode PSKT</source>
         <translation type="unfinished">Ne morem dekodirati DPBT</translation>
     </message>
 </context>
@@ -4451,12 +4451,12 @@ Za odpiranje denarnice kliknite Datoteka &gt; Odpri denarnico
         <translation type="unfinished">Ne morem shraniti osnutka transakcije</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
+        <source>PSKT copied</source>
         <translation type="unfinished">DPBT kopirana</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>
-        <translation type="unfinished">Ne morem podpihowli transakcije.</translation>
+        <translation type="unfinished">Ne morem podpisati transakcije.</translation>
     </message>
     <message>
         <source>Could not commit transaction</source>

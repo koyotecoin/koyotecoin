@@ -515,8 +515,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation type="unfinished">Prune mode is niet compatibel met -reindex-chainstate. Gebruik in plaats hiervan volledige -reindex.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
-        <translation type="unfinished">Prune: laatste wallet synchronihowlie gaat verder terug dan de pruned gegevens. Je moet herindexeren met -reindex (de hele blokketen opnieuw downloaden in geval van een pruned node)</translation>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <translation type="unfinished">Prune: laatste wallet synchronisatie gaat verder terug dan de pruned gegevens. Je moet herindexeren met -reindex (de hele blokketen opnieuw downloaden in geval van een pruned node)</translation>
     </message>
     <message>
         <source>SQLiteDatabase: Unknown sqlite wallet schema version %d. Only version %d is supported</source>
@@ -643,8 +643,8 @@ Ondertekenen is alleen mogelijk met adressen van het type 'legacy'.</translation
         <translation type="unfinished">-reindex-chainstate optie is niet compatibel met -txindex. Schakel -txindex tijdelijk uit aub en gebruik -reindex-chainstate, of vervang -reindex-chainstate met -reindex om alle indices volledig opnieuw op te bouwen.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
-        <translation type="unfinished">Aangenomen-geldig: Laatste walletsynchronihowlie gaat verder dan de beschikbare blokgegevens. Je moet wachten tot de validatie van de blokketen op de achtergrond meer blokken heeft gedownload.</translation>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <translation type="unfinished">Aangenomen-geldig: Laatste walletsynchronisatie gaat verder dan de beschikbare blokgegevens. Je moet wachten tot de validatie van de blokketen op de achtergrond meer blokken heeft gedownload.</translation>
     </message>
     <message>
         <source>Cannot provide specific connections and have addrman find outgoing connections at the same time.</source>
@@ -746,7 +746,7 @@ Kan mislukte migratie niet opschonen</translation>
     </message>
     <message>
         <source>Error initializing block database</source>
-        <translation type="unfinished">Fout bij intialihowlie blokkendatabase</translation>
+        <translation type="unfinished">Fout bij intialisatie blokkendatabase</translation>
     </message>
     <message>
         <source>Error initializing wallet database environment %s!</source>
@@ -870,7 +870,7 @@ Kan mislukte migratie niet opschonen</translation>
     </message>
     <message>
         <source>Failed to rescan the wallet during initialization</source>
-        <translation type="unfinished">Herscannen van de wallet tijdens initialihowlie mislukt</translation>
+        <translation type="unfinished">Herscannen van de wallet tijdens initialisatie mislukt</translation>
     </message>
     <message>
         <source>Failed to verify database</source>
@@ -894,7 +894,7 @@ Kan mislukte migratie niet opschonen</translation>
     </message>
     <message>
         <source>Initialization sanity check failed. %s is shutting down.</source>
-        <translation type="unfinished">Initialihowlie sanity check mislukt. %s is aan het afsluiten.</translation>
+        <translation type="unfinished">Initialisatie sanity check mislukt. %s is aan het afsluiten.</translation>
     </message>
     <message>
         <source>Input not found or already spent</source>
@@ -1313,8 +1313,8 @@ Kan mislukte migratie niet opschonen</translation>
         <translation type="unfinished">Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Koyotecoinadressen</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Laad PSBT vanuit bestand...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Laad PSKT vanuit bestand...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1432,8 +1432,8 @@ Kan mislukte migratie niet opschonen</translation>
         <translation type="unfinished">Laad gedeeltelijk ondertekende Koyotecoin transactie</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Laad PSBT vanaf klembord...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Laad PSKT vanaf klembord...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -2130,8 +2130,8 @@ Kan mislukte migratie niet opschonen</translation>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
-        <translation type="unfinished">Deze initiële synchronihowlie is heel veeleisend, en kan hardware problemen met uw computer blootleggen die voorheen onopgemerkt bleven. Elke keer dat %1 gebruikt word, zal verdergegaan worden waar gebleven is.</translation>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <translation type="unfinished">Deze initiële synchronisatie is heel veeleisend, en kan hardware problemen met uw computer blootleggen die voorheen onopgemerkt bleven. Elke keer dat %1 gebruikt word, zal verdergegaan worden waar gebleven is.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2 GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -2184,7 +2184,7 @@ Kan mislukte migratie niet opschonen</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the koyotecoin network, as detailed below.</source>
-        <translation type="unfinished">Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de wallet is daarom mogelijk niet correct. Deze informatie is correct zodra de synchronihowlie van de wallet met het Koyotecoinnetwerk gereed is, zoals onderaan toegelicht.</translation>
+        <translation type="unfinished">Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de wallet is daarom mogelijk niet correct. Deze informatie is correct zodra de synchronisatie van de wallet met het Koyotecoinnetwerk gereed is, zoals onderaan toegelicht.</translation>
     </message>
     <message>
         <source>Attempting to spend koyotecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -2216,7 +2216,7 @@ Kan mislukte migratie niet opschonen</translation>
     </message>
     <message>
         <source>Estimated time left until synced</source>
-        <translation type="unfinished">Geschatte resterende tijd tot synchronihowlie is voltooid</translation>
+        <translation type="unfinished">Geschatte resterende tijd tot synchronisatie is voltooid</translation>
     </message>
     <message>
         <source>Hide</source>
@@ -2371,14 +2371,14 @@ Ongebruikte mempool geheugen is gedeeld voor deze cache.</translation>
         <translation type="unfinished">&amp;Spendeer onbevestigd wisselgeld</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">&amp;PSBT besturingselementen inschakelen</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">&amp;PSKT besturingselementen inschakelen</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished"> PSBT besturingselementen weergegeven?</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished"> PSKT besturingselementen weergegeven?</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2675,7 +2675,7 @@ Ongebruikte mempool geheugen is gedeeld voor deze cache.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Dialoog</translation>
@@ -2737,8 +2737,8 @@ Ongebruikte mempool geheugen is gedeeld voor deze cache.</translation>
         <translation type="unfinished">Uitzenden transactie mislukt: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT gekopieerd naar klembord.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT gekopieerd naar klembord.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2746,12 +2746,12 @@ Ongebruikte mempool geheugen is gedeeld voor deze cache.</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Gedeeltelijk Ondertekende Transactie (Binair)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT opgeslagen op de schijf</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT opgeslagen op de schijf</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3155,7 +3155,7 @@ Als je deze fout ziet zou je de aanbieder moeten verzoeken om een BIP21-compatib
     </message>
     <message>
         <source>Time Offset</source>
-        <translation type="unfinished">Tijdcompenhowlie</translation>
+        <translation type="unfinished">Tijdcompensatie</translation>
     </message>
     <message>
         <source>Last block time</source>
@@ -3608,7 +3608,7 @@ Notitie: Omdat de vergoeding per byte wordt gerekend, zal een vergoeding van "10
         <translation type="unfinished">Activeer Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Met Replace-By-Fee (BIP-125) kun je de vergoeding voor een transactie verhogen na dat deze verstuurd is. Zonder dit kan een hogere vergoeding aangeraden worden om te compenseren voor de hogere kans op transactie vertragingen.</translation>
     </message>
     <message>
@@ -3678,8 +3678,8 @@ Notitie: Omdat de vergoeding per byte wordt gerekend, zal een vergoeding van "10
         <translation type="unfinished">Cr&amp;eëer Ongetekend</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Creëert een Gedeeltelijk Getekende Koyotecoin Transactie (PSBT) om te gebruiken met b.v. een offline %1 wallet, of een PSBT-compatibele hardware wallet.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Creëert een Gedeeltelijk Getekende Koyotecoin Transactie (PSKT) om te gebruiken met b.v. een offline %1 wallet, of een PSKT-compatibele hardware wallet.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3717,12 +3717,12 @@ Notitie: Omdat de vergoeding per byte wordt gerekend, zal een vergoeding van "10
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Gedeeltelijk Ondertekende Transactie (Binair)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT opgeslagen</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT opgeslagen</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3737,9 +3737,9 @@ Notitie: Omdat de vergoeding per byte wordt gerekend, zal een vergoeding van "10
         <translation type="unfinished">Je kunt de vergoeding later verhogen (signaleert Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Controleer aub je transactievoorstel. Dit zal een Gedeeltelijk Getekende Koyotecoin Transactie (PSBT) produceren die je kan opslaan of kopiëren en vervolgens ondertekenen met bijv. een offline %1 wallet, of een PSBT-combatibele hardware wallet.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Controleer aub je transactievoorstel. Dit zal een Gedeeltelijk Getekende Koyotecoin Transactie (PSKT) produceren die je kan opslaan of kopiëren en vervolgens ondertekenen met bijv. een offline %1 wallet, of een PSKT-combatibele hardware wallet.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3747,9 +3747,9 @@ Notitie: Omdat de vergoeding per byte wordt gerekend, zal een vergoeding van "10
         <translation type="unfinished">Wilt u deze transactie aanmaken?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Controleer aub je transactie. Je kan deze transactie creëren en verzenden, of een Gedeeltelijk Getekende Koyotecoin Transactie (PSBT) maken, die je kan opslaan of kopiëren en daarna ondertekenen, bijv. met een offline %1 wallet, of een PSBT-combatibele hardware wallet.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Controleer aub je transactie. Je kan deze transactie creëren en verzenden, of een Gedeeltelijk Getekende Koyotecoin Transactie (PSKT) maken, die je kan opslaan of kopiëren en daarna ondertekenen, bijv. met een offline %1 wallet, of een PSKT-combatibele hardware wallet.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4474,24 +4474,24 @@ Ga naar Bestand &gt; Wallet openen om een wallet te laden.
         <translation type="unfinished">Fout</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Onmogelijk om het PSBT te ontcijferen van het klembord (ongeldige base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Onmogelijk om het PSKT te ontcijferen van het klembord (ongeldige base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Laad Transactie Data</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Gedeeltelijk ondertekende transactie (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Gedeeltelijk ondertekende transactie (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">Het PSBT bestand moet kleiner dan 100 MiB te zijn.</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">Het PSKT bestand moet kleiner dan 100 MiB te zijn.</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Niet in staat om de PSBT te decoderen</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Niet in staat om de PSKT te decoderen</translation>
     </message>
 </context>
 <context>
@@ -4538,8 +4538,8 @@ Ga naar Bestand &gt; Wallet openen om een wallet te laden.
         <translation type="unfinished">Kan geen transactievoorstel aanmaken.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT is gekopieerd</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT is gekopieerd</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

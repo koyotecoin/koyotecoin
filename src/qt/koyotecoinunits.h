@@ -38,7 +38,7 @@ public:
     explicit KoyotecoinUnits(QObject *parent);
 
     /** Koyotecoin units.
-      @note Source: https://en.koyotecoin.it/wiki/Units . Please add only sensible ones
+      @note Please add only sensible ones
      */
     enum class Unit {
         KYC,

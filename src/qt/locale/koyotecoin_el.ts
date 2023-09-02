@@ -474,7 +474,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ο δακτύλιος έχει διαμορφωθεί κάτω από το ελάχιστο %d MiB. Χρησιμοποιήστε έναν υψηλότερο αριθμό.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Κλάδεμα: ο τελευταίος συγχρονισμός πορτοφολιού ξεπερνά τα κλαδεμένα δεδομένα. Πρέπει να κάνετε -reindex (κατεβάστε ολόκληρο το blockchain και πάλι σε περίπτωση κλαδέματος κόμβου)</translation>
     </message>
     <message>
@@ -1014,8 +1014,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Koyotecoin</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Φόρτωση PSBT από αρχείο...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Φόρτωση PSKT από αρχείο...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1133,8 +1133,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Φόρτωση συναλλαγής Partially Signed Koyotecoin</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Φόρτωσε PSBT από &amp;πρόχειρο...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Φόρτωσε PSKT από &amp;πρόχειρο...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1849,7 +1849,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Η επαναφορά αυτής της ρύθμισης απαιτεί εκ νέου λήψη ολόκληρου του μπλοκ αλυσίδας. Είναι πιο γρήγορο να κατεβάσετε πρώτα την πλήρη αλυσίδα και να την κλαδέψετε αργότερα. Απενεργοποιεί ορισμένες προηγμένες λειτουργίες.</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Αυτός ο αρχικός συγχρονισμός είναι πολύ απαιτητικός και μπορεί να εκθέσει προβλήματα υλικού με τον υπολογιστή σας, τα οποία προηγουμένως είχαν περάσει απαρατήρητα. Κάθε φορά που θα εκτελέσετε το %1, θα συνεχίσει να κατεβαίνει εκεί όπου έχει σταματήσει.</translation>
     </message>
     <message>
@@ -2344,7 +2344,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Διάλογος</translation>
@@ -2403,8 +2403,8 @@ ID Συναλλαγής: %1</translation>
         <translation type="unfinished">Η αναμετάδοση της συναλαγής απέτυχε: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT αντιγράφηκε στο πρόχειρο.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT αντιγράφηκε στο πρόχειρο.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2412,12 +2412,12 @@ ID Συναλλαγής: %1</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Μερικώς Υπογεγραμμένη Συναλλαγή (binary)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT αποθηκεύτηκε στο δίσκο.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT αποθηκεύτηκε στο δίσκο.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -3242,7 +3242,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">Ενεργοποίηση Αντικατάστασης-Aπό-Έξοδα</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Με την υπηρεσία αντικατάστασης-πληρωμής (BIP-125) μπορείτε να αυξήσετε το τέλος μιας συναλλαγής μετά την αποστολή. Χωρίς αυτό, μπορεί να συνιστάται υψηλότερη αμοιβή για την αντιστάθμιση του αυξημένου κινδύνου καθυστέρησης της συναλλαγής.</translation>
     </message>
     <message>
@@ -3337,12 +3337,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Μερικώς Υπογεγραμμένη Συναλλαγή (binary)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">Το PSBT αποθηκεύτηκε</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">Το PSKT αποθηκεύτηκε</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3357,9 +3357,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished"> Μπορείτε να αυξήσετε αργότερα την αμοιβή (σήματα Αντικατάσταση-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Παρακαλούμε, ελέγξτε την πρόταση συναλλαγής. Θα παραχθεί μια συναλλαγή Koyotecoin με μερική υπογραφή (PSBT), την οποία μπορείτε να αντιγράψετε και στη συνέχεια να υπογράψετε με π.χ. ένα πορτοφόλι %1 εκτός σύνδεσης ή ένα πορτοφόλι υλικού συμβατό με το PSBT.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Παρακαλούμε, ελέγξτε την πρόταση συναλλαγής. Θα παραχθεί μια συναλλαγή Koyotecoin με μερική υπογραφή (PSKT), την οποία μπορείτε να αντιγράψετε και στη συνέχεια να υπογράψετε με π.χ. ένα πορτοφόλι %1 εκτός σύνδεσης ή ένα πορτοφόλι υλικού συμβατό με το PSKT.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -4115,24 +4115,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Σφάλμα</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Αδυναμία αποκωδικοποίησης PSBT από το πρόχειρο (μη έγκυρο Base64)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Αδυναμία αποκωδικοποίησης PSKT από το πρόχειρο (μη έγκυρο Base64)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Φόρτωση δεδομένων συναλλαγής</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Μερικώς υπογεγραμμένη συναλλαγή (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Μερικώς υπογεγραμμένη συναλλαγή (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">Το αρχείο PSBT πρέπει να είναι μικρότερο από 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">Το αρχείο PSKT πρέπει να είναι μικρότερο από 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Αδυναμία στην αποκωδικοποίηση του PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Αδυναμία στην αποκωδικοποίηση του PSKT</translation>
     </message>
 </context>
 <context>
@@ -4175,8 +4175,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Δεν είναι δυνατή η σύνταξη συναλλαγής.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT αντιγράφηκε</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT αντιγράφηκε</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

@@ -74,8 +74,8 @@ void OptionTests::migrateSettings()
 
 void OptionTests::integerGetArgBug()
 {
-    // Test regression https://github.com/koyotecoin/koyotecoin/issues/24457. Ensure
-    // that setting integer prune value doesn't cause an exception to be thrown
+    // Test regression.
+    // Setting integer prune value doesn't cause an exception to be thrown
     // in the OptionsModel constructor
     gArgs.LockSettings([&](util::Settings& settings) {
         settings.forced_settings.erase("prune");
@@ -92,8 +92,6 @@ void OptionTests::integerGetArgBug()
 
 void OptionTests::parametersInteraction()
 {
-    // Test that the bug https://github.com/koyotecoin/gui/issues/567 does not resurface.
-    // It was fixed via https://github.com/koyotecoin/gui/pull/568.
     // With fListen=false in ~/.config/Koyotecoin/Koyotecoin-Qt.conf and all else left as default,
     // koyotecoin-qt should set both -listen and -listenonion to false and start successfully.
     gArgs.LockSettings([&](util::Settings& s) {
@@ -127,8 +125,8 @@ void OptionTests::parametersInteraction()
 
 void OptionTests::extractFilter()
 {
-    QString filter = QString("Partially Signed Transaction (Binary) (*.psbt)");
-    QCOMPARE(GUIUtil::ExtractFirstSuffixFromFilter(filter), "psbt");
+    QString filter = QString("Partially Signed Transaction (Binary) (*.pskt)");
+    QCOMPARE(GUIUtil::ExtractFirstSuffixFromFilter(filter), "pskt");
 
     filter = QString("Image (*.png *.jpg)");
     QCOMPARE(GUIUtil::ExtractFirstSuffixFromFilter(filter), "png");

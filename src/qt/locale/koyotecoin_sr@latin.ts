@@ -43,7 +43,7 @@
     </message>
     <message>
         <source>&amp;Delete</source>
-        <translation type="unfinished">&amp;Izbrihowli</translation>
+        <translation type="unfinished">&amp;Izbrisati</translation>
     </message>
     <message>
         <source>Choose the address to send coins to</source>

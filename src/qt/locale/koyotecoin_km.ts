@@ -1086,7 +1086,7 @@
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Copy to Clipboard</source>
         <translation type="unfinished">ថតចម្លងទៅកាន់ក្ដារតម្រៀប</translation>
@@ -1104,16 +1104,16 @@
         <translation type="unfinished"> ពុំស្គាល់ប្រត្តិបត្តិការកំពុងដំណើរការជួបបញ្ហា។</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT ត្រូវបានថតចម្លងទៅកាន់ក្ដារតម្រៀប។</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT ត្រូវបានថតចម្លងទៅកាន់ក្ដារតម្រៀប។</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
         <translation type="unfinished">រក្សាទិន្នន័យប្រត្តិបត្តិការ</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT បានរក្សាទុកក្នុងឌីស។</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT បានរក្សាទុកក្នុងឌីស។</translation>
     </message>
     <message>
         <source>Unable to calculate transaction fee or total transaction amount.</source>
@@ -1570,8 +1570,8 @@
         <translation type="unfinished">រក្សាទិន្នន័យប្រត្តិបត្តិការ</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished"> បានរក្សាទុកPSBT</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished"> បានរក្សាទុកPSKT</translation>
     </message>
     <message>
         <source>or</source>
@@ -2107,16 +2107,16 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">បញ្ហា</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">មិនអាចបកស្រាយអក្សរសម្ងាត់​PSBT ពី​ក្ដារតម្រៀប (មូដ្ឋាន៦៤ មិនត្រឹមត្រូវ)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">មិនអាចបកស្រាយអក្សរសម្ងាត់​PSKT ពី​ក្ដារតម្រៀប (មូដ្ឋាន៦៤ មិនត្រឹមត្រូវ)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">ទាញយកទិន្ន័យប្រត្តិបត្តិការ</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">ប្រត្តិបត្តិការ ដែលបានចុះហត្ថលេខាដោយផ្នែក (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">ប្រត្តិបត្តិការ ដែលបានចុះហត្ថលេខាដោយផ្នែក (*.pskt)</translation>
     </message>
     </context>
 <context>

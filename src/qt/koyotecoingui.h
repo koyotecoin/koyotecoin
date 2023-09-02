@@ -143,8 +143,8 @@ private:
     QAction* usedReceivingAddressesAction = nullptr;
     QAction* signMessageAction = nullptr;
     QAction* verifyMessageAction = nullptr;
-    QAction* m_load_psbt_action = nullptr;
-    QAction* m_load_psbt_clipboard_action = nullptr;
+    QAction* m_load_pskt_action = nullptr;
+    QAction* m_load_pskt_clipboard_action = nullptr;
     QAction* aboutAction = nullptr;
     QAction* receiveCoinsAction = nullptr;
     QAction* optionsAction = nullptr;
@@ -288,7 +288,7 @@ public Q_SLOTS:
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
     /** Load Partially Signed Koyotecoin Transaction from file or clipboard */
-    void gotoLoadPSBT(bool from_clipboard = false);
+    void gotoLoadPSKT(bool from_clipboard = false);
 
     /** Show open dialog */
     void openClicked();

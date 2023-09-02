@@ -319,10 +319,10 @@ void KoyotecoinGUI::createActions()
     signMessageAction->setStatusTip(tr("Sign messages with your Koyotecoin addresses to prove you own them"));
     verifyMessageAction = new QAction(tr("&Verify message…"), this);
     verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Koyotecoin addresses"));
-    m_load_psbt_action = new QAction(tr("&Load PSBT from file…"), this);
-    m_load_psbt_action->setStatusTip(tr("Load Partially Signed Koyotecoin Transaction"));
-    m_load_psbt_clipboard_action = new QAction(tr("Load PSBT from &clipboard…"), this);
-    m_load_psbt_clipboard_action->setStatusTip(tr("Load Partially Signed Koyotecoin Transaction from clipboard"));
+    m_load_pskt_action = new QAction(tr("&Load PSKT from file…"), this);
+    m_load_pskt_action->setStatusTip(tr("Load Partially Signed Koyotecoin Transaction"));
+    m_load_pskt_clipboard_action = new QAction(tr("Load PSKT from &clipboard…"), this);
+    m_load_pskt_clipboard_action->setStatusTip(tr("Load Partially Signed Koyotecoin Transaction from clipboard"));
 
     openRPCConsoleAction = new QAction(tr("Node window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open node debugging and diagnostic console"));
@@ -385,8 +385,8 @@ void KoyotecoinGUI::createActions()
         connect(changePassphraseAction, &QAction::triggered, walletFrame, &WalletFrame::changePassphrase);
         connect(signMessageAction, &QAction::triggered, [this]{ showNormalIfMinimized(); });
         connect(signMessageAction, &QAction::triggered, [this]{ gotoSignMessageTab(); });
-        connect(m_load_psbt_action, &QAction::triggered, [this]{ gotoLoadPSBT(); });
-        connect(m_load_psbt_clipboard_action, &QAction::triggered, [this]{ gotoLoadPSBT(true); });
+        connect(m_load_pskt_action, &QAction::triggered, [this]{ gotoLoadPSKT(); });
+        connect(m_load_pskt_clipboard_action, &QAction::triggered, [this]{ gotoLoadPSKT(true); });
         connect(verifyMessageAction, &QAction::triggered, [this]{ showNormalIfMinimized(); });
         connect(verifyMessageAction, &QAction::triggered, [this]{ gotoVerifyMessageTab(); });
         connect(usedSendingAddressesAction, &QAction::triggered, walletFrame, &WalletFrame::usedSendingAddresses);
@@ -489,8 +489,8 @@ void KoyotecoinGUI::createMenuBar()
         file->addAction(openAction);
         file->addAction(signMessageAction);
         file->addAction(verifyMessageAction);
-        file->addAction(m_load_psbt_action);
-        file->addAction(m_load_psbt_clipboard_action);
+        file->addAction(m_load_pskt_action);
+        file->addAction(m_load_pskt_clipboard_action);
         file->addSeparator();
     }
     file->addAction(quitAction);
@@ -954,9 +954,9 @@ void KoyotecoinGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
-void KoyotecoinGUI::gotoLoadPSBT(bool from_clipboard)
+void KoyotecoinGUI::gotoLoadPSKT(bool from_clipboard)
 {
-    if (walletFrame) walletFrame->gotoLoadPSBT(from_clipboard);
+    if (walletFrame) walletFrame->gotoLoadPSKT(from_clipboard);
 }
 #endif // ENABLE_WALLET
 

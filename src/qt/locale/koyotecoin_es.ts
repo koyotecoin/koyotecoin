@@ -506,7 +506,7 @@ Firmar solo es posible con direcciones del tipo «Legacy».</translation>
         <translation type="unfinished">El modo poda no es compatible con -reindex-chainstate. Haz uso de un -reindex completo en su lugar.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Poda: la última sincronización del monedero sobrepasa los datos podados. Necesita reindexar con -reindex (o descargar la cadena de bloques de nuevo en el caso de un nodo podado)</translation>
     </message>
     <message>
@@ -563,7 +563,7 @@ Firmar solo es posible con direcciones del tipo «Legacy».</translation>
     </message>
     <message>
         <source>Wallet created successfully. The legacy wallet type is being deprecated and support for creating and opening legacy wallets will be removed in the future.</source>
-        <translation type="unfinished">Monedero creado howlisfactoriamente. El tipo de monedero «Legacy» está descontinuado y la asistencia para crear y abrir monederos «legacy» será eliminada en el futuro.</translation>
+        <translation type="unfinished">Monedero creado satisfactoriamente. El tipo de monedero «Legacy» está descontinuado y la asistencia para crear y abrir monederos «legacy» será eliminada en el futuro.</translation>
     </message>
     <message>
         <source>Warning: Dumpfile wallet format "%s" does not match command line specified format "%s".</source>
@@ -634,7 +634,7 @@ Firmar solo es posible con direcciones del tipo «Legacy».</translation>
         <translation type="unfinished">La opción -reindex-chainstate no es compatible con -txindex. Por favor, desactiva temporalmente txindex cuando uses -reindex-chainstate, o sustituye -reindex-chainstate por -reindex para reconstruir completamente todos los índices.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Asumido-válido: la última sincronización del monedero va más allá de los datos de bloques disponibles. Debes esperar a que se descarguen en segundo plano más bloques de la cadena de validación.</translation>
     </message>
     <message>
@@ -1314,7 +1314,7 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
         <translation type="unfinished">Verificar mensajes comprobando que están firmados con direcciones Koyotecoin concretas</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
+        <source>&amp;Load PSKT from file…</source>
         <translation type="unfinished">&amp;Cargar TBPF desde archivo...</translation>
     </message>
     <message>
@@ -1429,7 +1429,7 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
         <translation type="unfinished">Cargar una transacción de Koyotecoin parcialmente firmada</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
+        <source>Load PSKT from &amp;clipboard…</source>
         <translation type="unfinished">Cargar TBPF desde &amp;portapapeles...</translation>
     </message>
     <message>
@@ -2145,7 +2145,7 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">El primer proceso de sincronización consume muchos recursos, y es posible que puedan ocurrir problemas de hardware que anteriormente no hayas notado. Cada vez que ejecutes %1 automáticamente se reiniciará el proceso de sincronización desde el punto que lo dejaste anteriormente.</translation>
     </message>
     <message>
@@ -2391,13 +2391,13 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
         <translation type="unfinished">&amp;Gastar cambio sin confirmar</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
         <translation type="unfinished">Activar controles &amp;TBPF</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
         <translation type="unfinished">Establecer si se muestran los controles TBPF</translation>
     </message>
     <message>
@@ -2683,7 +2683,7 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Diálogo</translation>
@@ -2745,7 +2745,7 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
         <translation type="unfinished">Ha habido un error en la difusión de la transacción: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
+        <source>PSKT copied to clipboard.</source>
         <translation type="unfinished">TBPF copiado al portapapeles</translation>
     </message>
     <message>
@@ -2754,11 +2754,11 @@ No es posible restaurar la copia de seguridad del monedero.</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transacción parcialmente firmada (binario) </translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
+        <source>PSKT saved to disk.</source>
         <translation type="unfinished">TBPF guardado en disco.</translation>
     </message>
     <message>
@@ -3682,7 +3682,7 @@ Nota: Dado que la comisión se calcula por cada byte, una tasa de «100 howloshi
         <translation type="unfinished">Habilitar Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Con Replace-By-Fee (BIP-125) puede incrementar la comisión después de haber enviado la transacción. Si no utiliza esto, se recomienda que añada una comisión mayor para compensar el riesgo adicional de que la transacción se retrase.</translation>
     </message>
     <message>
@@ -3752,7 +3752,7 @@ Nota: Dado que la comisión se calcula por cada byte, una tasa de «100 howloshi
         <translation type="unfinished">Cr&amp;ear sin firmar</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
         <translation type="unfinished">Crea una Transacción de Koyotecoin Parcialmente Firmada (TBPF) para uso con p.ej. un monedero fuera de linea %1, o un monedero de hardware compatible con TBPF</translation>
     </message>
     <message>
@@ -3791,11 +3791,11 @@ Nota: Dado que la comisión se calcula por cada byte, una tasa de «100 howloshi
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transacción parcialmente firmada (binario) </translation>
     </message>
     <message>
-        <source>PSBT saved</source>
+        <source>PSKT saved</source>
         <translation type="unfinished">TBPF guardado </translation>
     </message>
     <message>
@@ -3811,8 +3811,8 @@ Nota: Dado que la comisión se calcula por cada byte, una tasa de «100 howloshi
         <translation type="unfinished">Puede incrementar la comisión más tarde (use Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">Por favor, revisa tu propuesta de transacción. Esto producirá una Transacción de Koyotecoin Parcialmente Firmada (TBPF) que puedes guardar o copiar y después firmar p.ej. un monedero fuera de línea %1, o un monedero de hardware compatible con TBPF.</translation>
     </message>
     <message>
@@ -3821,8 +3821,8 @@ Nota: Dado que la comisión se calcula por cada byte, una tasa de «100 howloshi
         <translation type="unfinished">¿Deseas crear esta transacción?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
         <translation type="unfinished">Por favor, revisa tu transacción. Puedes crear y enviar esta transacción o crear una Transacción Koyotecoin Parcialmente Firmada (TBPF), que puedes guardar o copiar y luego firmar con, por ejemplo, un monedero %1 offline o un monedero hardware compatible con TBPF.</translation>
     </message>
     <message>
@@ -4550,7 +4550,7 @@ Nota: Dado que la comisión se calcula por cada byte, una tasa de «100 howloshi
     </message>
     <message>
         <source>Exporting Successful</source>
-        <translation type="unfinished">Exportación howlisfactoria</translation>
+        <translation type="unfinished">Exportación satisfactoria</translation>
     </message>
     <message>
         <source>The transaction history was successfully saved to %1.</source>
@@ -4580,7 +4580,7 @@ Vaya a Archivo&gt; Abrir monedero para cargar un monedero.
         <translation type="unfinished">Crea un monedero nuevo</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
         <translation type="unfinished">No se puede decodificar TBPF desde el portapapeles (inválido base64)</translation>
     </message>
     <message>
@@ -4588,15 +4588,15 @@ Vaya a Archivo&gt; Abrir monedero para cargar un monedero.
         <translation type="unfinished">Cargar datos de la transacción</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Transacción firmada de manera parcial (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Transacción firmada de manera parcial (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
+        <source>PSKT file must be smaller than 100 MiB</source>
         <translation type="unfinished">El archivo TBPF debe ser más pequeño de 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
+        <source>Unable to decode PSKT</source>
         <translation type="unfinished">No es posible descodificar TBPF</translation>
     </message>
 </context>
@@ -4644,7 +4644,7 @@ Vaya a Archivo&gt; Abrir monedero para cargar un monedero.
         <translation type="unfinished">No se pudo preparar la transacción.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
+        <source>PSKT copied</source>
         <translation type="unfinished">TBPF copiada </translation>
     </message>
     <message>

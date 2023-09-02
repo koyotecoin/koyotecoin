@@ -613,8 +613,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Зареди PSBT от файл…</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Зареди PSKT от файл…</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -736,8 +736,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Заредете частично подписана Koyotecoin трансакция</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Заредете PSBT (частично подписана Koyotecoin трансакция) от &amp;клипборд...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Заредете PSKT (частично подписана Koyotecoin трансакция) от &amp;клипборд...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1466,7 +1466,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ГБ</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Първоначалната синхронизация е изключително взискателна, и може да разкрие хардуерни проблеми с вашия компютър, които до сега са били незабелязани. Всеки път, когато включите %1,  свалянето ще започне от където е приключило.</translation>
     </message>
     <message>
@@ -1708,14 +1708,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Активиране &amp;PSBT контроли</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Активиране &amp;PSKT контроли</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Дали да покажа PSBT контроли.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Дали да покажа PSKT контроли.</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -1919,7 +1919,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Save…</source>
         <translation type="unfinished">Запази...</translation>
@@ -2978,8 +2978,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">грешка</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Частично Подписана Транзакция (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Частично Подписана Транзакция (*.pskt)</translation>
     </message>
     </context>
 <context>

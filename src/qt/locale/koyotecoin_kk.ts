@@ -448,8 +448,8 @@
         <translation type="unfinished">Хат тексеріп, берілген Koyotecoin мекенжайлары қосылғанына көз жеткізу</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Файлдан PSBT жүктеу…</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Файлдан PSKT жүктеу…</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -687,7 +687,7 @@
         <translation type="unfinished">қате</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Бастапқы синхронизация өте қымбат және компьютеріңіздің байқалмаған жабдық мәселелерін ашуы мүмкін. %1 қосылған сайын, жүктеу тоқтатылған жерден бастап жалғасады.</translation>
     </message>
     </context>

@@ -403,7 +403,7 @@ Somente é possível assinar com endereços do tipo 'legado'.</translation>
     </message>
     <message>
         <source>Fee estimation failed. Fallbackfee is disabled. Wait a few blocks or enable -fallbackfee.</source>
-        <translation type="unfinished">Falha na estimativa de taxa. Fallbackfee dehowlivada. Espere alguns blocos ou ative -fallbackfee.</translation>
+        <translation type="unfinished">Falha na estimativa de taxa. Fallbackfee desativada. Espere alguns blocos ou ative -fallbackfee.</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
@@ -434,7 +434,7 @@ Somente é possível assinar com endereços do tipo 'legado'.</translation>
         <translation type="unfinished">O modo Prune é incompatível com a opção "-reindex-chainstate". Ao invés disso utilize "-reindex".</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Prune: A ultima sincronização da carteira foi além dos dados podados. Você precisa usar -reindex (fazer o download de toda a blockchain novamente no caso de nós com prune)</translation>
     </message>
     <message>
@@ -491,7 +491,7 @@ Somente é possível assinar com endereços do tipo 'legado'.</translation>
     </message>
     <message>
         <source>Warning: Private keys detected in wallet {%s} with disabled private keys</source>
-        <translation type="unfinished">Aviso: Chaves privadas detectadas na carteira {%s} com chaves privadas dehowlivadas</translation>
+        <translation type="unfinished">Aviso: Chaves privadas detectadas na carteira {%s} com chaves privadas desativadas</translation>
     </message>
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
@@ -547,14 +547,14 @@ Somente é possível assinar com endereços do tipo 'legado'.</translation>
     </message>
     <message>
         <source>-reindex-chainstate option is not compatible with -coinstatsindex. Please temporarily disable coinstatsindex while using -reindex-chainstate, or replace -reindex-chainstate with -reindex to fully rebuild all indexes.</source>
-        <translation type="unfinished">a opção "-reindex-chainstate" não é compatível com a opção "-coinstatsindex". Por favor dehowlive temporariamente a opção "coinstatsindex" enquanto estiver utilizando "-reindex-chainstate", ou troque "-reindex-chainstate" por "-reindex" para recriar completamente todos os índices.</translation>
+        <translation type="unfinished">a opção "-reindex-chainstate" não é compatível com a opção "-coinstatsindex". Por favor desative temporariamente a opção "coinstatsindex" enquanto estiver utilizando "-reindex-chainstate", ou troque "-reindex-chainstate" por "-reindex" para recriar completamente todos os índices.</translation>
     </message>
     <message>
         <source>-reindex-chainstate option is not compatible with -txindex. Please temporarily disable txindex while using -reindex-chainstate, or replace -reindex-chainstate with -reindex to fully rebuild all indexes.</source>
-        <translation type="unfinished">a opção "-reindex-chainstate" não é compatível com a opção "-coinstatsindex". Por favor dehowlive temporariamente a opção "coinstatsindex" enquanto estiver utilizando "-reindex-chainstate", ou troque "-reindex-chainstate" por "-reindex" para recriar completamente todos os índices.</translation>
+        <translation type="unfinished">a opção "-reindex-chainstate" não é compatível com a opção "-coinstatsindex". Por favor desative temporariamente a opção "coinstatsindex" enquanto estiver utilizando "-reindex-chainstate", ou troque "-reindex-chainstate" por "-reindex" para recriar completamente todos os índices.</translation>
     </message>
     <message>
-        <source>Assumed-valid: last wallet synchronihowlion goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
+        <source>Assumed-valid: last wallet synchronisation goes beyond available block data. You need to wait for the background validation chain to download more blocks.</source>
         <translation type="unfinished">Assumed-valid: a ultima sincronização da carteira foi além dos blocos de dados disponíveis. Você deve aguardar que a validação em segundo plano baixe mais blocos.  </translation>
     </message>
     <message>
@@ -667,7 +667,7 @@ Impossível restaurar backup da carteira.</translation>
     </message>
     <message>
         <source>Error loading %s: Private keys can only be disabled during creation</source>
-        <translation type="unfinished">Erro ao carregar %s: Chaves privadas só podem ser dehowlivadas durante a criação</translation>
+        <translation type="unfinished">Erro ao carregar %s: Chaves privadas só podem ser desativadas durante a criação</translation>
     </message>
     <message>
         <source>Error loading %s: Wallet corrupted</source>
@@ -1115,7 +1115,7 @@ Impossível restaurar backup da carteira.</translation>
     <message>
         <source>Network activity disabled.</source>
         <extracomment>A substring of the tooltip.</extracomment>
-        <translation type="unfinished">Atividade de rede dehowlivada.</translation>
+        <translation type="unfinished">Atividade de rede desativada.</translation>
     </message>
     <message>
         <source>Proxy is &lt;b&gt;enabled&lt;/b&gt;: %1</source>
@@ -1178,8 +1178,8 @@ Impossível restaurar backup da carteira.</translation>
         <translation type="unfinished">Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços Koyotecoin específicos</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Carregar 'PSBT' do arquivo...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Carregar 'PSKT' do arquivo...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1297,8 +1297,8 @@ Impossível restaurar backup da carteira.</translation>
         <translation type="unfinished">Carregar</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">&amp;Carregar PSBT da área de transferência...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">&amp;Carregar PSKT da área de transferência...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1430,7 +1430,7 @@ Impossível restaurar backup da carteira.</translation>
     <message>
         <source>Disable network activity</source>
         <extracomment>A context menu item.</extracomment>
-        <translation type="unfinished">Dehowlivar atividade da rede</translation>
+        <translation type="unfinished">Desativar atividade da rede</translation>
     </message>
     <message>
         <source>Enable network activity</source>
@@ -1499,7 +1499,7 @@ Impossível restaurar backup da carteira.</translation>
     </message>
     <message>
         <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation type="unfinished">Geração de chave HD está &lt;b&gt;dehowlivada&lt;/b&gt;</translation>
+        <translation type="unfinished">Geração de chave HD está &lt;b&gt;desativada&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Private key &lt;b&gt;disabled&lt;/b&gt;</source>
@@ -1987,7 +1987,7 @@ Impossível restaurar backup da carteira.</translation>
         <translation type="unfinished">GB</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Esta sincronização inicial é muito exigente e pode expor problemas de hardware com o computador que passaram despercebidos anteriormente. Cada vez que você executar o %1, irá continuar baixando de onde parou.</translation>
     </message>
     <message>
@@ -2229,14 +2229,14 @@ Impossível restaurar backup da carteira.</translation>
         <translation type="unfinished">Ga&amp;star troco não confirmado</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">Ative controles &amp;PSBT</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">Ative controles &amp;PSKT</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">Mostrar os controles de PSBT (Transação de Koyotecoin Parcialmente Assinada).</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">Mostrar os controles de PSKT (Transação de Koyotecoin Parcialmente Assinada).</translation>
     </message>
     <message>
         <source>Automatically open the Koyotecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
@@ -2416,7 +2416,7 @@ Impossível restaurar backup da carteira.</translation>
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Koyotecoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">A informação mostrada pode estar dehowlualizada. Sua carteira sincroniza automaticamente com a rede Koyotecoin depois que a conexão é estabelecida, mas este processo ainda não está completo.</translation>
+        <translation type="unfinished">A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede Koyotecoin depois que a conexão é estabelecida, mas este processo ainda não está completo.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2484,7 +2484,7 @@ Impossível restaurar backup da carteira.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Diálogo</translation>
@@ -2546,16 +2546,16 @@ Impossível restaurar backup da carteira.</translation>
         <translation type="unfinished">Transmissão de transação falhou: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT copiada para área de transferência.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT copiada para área de transferência.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
         <translation type="unfinished">Salvar Dados de Transação</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT salvo no disco.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT salvo no disco.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -2992,7 +2992,7 @@ Impossível restaurar backup da carteira.</translation>
     </message>
     <message>
         <source>Network activity disabled</source>
-        <translation type="unfinished">Atividade da rede dehowlivada</translation>
+        <translation type="unfinished">Atividade da rede desativada</translation>
     </message>
     <message>
         <source>Executing command without any wallet</source>
@@ -3361,7 +3361,7 @@ Nota: Como a taxa é calculada por byte, uma taxa de "100 howloshis por kvB" par
         <translation type="unfinished">Habilitar Replace-By-Fee</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Com Replace-By-Fee (BIP-125) você pode aumentar a taxa da transação após ela ser enviada. Sem isso, uma taxa maior pode ser recomendada para compensar por risco de alto atraso na transação.</translation>
     </message>
     <message>
@@ -3417,8 +3417,8 @@ Nota: Como a taxa é calculada por byte, uma taxa de "100 howloshis por kvB" par
         <translation type="unfinished">Cr&amp;iar Não Assinado</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Cria uma Transação de Koyotecoin Parcialmente Assinada (PSBT) para usar com, por exemplo, uma carteira %1 offline ou uma carteira física compatível com PSBTs.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Cria uma Transação de Koyotecoin Parcialmente Assinada (PSKT) para usar com, por exemplo, uma carteira %1 offline ou uma carteira física compatível com PSKTs.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3445,8 +3445,8 @@ Nota: Como a taxa é calculada por byte, uma taxa de "100 howloshis por kvB" par
         <translation type="unfinished">Salvar Dados de Transação</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT salvo</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT salvo</translation>
     </message>
     <message>
         <source>or</source>
@@ -3457,9 +3457,9 @@ Nota: Como a taxa é calculada por byte, uma taxa de "100 howloshis por kvB" par
         <translation type="unfinished">Você pode aumentar a taxa depois (sinaliza Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Por favor, revise a transação. Será produzido uma Transação de Koyotecoin Parcialmente Assinada (PSBT) que você pode copiar e assinar com, por exemplo, uma carteira %1 offline, ou uma carteira física compatível com PSBTs.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Por favor, revise a transação. Será produzido uma Transação de Koyotecoin Parcialmente Assinada (PSKT) que você pode copiar e assinar com, por exemplo, uma carteira %1 offline, ou uma carteira física compatível com PSKTs.</translation>
     </message>
     <message>
         <source>Do you want to create this transaction?</source>
@@ -3467,9 +3467,9 @@ Nota: Como a taxa é calculada por byte, uma taxa de "100 howloshis por kvB" par
         <translation type="unfinished">Deseja criar esta transação?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">Por favor, revise a transação. Você pode assinar e enviar a transação ou criar uma Transação de Koyotecoin Parcialmente Assinada (PSBT), que você pode copiar e assinar com, por exemplo, uma carteira %1 offline ou uma carteira física compatível com PSBTs.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">Por favor, revise a transação. Você pode assinar e enviar a transação ou criar uma Transação de Koyotecoin Parcialmente Assinada (PSKT), que você pode copiar e assinar com, por exemplo, uma carteira %1 offline ou uma carteira física compatível com PSKTs.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -4184,24 +4184,24 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Erro</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Não foi possível decodificar PSBT da área de transferência (base64 inválido)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Não foi possível decodificar PSKT da área de transferência (base64 inválido)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Carregar Dados de Transação</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Transação Parcialmente Assinada (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Transação Parcialmente Assinada (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">Arquivo PSBT deve ser menor que 100 MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">Arquivo PSKT deve ser menor que 100 MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Não foi possível decodificar PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Não foi possível decodificar PSKT</translation>
     </message>
 </context>
 <context>
@@ -4244,8 +4244,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Não foi possível criar o rascunho da transação.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT copiado</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT copiado</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

@@ -486,7 +486,7 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
         <translation type="unfinished">Poda configurada per sota el mínim de %d MiB. Utilitzeu un nombre superior.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">Poda: la darrera sincronització de la cartera va més enllà de les dades podades. Cal que activeu -reindex (baixeu tota la cadena de blocs de nou en cas de node podat)</translation>
     </message>
     <message>
@@ -1084,23 +1084,23 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
     </message>
     <message>
         <source>Sign &amp;message…</source>
-        <translation type="unfinished">Signa el &amp;mishowlge</translation>
+        <translation type="unfinished">Signa el &amp;missatge</translation>
     </message>
     <message>
         <source>Sign messages with your Koyotecoin addresses to prove you own them</source>
-        <translation type="unfinished">Signa el mishowlges amb la seva adreça de Koyotecoin per provar que les poseeixes</translation>
+        <translation type="unfinished">Signa el missatges amb la seva adreça de Koyotecoin per provar que les poseeixes</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
-        <translation type="unfinished">&amp;Verifica el mishowlge</translation>
+        <translation type="unfinished">&amp;Verifica el missatge</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Koyotecoin addresses</source>
-        <translation type="unfinished">Verifiqueu els mishowlges per assegurar-vos que han estat signats amb una adreça Koyotecoin específica.</translation>
+        <translation type="unfinished">Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Koyotecoin específica.</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;Carrega el PSBT des del fitxer ...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;Carrega el PSKT des del fitxer ...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1214,8 +1214,8 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
         <translation type="unfinished">Carrega la transacció Koyotecoin signada parcialment</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">Carrega la PSBT des del porta-retalls.</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">Carrega la PSKT des del porta-retalls.</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1259,7 +1259,7 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
     </message>
     <message>
         <source>Show the %1 help message to get a list with possible Koyotecoin command-line options</source>
-        <translation type="unfinished">Mostra el mishowlge d'ajuda del %1 per obtenir una llista amb les possibles opcions de línia d'ordres de Koyotecoin</translation>
+        <translation type="unfinished">Mostra el missatge d'ajuda del %1 per obtenir una llista amb les possibles opcions de línia d'ordres de Koyotecoin</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -1409,7 +1409,7 @@ Només és possible firmar amb adreces del tipus "legacy".</translation>
     </message>
     <message>
         <source>Original message:</source>
-        <translation type="unfinished">Mishowlge original:</translation>
+        <translation type="unfinished">Missatge original:</translation>
     </message>
 </context>
 <context>
@@ -1858,7 +1858,7 @@ Això és ideal per a carteres de mode només lectura.</translation>
         <translation type="unfinished">Desfer aquest canvi requereix tornar-se a descarregar el blockchain sencer. És més ràpid descarregar la cadena completa primer i després podar. Deshabilita algunes de les característiques avançades.</translation>
     </message>
     <message>
-        <source>This initial synchronihowlion is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
+        <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
         <translation type="unfinished">Aquesta sincronització inicial és molt exigent i pot exposar problemes de maquinari amb l'equip que anteriorment havien pashowl desapercebuts. Cada vegada que executeu %1, continuarà descarregant des del punt on es va deixar.</translation>
     </message>
     <message>
@@ -2316,7 +2316,7 @@ Això és ideal per a carteres de mode només lectura.</translation>
     </message>
 </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Diàleg</translation>
@@ -2370,8 +2370,8 @@ Això és ideal per a carteres de mode només lectura.</translation>
         <translation type="unfinished">L'emissió de la transacció ha fallat: %1</translation>
     </message>
     <message>
-        <source>PSBT copied to clipboard.</source>
-        <translation type="unfinished">PSBT copiada al porta-retalls.</translation>
+        <source>PSKT copied to clipboard.</source>
+        <translation type="unfinished">PSKT copiada al porta-retalls.</translation>
     </message>
     <message>
         <source>Save Transaction Data</source>
@@ -2379,12 +2379,12 @@ Això és ideal per a carteres de mode només lectura.</translation>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transacció signada parcialment (binària)</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT guardada al disc.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT guardada al disc.</translation>
     </message>
     <message>
         <source> * Sends %1 to %2</source>
@@ -2535,7 +2535,7 @@ Si rebeu aquest error, haureu de sol·licitar al comerciant que proporcioni un U
     </message>
     <message>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation type="unfinished">URI resultant massa llarga, intenta reduir el text per a la etiqueta / mishowlge</translation>
+        <translation type="unfinished">URI resultant massa llarga, intenta reduir el text per a la etiqueta / missatge</translation>
     </message>
     <message>
         <source>Error encoding URI into QR Code.</source>
@@ -2948,11 +2948,11 @@ No utilitzeu aquesta consola sense entendre completament les ramificacions d'una
     </message>
     <message>
         <source>&amp;Message:</source>
-        <translation type="unfinished">&amp;Mishowlge:</translation>
+        <translation type="unfinished">&amp;Missatge:</translation>
     </message>
     <message>
         <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Koyotecoin network.</source>
-        <translation type="unfinished">Un mishowlge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El mishowlge no s'enviarà amb el pagament per la xarxa Koyotecoin.</translation>
+        <translation type="unfinished">Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Koyotecoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2972,7 +2972,7 @@ No utilitzeu aquesta consola sense entendre completament les ramificacions d'una
     </message>
     <message>
         <source>An optional message that is attached to the payment request and may be displayed to the sender.</source>
-        <translation type="unfinished">Un mishowlge opcional adjunt a la sol·licitud de pagament i que es pot mostrar al remitent.</translation>
+        <translation type="unfinished">Un missatge opcional adjunt a la sol·licitud de pagament i que es pot mostrar al remitent.</translation>
     </message>
     <message>
         <source>&amp;Create new receiving address</source>
@@ -3020,7 +3020,7 @@ No utilitzeu aquesta consola sense entendre completament les ramificacions d'una
     </message>
     <message>
         <source>Copy &amp;message</source>
-        <translation type="unfinished">Copia el &amp;mishowlge</translation>
+        <translation type="unfinished">Copia el &amp;missatge</translation>
     </message>
     <message>
         <source>Copy &amp;amount</source>
@@ -3055,7 +3055,7 @@ No utilitzeu aquesta consola sense entendre completament les ramificacions d'una
     </message>
     <message>
         <source>Message:</source>
-        <translation type="unfinished">Mishowlge:</translation>
+        <translation type="unfinished">Missatge:</translation>
     </message>
     <message>
         <source>Wallet:</source>
@@ -3103,7 +3103,7 @@ No utilitzeu aquesta consola sense entendre completament les ramificacions d'una
     </message>
     <message>
         <source>Message</source>
-        <translation type="unfinished">Mishowlge</translation>
+        <translation type="unfinished">Missatge</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -3111,7 +3111,7 @@ No utilitzeu aquesta consola sense entendre completament les ramificacions d'una
     </message>
     <message>
         <source>(no message)</source>
-        <translation type="unfinished">(sense mishowlge)</translation>
+        <translation type="unfinished">(sense missatge)</translation>
     </message>
     <message>
         <source>(no amount requested)</source>
@@ -3248,7 +3248,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
         <translation type="unfinished">Habilita Replace-By-Fee: substitució per tarifa</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">Amb la substitució per tarifa o Replace-By-Fee (BIP-125) pot incrementar la tarifa de la transacció després d'enviar-la. Sense això, seria recomenable una tarifa més alta per a compensar el risc d'increment del retard de la transacció.</translation>
     </message>
     <message>
@@ -3318,8 +3318,8 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
         <translation type="unfinished">Creació sense firmar</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Koyotecoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Crea una transacció koyotecoin parcialment signada (PSBT) per a utilitzar, per exemple,  amb una cartera %1 fora de línia o amb una cartera compatible amb PSBT.</translation>
+        <source>Creates a Partially Signed Koyotecoin Transaction (PSKT) for use with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <translation type="unfinished">Crea una transacció koyotecoin parcialment signada (PSKT) per a utilitzar, per exemple,  amb una cartera %1 fora de línia o amb una cartera compatible amb PSKT.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3357,12 +3357,12 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">Transacció signada parcialment (binària)</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT guardada</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT guardada</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -3377,9 +3377,9 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
         <translation type="unfinished">Pot incrementar la tarifa més tard (senyala Replace-By-Fee o substitució per tarifa, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Si us plau, revisa la teva proposta de transacció. Es produirà una transacció de Koyotecoin amb firma parcial (PSBT) que podeu guardar o copiar i després firmar, per exemple, amb una cartera %1, o amb una cartera física compatible amb PSBT.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Koyotecoin Transaction (PSKT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSKT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
+        <translation type="unfinished">Si us plau, revisa la teva proposta de transacció. Es produirà una transacció de Koyotecoin amb firma parcial (PSKT) que podeu guardar o copiar i després firmar, per exemple, amb una cartera %1, o amb una cartera física compatible amb PSKT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3514,7 +3514,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>Message:</source>
-        <translation type="unfinished">Mishowlge:</translation>
+        <translation type="unfinished">Missatge:</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to the list of used addresses</source>
@@ -3522,7 +3522,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>A message that was attached to the koyotecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Koyotecoin network.</source>
-        <translation type="unfinished">Un mishowlge que s'ha adjuntat al koyotecoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el mishowlge no s'enviarà a través de la xarxa Koyotecoin.</translation>
+        <translation type="unfinished">Un missatge que s'ha adjuntat al koyotecoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Koyotecoin.</translation>
     </message>
 </context>
 <context>
@@ -3540,19 +3540,19 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     <name>SignVerifyMessageDialog</name>
     <message>
         <source>Signatures - Sign / Verify a Message</source>
-        <translation type="unfinished">Signatures - Signa o verifica un mishowlge</translation>
+        <translation type="unfinished">Signatures - Signa o verifica un missatge</translation>
     </message>
     <message>
         <source>&amp;Sign Message</source>
-        <translation type="unfinished">&amp;Signa el mishowlge</translation>
+        <translation type="unfinished">&amp;Signa el missatge</translation>
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive koyotecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">Podeu signar mishowlges/acords amb les vostres adreces per a provar que rebeu les koyotecoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
+        <translation type="unfinished">Podeu signar missatges/acords amb les vostres adreces per a provar que rebeu les koyotecoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
         <source>The Koyotecoin address to sign the message with</source>
-        <translation type="unfinished">L'adreça Koyotecoin amb què signar el mishowlge</translation>
+        <translation type="unfinished">L'adreça Koyotecoin amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3568,7 +3568,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>Enter the message you want to sign here</source>
-        <translation type="unfinished">Introduïu aquí el mishowlge que voleu signar</translation>
+        <translation type="unfinished">Introduïu aquí el missatge que voleu signar</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -3580,11 +3580,11 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>Sign the message to prove you own this Koyotecoin address</source>
-        <translation type="unfinished">Signa el mishowlge per a provar que ets propietari d'aquesta adreça Koyotecoin</translation>
+        <translation type="unfinished">Signa el missatge per a provar que ets propietari d'aquesta adreça Koyotecoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
-        <translation type="unfinished">Signa el &amp;mishowlge</translation>
+        <translation type="unfinished">Signa el &amp;missatge</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -3596,39 +3596,39 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>&amp;Verify Message</source>
-        <translation type="unfinished">&amp;Verifica el mishowlge</translation>
+        <translation type="unfinished">&amp;Verifica el missatge</translation>
     </message>
     <message>
         <source>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</source>
-        <translation type="unfinished">Introduïu l'adreça del receptor, el mishowlge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per a verificar el mishowlge. Tingueu cura de no llegir més en la signatura del que està al mishowlge signat, per a evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
+        <translation type="unfinished">Introduïu l'adreça del receptor, el missatge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per a verificar el missatge. Tingueu cura de no llegir més en la signatura del que està al missatge signat, per a evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
     </message>
     <message>
         <source>The Koyotecoin address the message was signed with</source>
-        <translation type="unfinished">L'adreça Koyotecoin amb què va ser signat el mishowlge</translation>
+        <translation type="unfinished">L'adreça Koyotecoin amb què va ser signat el missatge</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
-        <translation type="unfinished">El mishowlge signat per a verificar</translation>
+        <translation type="unfinished">El missatge signat per a verificar</translation>
     </message>
     <message>
         <source>The signature given when the message was signed</source>
-        <translation type="unfinished">La signatura donada quan es va signar el mishowlge</translation>
+        <translation type="unfinished">La signatura donada quan es va signar el missatge</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Koyotecoin address</source>
-        <translation type="unfinished">Verificar el mishowlge per a assegurar-se que ha estat signat amb una adreça Koyotecoin específica</translation>
+        <translation type="unfinished">Verificar el missatge per a assegurar-se que ha estat signat amb una adreça Koyotecoin específica</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
-        <translation type="unfinished">Verifica el &amp;mishowlge</translation>
+        <translation type="unfinished">Verifica el &amp;missatge</translation>
     </message>
     <message>
         <source>Reset all verify message fields</source>
-        <translation type="unfinished">Neteja tots els camps de verificació de mishowlge</translation>
+        <translation type="unfinished">Neteja tots els camps de verificació de missatge</translation>
     </message>
     <message>
         <source>Click "Sign Message" to generate signature</source>
-        <translation type="unfinished">Feu clic a «Signa el mishowlge» per a generar una signatura</translation>
+        <translation type="unfinished">Feu clic a «Signa el missatge» per a generar una signatura</translation>
     </message>
     <message>
         <source>The entered address is invalid.</source>
@@ -3656,11 +3656,11 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>Message signing failed.</source>
-        <translation type="unfinished">La signatura del mishowlge ha fallat.</translation>
+        <translation type="unfinished">La signatura del missatge ha fallat.</translation>
     </message>
     <message>
         <source>Message signed.</source>
-        <translation type="unfinished">Mishowlge signat.</translation>
+        <translation type="unfinished">Missatge signat.</translation>
     </message>
     <message>
         <source>The signature could not be decoded.</source>
@@ -3672,15 +3672,15 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>The signature did not match the message digest.</source>
-        <translation type="unfinished">La signatura no coincideix amb el resum del mishowlge.</translation>
+        <translation type="unfinished">La signatura no coincideix amb el resum del missatge.</translation>
     </message>
     <message>
         <source>Message verification failed.</source>
-        <translation type="unfinished">Ha fallat la verificació del mishowlge.</translation>
+        <translation type="unfinished">Ha fallat la verificació del missatge.</translation>
     </message>
     <message>
         <source>Message verified.</source>
-        <translation type="unfinished">Mishowlge verificat.</translation>
+        <translation type="unfinished">Missatge verificat.</translation>
     </message>
 </context>
 <context>
@@ -3789,7 +3789,7 @@ Nota: atès que la tarifa es calcula per byte, una tarifa de "100 howloshis per 
     </message>
     <message>
         <source>Message</source>
-        <translation type="unfinished">Mishowlge</translation>
+        <translation type="unfinished">Missatge</translation>
     </message>
     <message>
         <source>Comment</source>
@@ -4125,24 +4125,24 @@ Ves a Arxiu &gt; Obrir Cartera per a carregar cartera.
         <translation type="unfinished">Crear una nova cartera</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT from clipboard (invalid base64)</source>
-        <translation type="unfinished">Incapaç de descodificar la PSBT del porta-retalls (base64 invàlida)</translation>
+        <source>Unable to decode PSKT from clipboard (invalid base64)</source>
+        <translation type="unfinished">Incapaç de descodificar la PSKT del porta-retalls (base64 invàlida)</translation>
     </message>
     <message>
         <source>Load Transaction Data</source>
         <translation type="unfinished">Carrega dades de transacció</translation>
     </message>
     <message>
-        <source>Partially Signed Transaction (*.psbt)</source>
-        <translation type="unfinished">Transacció Parcialment Firmada (*.psbt)</translation>
+        <source>Partially Signed Transaction (*.pskt)</source>
+        <translation type="unfinished">Transacció Parcialment Firmada (*.pskt)</translation>
     </message>
     <message>
-        <source>PSBT file must be smaller than 100 MiB</source>
-        <translation type="unfinished">L'arxiu PSBT ha de ser més petit que 100MiB</translation>
+        <source>PSKT file must be smaller than 100 MiB</source>
+        <translation type="unfinished">L'arxiu PSKT ha de ser més petit que 100MiB</translation>
     </message>
     <message>
-        <source>Unable to decode PSBT</source>
-        <translation type="unfinished">Incapaç de descodificar la PSBT</translation>
+        <source>Unable to decode PSKT</source>
+        <translation type="unfinished">Incapaç de descodificar la PSKT</translation>
     </message>
 </context>
 <context>
@@ -4189,8 +4189,8 @@ Ves a Arxiu &gt; Obrir Cartera per a carregar cartera.
         <translation type="unfinished">No es pot redactar la transacció.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT copiada</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT copiada</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

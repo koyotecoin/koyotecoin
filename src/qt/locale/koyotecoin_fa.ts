@@ -492,7 +492,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">هیچ فرمت فایل کیف پول ارائه نشده است. برای استفاده از createfromdump باید -format=&lt;format&gt; ارائه شود.</translation>
     </message>
     <message>
-        <source>Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
+        <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
         <translation type="unfinished">هرس: آخرین هماهنگی کیف پول فراتر از داده های هرس شده است. شما باید دوباره -exe کنید (در صورت گره هرس شده دوباره کل بلاکچین را بارگیری کنید)
  </translation>
     </message>
@@ -939,8 +939,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
  </translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">بارگیری PSBT از پرونده</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">بارگیری PSKT از پرونده</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -1053,8 +1053,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">به روز</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">بارگیری PSBT از &amp;clipboard…</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">بارگیری PSKT از &amp;clipboard…</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -1940,14 +1940,14 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">فعال کردن قابلیت سکه و کنترل</translation>
     </message>
     <message>
-        <source>Enable &amp;PSBT controls</source>
-        <extracomment>An options window setting to enable PSBT controls.</extracomment>
-        <translation type="unfinished">کنترل‌های &amp;PSBT را فعال کنید</translation>
+        <source>Enable &amp;PSKT controls</source>
+        <extracomment>An options window setting to enable PSKT controls.</extracomment>
+        <translation type="unfinished">کنترل‌های &amp;PSKT را فعال کنید</translation>
     </message>
     <message>
-        <source>Whether to show PSBT controls.</source>
-        <extracomment>Tooltip text for options window setting that enables PSBT controls.</extracomment>
-        <translation type="unfinished">برای نمایش کنترل‌های PSBT.</translation>
+        <source>Whether to show PSKT controls.</source>
+        <extracomment>Tooltip text for options window setting that enables PSKT controls.</extracomment>
+        <translation type="unfinished">برای نمایش کنترل‌های PSKT.</translation>
     </message>
     <message>
         <source>External Signer (e.g. hardware wallet)</source>
@@ -2237,7 +2237,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">تگفتگو</translation>
@@ -2268,7 +2268,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">تراکنش نسبتا امضا شده (باینری)</translation>
     </message>
     <message>
@@ -3116,7 +3116,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">فعال کردن جایگذاری دوباره از کارمزد</translation>
     </message>
     <message>
-        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compenhowle for increased transaction delay risk.</source>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
         <translation type="unfinished">با Replace-By-Fee (BIP-125) می توانید هزینه معامله را پس از ارسال آن افزایش دهید. بدون این ، ممکن است هزینه بیشتری برای جبران افزایش خطر تاخیر در معامله پیشنهاد شود.
  </translation>
     </message>
@@ -3210,7 +3210,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
     </message>
     <message>
         <source>Partially Signed Transaction (Binary)</source>
-        <extracomment>Expanded name of the binary PSBT file format. See: BIP 174.</extracomment>
+        <extracomment>Expanded name of the binary PSKT file format. See: BIP 174.</extracomment>
         <translation type="unfinished">تراکنش نسبتا امضا شده (باینری)</translation>
     </message>
     <message>
@@ -3231,9 +3231,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">آیا می خواهید این تراکنش را ایجاد کنید؟</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
-        <translation type="unfinished">لطفا معامله خود را بررسی کنید  می توانید این تراکنش را ایجاد و ارسال کنید یا یک تراکنش بیت کوین با امضای جزئی (PSBT) ایجاد کنید، که می توانید آن را ذخیره یا کپی کنید و سپس با آن امضا کنید، به عنوان مثال، یک کیف پول آفلاین %1، یا یک کیف پول سخت افزاری سازگار با PSBT.</translation>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Koyotecoin Transaction (PSKT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSKT-compatible hardware wallet.</source>
+        <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSKT. This string is displayed when both private keys and PSKT controls are enabled.</extracomment>
+        <translation type="unfinished">لطفا معامله خود را بررسی کنید  می توانید این تراکنش را ایجاد و ارسال کنید یا یک تراکنش بیت کوین با امضای جزئی (PSKT) ایجاد کنید، که می توانید آن را ذخیره یا کپی کنید و سپس با آن امضا کنید، به عنوان مثال، یک کیف پول آفلاین %1، یا یک کیف پول سخت افزاری سازگار با PSKT.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3933,8 +3933,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 howlo
         <translation type="unfinished">هشدار: ممکن است در صورت لزوم، با کاهش خروجی تغییر یا افزودن ورودی‌ها، هزینه اضافی را پرداخت کنید.  اگر از قبل وجود نداشته باشد، ممکن است یک خروجی تغییر جدید اضافه کند.  این تغییرات ممکن است به طور بالقوه حریم خصوصی را درز کند.</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT کپی شد</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT کپی شد</translation>
     </message>
     <message>
         <source>Can't sign transaction.</source>

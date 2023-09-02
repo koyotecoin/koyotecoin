@@ -71,8 +71,8 @@ private:
     bool fFeeMinimized;
     const PlatformStyle *platformStyle;
 
-    // Copy PSBT to clipboard and offer to save it.
-    void presentPSBT(PartiallySignedTransaction& psbt);
+    // Copy PSKT to clipboard and offer to save it.
+    void presentPSKT(PartiallySignedTransaction& pskt);
     // Process WalletModel::SendCoinsReturn and generate a pair consisting
     // of a message and message flags for use in Q_EMIT message().
     // Additional parameter msgArg can be used via .arg(msgArg).
@@ -80,15 +80,15 @@ private:
     void minimizeFeeSection(bool fMinimize);
     // Format confirmation message
     bool PrepareSendText(QString& question_string, QString& informative_text, QString& detailed_text);
-    /* Sign PSBT using external signer.
+    /* Sign PSKT using external signer.
      *
-     * @param[in,out] psbtx the PSBT to sign
+     * @param[in,out] psktx the PSKT to sign
      * @param[in,out] mtx needed to attempt to finalize
-     * @param[in,out] complete whether the PSBT is complete (a successfully signed multisig transaction may not be complete)
+     * @param[in,out] complete whether the PSKT is complete (a successfully signed multisig transaction may not be complete)
      *
      * @returns false if any failure occurred, which may include the user rejection of a transaction on the device.
      */
-    bool signWithExternalSigner(PartiallySignedTransaction& psbt, CMutableTransaction& mtx, bool& complete);
+    bool signWithExternalSigner(PartiallySignedTransaction& pskt, CMutableTransaction& mtx, bool& complete);
     void updateFeeMinimizedLabel();
     void updateCoinControlState();
 
@@ -139,12 +139,12 @@ private Q_SLOTS:
 
 private:
     QAbstractButton *yesButton;
-    QAbstractButton *m_psbt_button;
+    QAbstractButton *m_pskt_button;
     QTimer countDownTimer;
     int secDelay;
     QString confirmButtonText{tr("Send")};
     bool m_enable_send;
-    QString m_psbt_button_text{tr("Create Unsigned")};
+    QString m_pskt_button_text{tr("Create Unsigned")};
 };
 
 #endif // KOYOTECOIN_QT_SENDCOINSDIALOG_H

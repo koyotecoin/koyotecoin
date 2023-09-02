@@ -865,7 +865,7 @@
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Close</source>
         <translation type="unfinished">Pechar</translation>

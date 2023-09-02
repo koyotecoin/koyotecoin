@@ -518,8 +518,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Egiaztatu mesua Koyotecoin helbide espezifikoarekin erregistratu direla ziurtatzeko</translation>
     </message>
     <message>
-        <source>&amp;Load PSBT from file…</source>
-        <translation type="unfinished">&amp;kargatu PSBT fitxategitik...</translation>
+        <source>&amp;Load PSKT from file…</source>
+        <translation type="unfinished">&amp;kargatu PSKT fitxategitik...</translation>
     </message>
     <message>
         <source>Open &amp;URI…</source>
@@ -629,8 +629,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Partzialki sinatutako Koyotecoin transakzioa kargatu</translation>
     </message>
     <message>
-        <source>Load PSBT from &amp;clipboard…</source>
-        <translation type="unfinished">kargatu PSBT arbeletik...</translation>
+        <source>Load PSKT from &amp;clipboard…</source>
+        <translation type="unfinished">kargatu PSKT arbeletik...</translation>
     </message>
     <message>
         <source>Load Partially Signed Koyotecoin Transaction from clipboard</source>
@@ -1384,7 +1384,7 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     </message>
     </context>
 <context>
-    <name>PSBTOperationsDialog</name>
+    <name>PSKTOperationsDialog</name>
     <message>
         <source>Dialog</source>
         <translation type="unfinished">Elkarrizketa</translation>
@@ -1410,8 +1410,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Gorde transakzioko data</translation>
     </message>
     <message>
-        <source>PSBT saved to disk.</source>
-        <translation type="unfinished">PSBT diskoan gorde da.</translation>
+        <source>PSKT saved to disk.</source>
+        <translation type="unfinished">PSKT diskoan gorde da.</translation>
     </message>
     <message>
         <source>Total Amount</source>
@@ -1870,8 +1870,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Gorde transakzioko data</translation>
     </message>
     <message>
-        <source>PSBT saved</source>
-        <translation type="unfinished">PSBT gordeta</translation>
+        <source>PSKT saved</source>
+        <translation type="unfinished">PSKT gordeta</translation>
     </message>
     <message>
         <source>External balance:</source>
@@ -2151,7 +2151,7 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
     </message>
     <message>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
-        <translation type="unfinished">Transakzioaren egoera. Pahowlu sagua gainetik konfirmazio kopurua ikusteko.</translation>
+        <translation type="unfinished">Transakzioaren egoera. Pasatu sagua gainetik konfirmazio kopurua ikusteko.</translation>
     </message>
     <message>
         <source>Date and time that the transaction was received.</source>
@@ -2276,8 +2276,8 @@ Sinatzea 'legacy' motako helbideekin soilik da posible</translation>
         <translation type="unfinished">Kuota berria:</translation>
     </message>
     <message>
-        <source>PSBT copied</source>
-        <translation type="unfinished">PSBT kopiatua</translation>
+        <source>PSKT copied</source>
+        <translation type="unfinished">PSKT kopiatua</translation>
     </message>
     <message>
         <source>default wallet</source>
