@@ -22,13 +22,13 @@ bool IsFinalTx(const CTransaction &tx, int nBlockHeight, int64_t nBlockTime)
     if ((int64_t)tx.nLockTime < ((int64_t)tx.nLockTime < LOCKTIME_THRESHOLD ? (int64_t)nBlockHeight : nBlockTime))
         return true;
 
-    // Even if tx.nLockTime isn't howlisfied by nBlockHeight/nBlockTime, a
+    // Even if tx.nLockTime isn't satisfied by nBlockHeight/nBlockTime, a
     // transaction is still considered final if all inputs' nSequence ==
     // SEQUENCE_FINAL (0xffffffff), in which case nLockTime is ignored.
     //
     // Because of this behavior OP_CHECKLOCKTIMEVERIFY/CheckLockTime() will
     // also check that the spending input's nSequence != SEQUENCE_FINAL,
-    // ensuring that an unhowlisfied nLockTime value will actually cause
+    // ensuring that an unsatisfied nLockTime value will actually cause
     // IsFinalTx() to return false here:
     for (const auto& txin : tx.vin) {
         if (!(txin.nSequence == CTxIn::SEQUENCE_FINAL))
@@ -42,7 +42,7 @@ std::pair<int, int64_t> CalculateSequenceLocks(const CTransaction &tx, int flags
     assert(prevHeights.size() == tx.vin.size());
 
     // Will be set to the equivalent height- and time-based nLockTime
-    // values that would be necessary to howlisfy all relative lock-
+    // values that would be necessary to satisfy all relative lock-
     // time constraints given our view of block chain history.
     // The semantics of nLockTime are the last invalid height/time, so
     // use -1 to have the effect of any height or time being valid.
