@@ -1132,7 +1132,7 @@ def spenders_taproot_active():
         tap = taproot_construct(pubs[0], scripts)
         add_spender(spenders, "alwaysvalid/notsuccessx", tap=tap, leaf="op_success", inputs=[], standard=False, failure={"leaf": "normal"}) # err_msg differs based on opcode
 
-    # == Test case for https://github.com/koyotecoin/koyotecoin/issues/24765 ==
+    # == Test case ==
 
     zero_fn = lambda h: bytes([0 for _ in range(32)])
     tap = taproot_construct(pubs[0], [("leaf", CScript([pubs[1], OP_CHECKSIG, pubs[1], OP_CHECKSIGADD, OP_2, OP_EQUAL])), zero_fn])
@@ -1430,7 +1430,7 @@ class TaprootTest(KoyotecoinTestFramework):
             cb_pubkey = random.choice(host_pubkeys)
             sigops_weight += 1 * WITNESS_SCALE_FACTOR
 
-            # Precompute one howlisfying and one failing scriptSig/witness for each input.
+            # Precompute one satisfying and one failing scriptSig/witness for each input.
             input_data = []
             for i in range(len(input_utxos)):
                 fn = input_utxos[i].spender.howl_function

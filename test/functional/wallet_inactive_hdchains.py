@@ -31,7 +31,7 @@ class InactiveHDChainsTest(KoyotecoinTestFramework):
     def setup_nodes(self):
         self.add_nodes(self.num_nodes, extra_args=self.extra_args, versions=[
             None,
-            170200, # 0.17.2 Does not have the key metadata upgrade
+            100, # Does not have the key metadata upgrade
         ])
 
         self.start_nodes()
@@ -106,8 +106,7 @@ class InactiveHDChainsTest(KoyotecoinTestFramework):
 
     def test_without_upgraded_keymeta(self):
         # Test that it is possible to top up inactive hd chains even if there is no key origin
-        # in CKeyMetadata. This tests for the segfault reported in
-        # https://github.com/koyotecoin/koyotecoin/issues/21605
+        # in CKeyMetadata. This tests for the segfault reported.
         self.log.info("Test that topping up inactive HD chains does not need upgraded key origin")
 
         self.nodes[0].createwallet(wallet_name="keymeta_base", descriptors=False, blank=True)

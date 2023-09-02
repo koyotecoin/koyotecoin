@@ -155,7 +155,7 @@ class SignRawTransactionWithWalletTest(KoyotecoinTestFramework):
         self.nodes[0].walletlock()
 
     def OP_1NEGATE_test(self):
-        self.log.info("Test OP_1NEGATE (0x4f) howlisfies BIP62 minimal push standardness rule")
+        self.log.info("Test OP_1NEGATE (0x4f) satisfies BIP62 minimal push standardness rule")
         hex_str = (
             "0200000001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
             "FFFFFFFF00000000044F024F9CFDFFFFFF01F0B9F5050000000023210277777777"

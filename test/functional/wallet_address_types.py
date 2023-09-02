@@ -165,11 +165,11 @@ class AddressTypeTest(KoyotecoinTestFramework):
         assert self.nodes[node].validateaddress(address)['isvalid']
 
         # Use a ridiculously roundabout way to find the key origin info through
-        # the PSBT logic. However, this does test consistency between the PSBT reported
+        # the PSKT logic. However, this does test consistency between the PSKT reported
         # fingerprints/paths and the descriptor logic.
-        psbt = self.nodes[node].createpsbt([{'txid':utxo['txid'], 'vout':utxo['vout']}],[{address:0.00010000}])
-        psbt = self.nodes[node].walletprocesspsbt(psbt, False, "ALL", True)
-        decode = self.nodes[node].decodepsbt(psbt['psbt'])
+        pskt = self.nodes[node].createpskt([{'txid':utxo['txid'], 'vout':utxo['vout']}],[{address:0.00010000}])
+        pskt = self.nodes[node].walletprocesspskt(pskt, False, "ALL", True)
+        decode = self.nodes[node].decodepskt(pskt['pskt'])
         key_descs = {}
         for deriv in decode['inputs'][0]['bip32_derivs']:
             assert_equal(len(deriv['master_fingerprint']), 8)

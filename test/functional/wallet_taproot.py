@@ -300,7 +300,7 @@ class WalletTaprootTest(KoyotecoinTestFramework):
             self.generatetoaddress(self.nodes[0], 1, self.boring.getnewaddress(), sync_fun=self.no_op)
             test_balance = int(rpc_online.getbalance() * 100000000)
             ret_amnt = random.randrange(100000, test_balance)
-            # Increase fee_rate to compenhowle for the wallet's inability to estimate fees for script path spends.
+            # Increase fee_rate to compensate for the wallet's inability to estimate fees for script path spends.
             res = rpc_online.sendtoaddress(address=self.boring.getnewaddress(), amount=Decimal(ret_amnt) / 100000000, subtractfeefromamount=True, fee_rate=200)
             self.generatetoaddress(self.nodes[0], 1, self.boring.getnewaddress(), sync_fun=self.no_op)
             assert(rpc_online.gettransaction(res)["confirmations"] > 0)
@@ -311,16 +311,16 @@ class WalletTaprootTest(KoyotecoinTestFramework):
         assert(rpc_online.gettransaction(txid)["confirmations"] > 0)
         rpc_online.unloadwallet()
 
-    def do_test_psbt(self, comment, pattern, privmap, treefn, keys_pay, keys_change):
-        self.log.info("Testing %s through PSBT" % comment)
+    def do_test_pskt(self, comment, pattern, privmap, treefn, keys_pay, keys_change):
+        self.log.info("Testing %s through PSKT" % comment)
 
         # Create wallets
         wallet_uuid = uuid.uuid4().hex
-        self.nodes[0].createwallet(wallet_name=f"psbt_online_{wallet_uuid}", descriptors=True, disable_private_keys=True, blank=True)
-        self.nodes[1].createwallet(wallet_name=f"psbt_offline_{wallet_uuid}", descriptors=True, blank=True)
+        self.nodes[0].createwallet(wallet_name=f"pskt_online_{wallet_uuid}", descriptors=True, disable_private_keys=True, blank=True)
+        self.nodes[1].createwallet(wallet_name=f"pskt_offline_{wallet_uuid}", descriptors=True, blank=True)
         self.nodes[1].createwallet(f"key_only_wallet_{wallet_uuid}", descriptors=True, blank=True)
-        psbt_online = self.nodes[0].get_wallet_rpc(f"psbt_online_{wallet_uuid}")
-        psbt_offline = self.nodes[1].get_wallet_rpc(f"psbt_offline_{wallet_uuid}")
+        pskt_online = self.nodes[0].get_wallet_rpc(f"pskt_online_{wallet_uuid}")
+        pskt_offline = self.nodes[1].get_wallet_rpc(f"pskt_offline_{wallet_uuid}")
         key_only_wallet = self.nodes[1].get_wallet_rpc(f"key_only_wallet_{wallet_uuid}")
 
         desc_pay = self.make_desc(pattern, privmap, keys_pay, False)
@@ -329,20 +329,20 @@ class WalletTaprootTest(KoyotecoinTestFramework):
         desc_change_pub = self.make_desc(pattern, privmap, keys_change, True)
         assert_equal(self.nodes[0].getdescriptorinfo(desc_pay)['descriptor'], desc_pay_pub)
         assert_equal(self.nodes[0].getdescriptorinfo(desc_change)['descriptor'], desc_change_pub)
-        result = psbt_online.importdescriptors([{"desc": desc_pay_pub, "active": True, "timestamp": "now"}])
+        result = pskt_online.importdescriptors([{"desc": desc_pay_pub, "active": True, "timestamp": "now"}])
         assert(result[0]['success'])
-        result = psbt_online.importdescriptors([{"desc": desc_change_pub, "active": True, "timestamp": "now", "internal": True}])
+        result = pskt_online.importdescriptors([{"desc": desc_change_pub, "active": True, "timestamp": "now", "internal": True}])
         assert(result[0]['success'])
-        result = psbt_offline.importdescriptors([{"desc": desc_pay, "active": True, "timestamp": "now"}])
+        result = pskt_offline.importdescriptors([{"desc": desc_pay, "active": True, "timestamp": "now"}])
         assert(result[0]['success'])
-        result = psbt_offline.importdescriptors([{"desc": desc_change, "active": True, "timestamp": "now", "internal": True}])
+        result = pskt_offline.importdescriptors([{"desc": desc_change, "active": True, "timestamp": "now", "internal": True}])
         assert(result[0]['success'])
         for key in keys_pay + keys_change:
             result = key_only_wallet.importdescriptors([{"desc": descsum_create(f"wpkh({key['xprv']}/*)"), "timestamp":"now"}])
             assert(result[0]["success"])
         address_type = "bech32m" if "tr" in pattern else "bech32"
         for i in range(4):
-            addr_g = psbt_online.getnewaddress(address_type=address_type)
+            addr_g = pskt_online.getnewaddress(address_type=address_type)
             if treefn is not None:
                 addr_r = self.make_addr(treefn, keys_pay, i)
                 assert_equal(addr_g, addr_r)
@@ -350,50 +350,50 @@ class WalletTaprootTest(KoyotecoinTestFramework):
             to_amnt = random.randrange(1000000, boring_balance)
             self.boring.sendtoaddress(address=addr_g, amount=Decimal(to_amnt) / 100000000, subtractfeefromamount=True)
             self.generatetoaddress(self.nodes[0], 1, self.boring.getnewaddress(), sync_fun=self.no_op)
-            test_balance = int(psbt_online.getbalance() * 100000000)
+            test_balance = int(pskt_online.getbalance() * 100000000)
             ret_amnt = random.randrange(100000, test_balance)
-            # Increase fee_rate to compenhowle for the wallet's inability to estimate fees for script path spends.
-            psbt = psbt_online.walletcreatefundedpsbt([], [{self.boring.getnewaddress(): Decimal(ret_amnt) / 100000000}], None, {"subtractFeeFromOutputs":[0], "fee_rate": 200, "change_type": address_type})['psbt']
-            res = psbt_offline.walletprocesspsbt(psbt=psbt, finalize=False)
-            for wallet in [psbt_offline, key_only_wallet]:
-                res = wallet.walletprocesspsbt(psbt=psbt, finalize=False)
+            # Increase fee_rate to compensate for the wallet's inability to estimate fees for script path spends.
+            pskt = pskt_online.walletcreatefundedpskt([], [{self.boring.getnewaddress(): Decimal(ret_amnt) / 100000000}], None, {"subtractFeeFromOutputs":[0], "fee_rate": 200, "change_type": address_type})['pskt']
+            res = pskt_offline.walletprocesspskt(pskt=pskt, finalize=False)
+            for wallet in [pskt_offline, key_only_wallet]:
+                res = wallet.walletprocesspskt(pskt=pskt, finalize=False)
 
-                decoded = wallet.decodepsbt(res["psbt"])
+                decoded = wallet.decodepskt(res["pskt"])
                 if pattern.startswith("tr("):
-                    for psbtin in decoded["inputs"]:
-                        assert "non_witness_utxo" not in psbtin
-                        assert "witness_utxo" in psbtin
-                        assert "taproot_internal_key" in psbtin
-                        assert "taproot_bip32_derivs" in psbtin
-                        assert "taproot_key_path_sig" in psbtin or "taproot_script_path_sigs" in psbtin
-                        if "taproot_script_path_sigs" in psbtin:
-                            assert "taproot_merkle_root" in psbtin
-                            assert "taproot_scripts" in psbtin
+                    for psktin in decoded["inputs"]:
+                        assert "non_witness_utxo" not in psktin
+                        assert "witness_utxo" in psktin
+                        assert "taproot_internal_key" in psktin
+                        assert "taproot_bip32_derivs" in psktin
+                        assert "taproot_key_path_sig" in psktin or "taproot_script_path_sigs" in psktin
+                        if "taproot_script_path_sigs" in psktin:
+                            assert "taproot_merkle_root" in psktin
+                            assert "taproot_scripts" in psktin
 
-                rawtx = self.nodes[0].finalizepsbt(res['psbt'])['hex']
+                rawtx = self.nodes[0].finalizepskt(res['pskt'])['hex']
                 res = self.nodes[0].testmempoolaccept([rawtx])
                 assert res[0]["allowed"]
 
             txid = self.nodes[0].sendrawtransaction(rawtx)
             self.generatetoaddress(self.nodes[0], 1, self.boring.getnewaddress(), sync_fun=self.no_op)
-            assert(psbt_online.gettransaction(txid)['confirmations'] > 0)
+            assert(pskt_online.gettransaction(txid)['confirmations'] > 0)
 
         # Cleanup
-        psbt = psbt_online.sendall(recipients=[self.boring.getnewaddress()], options={"psbt": True})["psbt"]
-        res = psbt_offline.walletprocesspsbt(psbt=psbt, finalize=False)
-        rawtx = self.nodes[0].finalizepsbt(res['psbt'])['hex']
+        pskt = pskt_online.sendall(recipients=[self.boring.getnewaddress()], options={"pskt": True})["pskt"]
+        res = pskt_offline.walletprocesspskt(pskt=pskt, finalize=False)
+        rawtx = self.nodes[0].finalizepskt(res['pskt'])['hex']
         txid = self.nodes[0].sendrawtransaction(rawtx)
         self.generatetoaddress(self.nodes[0], 1, self.boring.getnewaddress(), sync_fun=self.no_op)
-        assert(psbt_online.gettransaction(txid)['confirmations'] > 0)
-        psbt_online.unloadwallet()
-        psbt_offline.unloadwallet()
+        assert(pskt_online.gettransaction(txid)['confirmations'] > 0)
+        pskt_online.unloadwallet()
+        pskt_offline.unloadwallet()
 
     def do_test(self, comment, pattern, privmap, treefn):
         nkeys = len(privmap)
         keys = random.sample(KEYS, nkeys * 4)
         self.do_test_addr(comment, pattern, privmap, treefn, keys[0:nkeys])
         self.do_test_sendtoaddress(comment, pattern, privmap, treefn, keys[0:nkeys], keys[nkeys:2*nkeys])
-        self.do_test_psbt(comment, pattern, privmap, treefn, keys[2*nkeys:3*nkeys], keys[3*nkeys:4*nkeys])
+        self.do_test_pskt(comment, pattern, privmap, treefn, keys[2*nkeys:3*nkeys], keys[3*nkeys:4*nkeys])
 
     def run_test(self):
         self.nodes[0].createwallet(wallet_name="boring")

@@ -60,7 +60,7 @@ class WalletMiniscriptTest(KoyotecoinTestFramework):
             lambda: len(self.ms_wo_wallet.listunspent(minconf=0, addresses=[addr])) == 1
         )
         utxo = self.ms_wo_wallet.listunspent(minconf=0, addresses=[addr])[0]
-        assert utxo["txid"] == txid and not utxo["solvable"]  # No howlisfaction logic (yet)
+        assert utxo["txid"] == txid and not utxo["solvable"]  # No satisfaction logic (yet)
 
     def run_test(self):
         self.log.info("Making a descriptor wallet")

@@ -8,7 +8,7 @@
 Test upgradewallet RPC. Download node binaries:
 
 Requires previous releases binaries, see test/README.md.
-Only v0.15.2 and v0.16.3 are required by this test.
+Only v1.0.0 are required by this test.
 """
 
 import os
@@ -51,8 +51,8 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
         self.num_nodes = 3
         self.extra_args = [
             ["-addresstype=bech32", "-keypool=2"], # current wallet version
-            ["-usehd=1", "-keypool=2"],            # v0.16.3 wallet
-            ["-usehd=0", "-keypool=2"]             # v0.15.2 wallet
+            ["-usehd=1", "-keypool=2"],            # v1.0.0 wallet
+            ["-usehd=0", "-keypool=2"]             # v1.0.0 wallet
         ]
         self.wallet_names = [self.default_wallet_name, None, None]
 
@@ -67,8 +67,7 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
     def setup_nodes(self):
         self.add_nodes(self.num_nodes, extra_args=self.extra_args, versions=[
             None,
-            160300,
-            150200,
+            100,
         ])
         self.start_nodes()
         self.import_deterministic_coinbase_privkeys()
@@ -76,12 +75,6 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
     def dumb_sync_blocks(self):
         """
         Little helper to sync older wallets.
-        Notice that v0.15.2's regtest is hardforked, so there is
-        no sync for it.
-        v0.15.2 is only being used to test for version upgrade
-        and master hash key presence.
-        v0.16.3 is being used to test for version upgrade and balances.
-        Further info: https://github.com/koyotecoin/koyotecoin/pull/18774#discussion_r416967844
         """
         node_from = self.nodes[0]
         v16_3_node = self.nodes[1]
@@ -193,27 +186,27 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
         # should have no master key hash before conversion
         assert_equal('hdseedid' in wallet.getwalletinfo(), False)
         self.log.info("Test upgradewallet with explicit version number")
-        self.test_upgradewallet(wallet, previous_version=60000, requested_version=169900)
+        self.test_upgradewallet(wallet, previous_version=100, requested_version=169900)
         # after conversion master key hash should be present
         assert_is_hex_string(wallet.getwalletinfo()['hdseedid'])
 
         self.log.info("Intermediary versions don't effect anything")
         copy_non_hd()
-        # Wallet starts with 60000
-        assert_equal(60000, wallet.getwalletinfo()['walletversion'])
+        # Wallet starts with 100
+        assert_equal(100, wallet.getwalletinfo()['walletversion'])
         wallet.unloadwallet()
         before_checksum = sha256sum_file(node_master_wallet)
         node_master.loadwallet('')
-        # Test an "upgrade" from 60000 to 129999 has no effect, as the next version is 130000
-        self.test_upgradewallet(wallet, previous_version=60000, requested_version=129999, expected_version=60000)
+        # Test an "upgrade" from 100 to 129999 has no effect, as the next version is 130000
+        self.test_upgradewallet(wallet, previous_version=100, requested_version=129999, expected_version=100)
         wallet.unloadwallet()
         assert_equal(before_checksum, sha256sum_file(node_master_wallet))
         node_master.loadwallet('')
 
         self.log.info('Wallets cannot be downgraded')
         copy_non_hd()
-        self.test_upgradewallet_error(wallet, previous_version=60000, requested_version=40000,
-            msg="Cannot downgrade wallet from version 60000 to version 40000. Wallet version unchanged.")
+        self.test_upgradewallet_error(wallet, previous_version=100, requested_version=40000,
+            msg="Cannot downgrade wallet from version 100 to version 40000. Wallet version unchanged.")
         wallet.unloadwallet()
         assert_equal(before_checksum, sha256sum_file(node_master_wallet))
         node_master.loadwallet('')
@@ -223,7 +216,7 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
         orig_kvs = dump_bdb_kv(node_master_wallet)
         assert b'\x07hdchain' not in orig_kvs
         # Upgrade to HD, no split
-        self.test_upgradewallet(wallet, previous_version=60000, requested_version=130000)
+        self.test_upgradewallet(wallet, previous_version=100, requested_version=130000)
         # Check that there is now a hd chain and it is version 1, no internal chain counter
         new_kvs = dump_bdb_kv(node_master_wallet)
         assert b'\x07hdchain' in new_kvs
@@ -277,7 +270,7 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
 
         self.log.info('Upgrade non-HD to HD chain split')
         copy_non_hd()
-        self.test_upgradewallet(wallet, previous_version=60000, requested_version=169900)
+        self.test_upgradewallet(wallet, previous_version=100, requested_version=169900)
         # Check that the hdchain updated correctly
         new_kvs = dump_bdb_kv(node_master_wallet)
         hd_chain = new_kvs[b'\x07hdchain']

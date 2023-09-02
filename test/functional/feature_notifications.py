@@ -122,8 +122,7 @@ class NotificationsTest(KoyotecoinTestFramework):
             self.expect_wallet_notify([(tx1, -1, UNCONFIRMED_HASH_STRING)])
 
             # Generate bump transaction, sync mempools, and check for bump1
-            # notification. In the future, per
-            # https://github.com/koyotecoin/koyotecoin/pull/9371, it might be better
+            # notification. In the future, it might be better
             # to have notifications for both tx1 and bump1.
             bump1 = self.nodes[0].bumpfee(tx1)["txid"]
             assert_equal(bump1 in self.nodes[0].getrawmempool(), True)

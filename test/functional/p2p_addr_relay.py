@@ -131,7 +131,7 @@ class AddrTest(KoyotecoinTestFramework):
         # `addr` messages are sent on an exponential distribution with mean interval of 30s.
         # Setting the mocktime 600s forward gives a probability of (1 - e^-(600/30)) that
         # the event will occur (i.e. this fails once in ~500 million repeats).
-        self.mocktime += 10 * 60
+        self.mocktime += 5 * 60
         self.nodes[0].setmocktime(self.mocktime)
         for peer in receivers:
             peer.sync_send_with_ping()
@@ -292,7 +292,7 @@ class AddrTest(KoyotecoinTestFramework):
         inbound_peer.send_and_ping(msg_getaddr())
 
         # invoke m_next_addr_send timer, see under send_addr_msg() function for rationale
-        self.mocktime += 10 * 60
+        self.mocktime += 5 * 60
         self.nodes[0].setmocktime(self.mocktime)
         inbound_peer.wait_until(lambda: inbound_peer.addr_received() is True)
 

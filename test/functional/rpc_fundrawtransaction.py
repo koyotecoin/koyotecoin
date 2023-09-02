@@ -569,7 +569,7 @@ class RawTransactionsTest(KoyotecoinTestFramework):
 
     def test_spend_2of2(self):
         """Spend a 2-of-2 multisig transaction over fundraw."""
-        self.log.info("Test fundpsbt spending 2-of-2 multisig")
+        self.log.info("Test fundpskt spending 2-of-2 multisig")
 
         # Create 2-of-2 addr.
         addr1 = self.nodes[2].getnewaddress()
@@ -599,12 +599,12 @@ class RawTransactionsTest(KoyotecoinTestFramework):
         oldBalance = self.nodes[1].getbalance()
         inputs = []
         outputs = {self.nodes[1].getnewaddress(): 1.1}
-        funded_psbt = wmulti.walletcreatefundedpsbt(inputs=inputs, outputs=outputs, options={
-                                                    'changeAddress': w2.getrawchangeaddress()})['psbt']
+        funded_pskt = wmulti.walletcreatefundedpskt(inputs=inputs, outputs=outputs, options={
+                                                    'changeAddress': w2.getrawchangeaddress()})['pskt']
 
-        signed_psbt = w2.walletprocesspsbt(funded_psbt)
-        final_psbt = w2.finalizepsbt(signed_psbt['psbt'])
-        self.nodes[2].sendrawtransaction(final_psbt['hex'])
+        signed_pskt = w2.walletprocesspskt(funded_pskt)
+        final_pskt = w2.finalizepskt(signed_pskt['pskt'])
+        self.nodes[2].sendrawtransaction(final_pskt['hex'])
         self.generate(self.nodes[2], 1)
 
         # Make sure funds are received at node1.
@@ -1265,9 +1265,9 @@ class RawTransactionsTest(KoyotecoinTestFramework):
         tx = wallet.send(outputs=[{addr1: 8}], options=options)
         assert tx["complete"]
         # Check that only the preset inputs were added to the tx
-        decoded_psbt_inputs = self.nodes[0].decodepsbt(tx["psbt"])['tx']['vin']
-        assert_equal(len(decoded_psbt_inputs), 2)
-        for input in decoded_psbt_inputs:
+        decoded_pskt_inputs = self.nodes[0].decodepskt(tx["pskt"])['tx']['vin']
+        assert_equal(len(decoded_pskt_inputs), 2)
+        for input in decoded_pskt_inputs:
             assert_equal(input["txid"], source_tx["txid"])
 
         # Case (5), assert that inputs are added to the tx by explicitly setting add_inputs=true
@@ -1277,14 +1277,14 @@ class RawTransactionsTest(KoyotecoinTestFramework):
 
         ################################################
 
-        # Case (1), 'walletcreatefundedpsbt' command
+        # Case (1), 'walletcreatefundedpskt' command
         # Default add_inputs value with no preset inputs (add_inputs=true)
         inputs = []
         outputs = {self.nodes[1].getnewaddress(): 8}
-        assert "psbt" in wallet.walletcreatefundedpsbt(
+        assert "pskt" in wallet.walletcreatefundedpskt(
             inputs=inputs, outputs=outputs)
 
-        # Case (2), 'walletcreatefundedpsbt' command
+        # Case (2), 'walletcreatefundedpskt' command
         # Default add_inputs value with preset inputs (add_inputs=false).
         inputs = [{
             "txid": source_tx["txid"],
@@ -1292,12 +1292,12 @@ class RawTransactionsTest(KoyotecoinTestFramework):
         }]
         outputs = {self.nodes[1].getnewaddress(): 8}
         assert_raises_rpc_error(-4, "Insufficient funds",
-                                wallet.walletcreatefundedpsbt, inputs=inputs, outputs=outputs)
+                                wallet.walletcreatefundedpskt, inputs=inputs, outputs=outputs)
 
         # Case (3), Explicit add_inputs=true and preset inputs (with preset inputs not-covering the target amount)
         options["add_inputs"] = True
         options["add_to_wallet"] = False
-        assert "psbt" in wallet.walletcreatefundedpsbt(
+        assert "pskt" in wallet.walletcreatefundedpskt(
             outputs=[{addr1: 8}], inputs=inputs, options=options)
 
         # Case (4), Explicit add_inputs=true and preset inputs (with preset inputs covering the target amount)
@@ -1305,21 +1305,21 @@ class RawTransactionsTest(KoyotecoinTestFramework):
             "txid": source_tx["txid"],
             "vout": 2  # change position was hardcoded to index 0
         })
-        psbt_tx = wallet.walletcreatefundedpsbt(
+        pskt_tx = wallet.walletcreatefundedpskt(
             outputs=[{addr1: 8}], inputs=inputs, options=options)
         # Check that only the preset inputs were added to the tx
-        decoded_psbt_inputs = self.nodes[0].decodepsbt(psbt_tx["psbt"])[
+        decoded_pskt_inputs = self.nodes[0].decodepskt(pskt_tx["pskt"])[
             'tx']['vin']
-        assert_equal(len(decoded_psbt_inputs), 2)
-        for input in decoded_psbt_inputs:
+        assert_equal(len(decoded_pskt_inputs), 2)
+        for input in decoded_pskt_inputs:
             assert_equal(input["txid"], source_tx["txid"])
 
-        # Case (5), 'walletcreatefundedpsbt' command
+        # Case (5), 'walletcreatefundedpskt' command
         # Explicit add_inputs=true, no preset inputs
         options = {
             "add_inputs": True
         }
-        assert "psbt" in wallet.walletcreatefundedpsbt(
+        assert "pskt" in wallet.walletcreatefundedpskt(
             inputs=[], outputs=outputs, options=options)
 
         self.nodes[2].unloadwallet("test_preset_inputs")

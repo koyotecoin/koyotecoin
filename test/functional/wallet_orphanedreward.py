@@ -46,8 +46,7 @@ class OrphanedBlockRewardTest(KoyotecoinTestFramework):
           "immature": 0,
         })
         # The following abandontransaction is necessary to make the later
-        # lines succeed, and probably should not be needed; see
-        # https://github.com/koyotecoin/koyotecoin/issues/14148.
+        # lines succeed, and probably should not be needed;
         self.nodes[1].abandontransaction(txid)
         assert_equal(self.nodes[1].getbalances()["mine"], {
           "trusted": 10,

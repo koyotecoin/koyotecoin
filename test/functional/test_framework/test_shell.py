@@ -34,9 +34,9 @@ class TestShell:
 
             # User parameters override default values.
             for key, value in kwargs.items():
-                if hahowltr(self, key):
+                if hasattr(self, key):
                     setattr(self, key, value)
-                elif hahowltr(self.options, key):
+                elif hasattr(self.options, key):
                     setattr(self.options, key, value)
                 else:
                     raise KeyError(key + " not a valid parameter key!")

@@ -90,15 +90,15 @@ class CreateWalletWatchonlyTest(KoyotecoinTestFramework):
         result = wo_wallet.gettransaction(txid=txid, include_watchonly=False)
         assert_equal(len(result["details"]), 0)
 
-        self.log.info('Testing walletcreatefundedpsbt watch-only defaults')
+        self.log.info('Testing walletcreatefundedpskt watch-only defaults')
         inputs = []
         outputs = [{a1: 0.5}]
         options = {'changeAddress': wo_change}
         no_wo_options = {'changeAddress': wo_change, 'includeWatching': False}
 
-        result = wo_wallet.walletcreatefundedpsbt(inputs=inputs, outputs=outputs, options=options)
-        assert_equal("psbt" in result, True)
-        assert_raises_rpc_error(-4, "Insufficient funds", wo_wallet.walletcreatefundedpsbt, inputs, outputs, 0, no_wo_options)
+        result = wo_wallet.walletcreatefundedpskt(inputs=inputs, outputs=outputs, options=options)
+        assert_equal("pskt" in result, True)
+        assert_raises_rpc_error(-4, "Insufficient funds", wo_wallet.walletcreatefundedpskt, inputs, outputs, 0, no_wo_options)
 
         self.log.info('Testing fundrawtransaction watch-only defaults')
         rawtx = wo_wallet.createrawtransaction(inputs=inputs, outputs=outputs)

@@ -133,11 +133,11 @@ class WalletSignerTest(KoyotecoinTestFramework):
         )
         self.clear_mock_result(self.nodes[1])
 
-        self.log.info('Prepare mock PSBT')
+        self.log.info('Prepare mock PSKT')
         self.nodes[0].sendtoaddress(address1, 1)
         self.generate(self.nodes[0], 1)
 
-        # Load private key into wallet to generate a signed PSBT for the mock
+        # Load private key into wallet to generate a signed PSKT for the mock
         self.nodes[1].createwallet(wallet_name="mock", disable_private_keys=False, blank=True, descriptors=True)
         mock_wallet = self.nodes[1].get_wallet_rpc("mock")
         assert mock_wallet.getwalletinfo()['private_keys_enabled']
@@ -160,14 +160,14 @@ class WalletSignerTest(KoyotecoinTestFramework):
         assert_equal(result[1], {'success': True})
         assert_equal(mock_wallet.getwalletinfo()["txcount"], 1)
         dest = self.nodes[0].getnewaddress(address_type='bech32')
-        mock_psbt = mock_wallet.walletcreatefundedpsbt([], {dest:0.5}, 0, {}, True)['psbt']
-        mock_psbt_signed = mock_wallet.walletprocesspsbt(psbt=mock_psbt, sign=True, sighashtype="ALL", bip32derivs=True)
-        mock_psbt_final = mock_wallet.finalizepsbt(mock_psbt_signed["psbt"])
-        mock_tx = mock_psbt_final["hex"]
+        mock_pskt = mock_wallet.walletcreatefundedpskt([], {dest:0.5}, 0, {}, True)['pskt']
+        mock_pskt_signed = mock_wallet.walletprocesspskt(pskt=mock_pskt, sign=True, sighashtype="ALL", bip32derivs=True)
+        mock_pskt_final = mock_wallet.finalizepskt(mock_pskt_signed["pskt"])
+        mock_tx = mock_pskt_final["hex"]
         assert(mock_wallet.testmempoolaccept([mock_tx])[0]["allowed"])
 
         # # Create a new wallet and populate with specific public keys, in order
-        # # to work with the mock signed PSBT.
+        # # to work with the mock signed PSKT.
         # self.nodes[1].createwallet(wallet_name="hww4", disable_private_keys=True, descriptors=True, external_signer=True)
         # hww4 = self.nodes[1].get_wallet_rpc("hww4")
         #
@@ -195,8 +195,8 @@ class WalletSignerTest(KoyotecoinTestFramework):
 
         assert(hww.testmempoolaccept([mock_tx])[0]["allowed"])
 
-        with open(os.path.join(self.nodes[1].cwd, "mock_psbt"), "w", encoding="utf8") as f:
-            f.write(mock_psbt_signed["psbt"])
+        with open(os.path.join(self.nodes[1].cwd, "mock_pskt"), "w", encoding="utf8") as f:
+            f.write(mock_pskt_signed["pskt"])
 
         self.log.info('Test send using hww1')
 
@@ -213,7 +213,7 @@ class WalletSignerTest(KoyotecoinTestFramework):
         # # Handle error thrown by script
         # self.set_mock_result(self.nodes[4], "2")
         # assert_raises_rpc_error(-1, 'Unable to parse JSON',
-        #     hww4.signerprocesspsbt, psbt_orig, "00000001"
+        #     hww4.signerprocesspskt, pskt_orig, "00000001"
         # )
         # self.clear_mock_result(self.nodes[4])
 

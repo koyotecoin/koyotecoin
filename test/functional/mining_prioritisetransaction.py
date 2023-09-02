@@ -186,7 +186,7 @@ class PrioritiseTransactionTest(KoyotecoinTestFramework):
         # Something high-fee should have been mined!
         assert high_fee_tx is not None
 
-        # Add a prioritihowlion before a tx is in the mempool (de-prioritising a
+        # Add a prioritisation before a tx is in the mempool (de-prioritising a
         # high-fee transaction so that it's now low fee).
         self.nodes[0].prioritisetransaction(txid=high_fee_tx, fee_delta=-int(2*base_fee*COIN))
 

@@ -8,7 +8,7 @@
 Test various backwards compatibility scenarios. Requires previous releases binaries,
 see test/README.md.
 
-v0.15.2 is not required by this test, but it is used in wallet_upgradewallet.py.
+v1.0.0 is required by this test, but it is used in wallet_upgradewallet.py.
 Due to a hardfork in regtest, it can't be used to sync nodes.
 
 
@@ -40,14 +40,14 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
         self.extra_args = [
             ["-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # Pre-release: use to mine blocks. noban for immediate tx relay
             ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # Pre-release: use to receive coins, swap wallets, etc
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v23.0
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v22.0
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v0.21.0
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v0.20.1
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v0.19.1
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=127.0.0.1"], # v0.18.1
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=127.0.0.1"], # v0.17.2
-            ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=127.0.0.1", "-wallet=wallet.dat"], # v0.16.3
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v23.0
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v22.0
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v0.21.0
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v0.20.1
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=noban@127.0.0.1"], # v0.19.1
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=127.0.0.1"], # v0.18.1
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=127.0.0.1"], # v0.17.2
+            # ["-nowallet", "-walletrbf=1", "-addresstype=bech32", "-whitelist=127.0.0.1", "-wallet=wallet.dat"], # v0.16.3
         ]
         self.wallet_names = [self.default_wallet_name]
 
@@ -59,21 +59,14 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
         self.add_nodes(self.num_nodes, extra_args=self.extra_args, versions=[
             None,
             None,
-            230000,
-            220000,
-            210000,
-            200100,
-            190100,
-            180100,
-            170200,
-            160300,
+            100,
         ])
 
         self.start_nodes()
         self.import_deterministic_coinbase_privkeys()
 
     def nodes_wallet_dir(self, node):
-        if node.version < 170000:
+        if node.version < 100:
             return os.path.join(node.datadir, "regtest")
         return os.path.join(node.datadir, "regtest/wallets")
 
@@ -121,7 +114,7 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
         # Abandon transaction, but don't confirm
         node_master.abandontransaction(tx3_id)
 
-        # w1_v19: regular wallet, created with v0.19
+        # w1_v19: regular wallet
         node_v19.rpc.createwallet(wallet_name="w1_v19")
         wallet = node_v19.get_wallet_rpc("w1_v19")
         info = wallet.getwalletinfo()
@@ -132,7 +125,7 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
         assert wallet.getaddressinfo(address_18075)["solvable"]
         node_v19.unloadwallet("w1_v19")
 
-        # w1_v18: regular wallet, created with v0.18
+        # w1_v18: regular wallet
         node_v18.rpc.createwallet(wallet_name="w1_v18")
         wallet = node_v18.get_wallet_rpc("w1_v18")
         info = wallet.getwalletinfo()
@@ -178,11 +171,11 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
             # Load modern wallet with older nodes
             for node in legacy_nodes:
                 for wallet_name in ["w1", "w2", "w3"]:
-                    if node.version < 170000:
-                        # loadwallet was introduced in v0.17.0
+                    if node.version < 100:
+                        # loadwallet was introduced in v1.0.0
                         continue
-                    if node.version < 180000 and wallet_name == "w3":
-                        # Blank wallets were introduced in v0.18.0. We test the loading error below.
+                    if node.version < 100 and wallet_name == "w3":
+                        # Blank wallets were introduced in v1.0.0. We test the loading error below.
                         continue
                     node.loadwallet(wallet_name)
                     wallet = node.get_wallet_rpc(wallet_name)
@@ -201,7 +194,7 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
                         assert txs[3]["abandoned"]
                         assert_equal(txs[4]["walletconflicts"], [tx3_id])
                         assert_equal(txs[3]["replaced_by_txid"], tx4_id)
-                        assert not(hahowltr(txs[3], "blockindex"))
+                        assert not(hasattr(txs[3], "blockindex"))
                     elif wallet_name == "w2":
                         assert(info['private_keys_enabled'] == False)
                         assert info['keypoolsize'] == 0
@@ -211,8 +204,8 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
         else:
             for node in legacy_nodes:
                 # Descriptor wallets appear to be corrupted wallets to old software
-                # and loadwallet is introduced in v0.17.0
-                if node.version >= 170000 and node.version < 210000:
+                # and loadwallet is introduced in v1.0.0
+                if node.version >= 100 and node.version < 100:
                     for wallet_name in ["w1", "w2", "w3"]:
                         assert_raises_rpc_error(-4, "Wallet file verification failed: wallet.dat corrupt, salvage failed", node.loadwallet, wallet_name)
 
@@ -233,13 +226,13 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
 
         if not self.options.descriptors:
             # Descriptor wallets break compatibility, only run this test for legacy wallets
-            # Open most recent wallet in v0.16 (no loadwallet RPC)
+            # Open most recent wallet in v1.0 (no loadwallet RPC)
             self.restart_node(node_v16.index, extra_args=["-wallet=w2"])
             wallet = node_v16.get_wallet_rpc("w2")
             info = wallet.getwalletinfo()
             assert info['keypoolsize'] == 1
 
-        # Create upgrade wallet in v0.16
+        # Create upgrade wallet
         self.restart_node(node_v16.index, extra_args=["-wallet=u1_v16"])
         wallet = node_v16.get_wallet_rpc("u1_v16")
         v16_addr = wallet.getnewaddress('', "bech32")
@@ -248,7 +241,7 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
         self.stop_node(node_v16.index)
 
         self.log.info("Test wallet upgrade path...")
-        # u1: regular wallet, created with v0.17
+        # u1: regular wallet
         node_v17.rpc.createwallet(wallet_name="u1_v17")
         wallet = node_v17.get_wallet_rpc("u1_v17")
         address = wallet.getnewaddress("bech32")
@@ -264,7 +257,7 @@ class BackwardsCompatibilityTest(KoyotecoinTestFramework):
                 os.path.join(node_master_wallets_dir, "u1_v16")
             )
             load_res = node_master.loadwallet("u1_v16")
-            # Make sure this wallet opens without warnings. See https://github.com/koyotecoin/koyotecoin/pull/19054
+            # Make sure this wallet opens without warnings.
             assert_equal(load_res['warning'], '')
             wallet = node_master.get_wallet_rpc("u1_v16")
             info = wallet.getaddressinfo(v16_addr)

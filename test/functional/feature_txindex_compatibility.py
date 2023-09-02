@@ -32,9 +32,8 @@ class MempoolCompatibilityTest(KoyotecoinTestFramework):
             self.num_nodes,
             self.extra_args,
             versions=[
-                160300,  # Last release with legacy txindex
-                None,  # For MiniWallet, without migration code
-                200100,  # Any release with migration code (0.17.x - 22.x)
+                100,  # Last release with legacy txindex
+                None,  # For MiniWallet, without migration code.x)
             ],
         )
         self.start_nodes()

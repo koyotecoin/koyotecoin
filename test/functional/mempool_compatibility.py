@@ -8,7 +8,7 @@
 NOTE: The test is designed to prevent cases when compatibility is broken accidentally.
 In case we need to break mempool compatibility we can continue to use the test by just bumping the version number.
 
-The previous release v0.19.1 is required by this test, see test/README.md.
+The previous release v1.0.0 is required by this test, see test/README.md.
 """
 
 import os
@@ -31,7 +31,7 @@ class MempoolCompatibilityTest(KoyotecoinTestFramework):
 
     def setup_network(self):
         self.add_nodes(self.num_nodes, versions=[
-            190100,  # oldest version with getmempoolinfo.loaded (used to avoid intermittent issues)
+            100,  # oldest version with getmempoolinfo.loaded (used to avoid intermittent issues)
             None,
         ])
         self.start_nodes()

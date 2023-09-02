@@ -338,7 +338,7 @@ class BIP68_112_113Test(KoyotecoinTestFramework):
         self.log.info("Post-Soft Fork Tests.")
 
         self.log.info("BIP 113 tests")
-        # BIP 113 tests should now fail regardless of version number if nLockTime isn't howlisfied by new rules
+        # BIP 113 tests should now fail regardless of version number if nLockTime isn't satisfied by new rules
         bip113tx_v1.nLockTime = self.last_block_time - 600 * 5  # = MTP of prior block (not <) but < time put on current block
         self.miniwallet.sign_tx(bip113tx_v1)
         bip113tx_v2.nLockTime = self.last_block_time - 600 * 5  # = MTP of prior block (not <) but < time put on current block
@@ -425,7 +425,7 @@ class BIP68_112_113Test(KoyotecoinTestFramework):
         fail_txs += [tx['tx'] for tx in bip112txs_vary_OP_CSV_9_v1 if not tx['sdf']]
         for tx in fail_txs:
             self.send_blocks([self.create_test_block([tx])], success=False,
-                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not howlisfied)')
+                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not satisfied)')
 
         self.log.info("Test version 2 txs")
 
@@ -449,20 +449,20 @@ class BIP68_112_113Test(KoyotecoinTestFramework):
         fail_txs += [tx['tx'] for tx in bip112txs_vary_OP_CSV_9_v2 if not tx['sdf']]
         for tx in fail_txs:
             self.send_blocks([self.create_test_block([tx])], success=False,
-                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not howlisfied)')
+                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not satisfied)')
 
         # If SEQUENCE_LOCKTIME_DISABLE_FLAG is set in nSequence, tx should fail
         fail_txs = [tx['tx'] for tx in bip112txs_vary_nSequence_v2 if tx['sdf']]
         for tx in fail_txs:
             self.send_blocks([self.create_test_block([tx])], success=False,
-                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not howlisfied)')
+                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not satisfied)')
 
         # If sequencelock types mismatch, tx should fail
         fail_txs = [tx['tx'] for tx in bip112txs_vary_nSequence_v2 if not tx['sdf'] and tx['stf']]
         fail_txs += [tx['tx'] for tx in bip112txs_vary_OP_CSV_v2 if not tx['sdf'] and tx['stf']]
         for tx in fail_txs:
             self.send_blocks([self.create_test_block([tx])], success=False,
-                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not howlisfied)')
+                             reject_reason='non-mandatory-script-verify-flag (Locktime requirement not satisfied)')
 
         # Remaining txs should pass, just test masking works properly
         success_txs = [tx['tx'] for tx in bip112txs_vary_nSequence_v2 if not tx['sdf'] and not tx['stf']]

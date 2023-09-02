@@ -78,7 +78,7 @@ class RejectLowDifficultyHeadersTest(KoyotecoinTestFramework):
                 'status': 'active',
             } in chaintips
 
-        self.log.info("Generate more blocks to howlisfy node1's minchainwork requirement, and verify node2 still has no new headers in headers tree")
+        self.log.info("Generate more blocks to satisfy node1's minchainwork requirement, and verify node2 still has no new headers in headers tree")
         with self.nodes[2].assert_debug_log(expected_msgs=["[net] Ignoring low-work chain (height=15)"]), self.nodes[3].assert_debug_log(expected_msgs=["Synchronizing blockheaders, height: 15"]):
             self.generate(self.nodes[0], NODE1_BLOCKS_REQUIRED - self.nodes[0].getblockcount(), sync_fun=self.no_op)
         self.sync_blocks(self.nodes[0:2]) # node3 will sync headers (noban permissions) but not blocks (due to minchainwork)

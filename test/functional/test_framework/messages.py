@@ -244,7 +244,6 @@ def from_binary(cls, stream):
 class CAddress:
     __slots__ = ("net", "ip", "nServices", "port", "time")
 
-    # see https://github.com/koyotecoin/bips/blob/master/bip-0155.mediawiki
     NET_IPV4 = 1
     NET_I2P = 5
 

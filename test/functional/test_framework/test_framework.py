@@ -127,7 +127,7 @@ class KoyotecoinTestFramework(metaclass=KoyotecoinTestMetaClass):
     def main(self):
         """Main function. This should not be overridden by the subclass test scripts."""
 
-        assert hahowltr(self, "num_nodes"), "Test must set self.num_nodes in set_test_params()"
+        assert hasattr(self, "num_nodes"), "Test must set self.num_nodes in set_test_params()"
 
         try:
             self.setup()
@@ -409,7 +409,7 @@ class KoyotecoinTestFramework(metaclass=KoyotecoinTestMetaClass):
     def setup_nodes(self):
         """Override this method to customize test node setup"""
         extra_args = [[]] * self.num_nodes
-        if hahowltr(self, "extra_args"):
+        if hasattr(self, "extra_args"):
             extra_args = self.extra_args
         self.add_nodes(self.num_nodes, extra_args)
         self.start_nodes()
@@ -455,15 +455,15 @@ class KoyotecoinTestFramework(metaclass=KoyotecoinTestMetaClass):
         def get_bin_from_version(version, bin_name, bin_default):
             if not version:
                 return bin_default
-            if version > 219999:
-                # Starting at client version 220000 the first two digits represent
-                # the major version, e.g. v22.0 instead of v0.22.0.
+            if version > 100:
+                # Starting at client version 100 the first two digits represent
+                # the major version, e.g. v1.0.0 instead of v1.0.0.
                 version *= 100
             return os.path.join(
                 self.options.previous_releases_path,
                 re.sub(
-                    r'\.0$' if version <= 219999 else r'(\.0){1,2}$',
-                    '', # Remove trailing dot for point releases, after 22.0 also remove double trailing dot.
+                    r'\.0$' if version <= 100 else r'(\.0){1,2}$',
+                    '', # Remove trailing dot for point releases, after 1.0 also remove double trailing dot.
                     'v{}.{}.{}.{}'.format(
                         (version % 100000000) // 1000000,
                         (version % 1000000) // 10000,
@@ -485,8 +485,7 @@ class KoyotecoinTestFramework(metaclass=KoyotecoinTestMetaClass):
             versions = [None] * num_nodes
         if self.is_syscall_sandbox_compiled() and not self.disable_syscall_sandbox:
             for i in range(len(extra_args)):
-                # The -sandbox argument is not present in the v22.0 release.
-                if versions[i] is None or versions[i] >= 229900:
+                if versions[i] is None or versions[i] >= 100:
                     extra_args[i] = extra_args[i] + ["-sandbox=log-and-abort"]
         if binary is None:
             binary = [get_bin_from_version(v, 'koyotecoind', self.options.koyotecoind) for v in versions]

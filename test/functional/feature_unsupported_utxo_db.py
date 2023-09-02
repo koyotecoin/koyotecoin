@@ -26,13 +26,13 @@ class UnsupportedUtxoDbTest(KoyotecoinTestFramework):
         self.add_nodes(
             self.num_nodes,
             versions=[
-                140300,  # Last release with previous utxo db format
+                100,  # Last release with previous utxo db format
                 None,  # For MiniWallet, without migration code
             ],
         )
 
     def run_test(self):
-        self.log.info("Create previous version (v0.14.3) utxo db")
+        self.log.info("Create previous version (v1.0.0) utxo db")
         self.start_node(0)
         block = self.generate(self.nodes[0], 1, sync_fun=self.no_op)[-1]
         assert_equal(self.nodes[0].getbestblockhash(), block)

@@ -301,8 +301,8 @@ class SendallTest(KoyotecoinTestFramework):
             watchonly.importmulti(import_req)
 
         sendall_tx_receipt = watchonly.sendall(recipients=[self.remainder_target], options={"inputs": [utxo]})
-        psbt = sendall_tx_receipt["psbt"]
-        decoded = self.nodes[0].decodepsbt(psbt)
+        pskt = sendall_tx_receipt["pskt"]
+        decoded = self.nodes[0].decodepskt(pskt)
         assert_equal(len(decoded["inputs"]), 1)
         assert_equal(len(decoded["outputs"]), 1)
         assert_equal(decoded["tx"]["vin"][0]["txid"], utxo["txid"])

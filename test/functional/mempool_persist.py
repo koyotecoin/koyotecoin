@@ -106,7 +106,7 @@ class MempoolPersistTest(KoyotecoinTestFramework):
         assert_equal(len(self.nodes[0].p2ps), 0)
         self.mini_wallet.send_self_transfer(from_node=self.nodes[0])
 
-        # Test persistence of prioritihowlion for transactions not in the mempool.
+        # Test persistence of prioritisation for transactions not in the mempool.
         # Create a tx and prioritise but don't submit until after the restart.
         tx_prioritised_not_submitted = self.mini_wallet.create_self_transfer()
         self.nodes[0].prioritisetransaction(txid=tx_prioritised_not_submitted['txid'], fee_delta=9999)

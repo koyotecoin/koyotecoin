@@ -6,7 +6,7 @@
 """Test logic for skipping signature validation on old blocks.
 
 Test logic for skipping signature validation on blocks which we've assumed
-valid (https://github.com/koyotecoin/koyotecoin/pull/9484)
+valid
 
 We build a chain that includes and invalid signature for one of the
 transactions:
