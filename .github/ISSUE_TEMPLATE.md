@@ -2,12 +2,10 @@
 
 General koyotecoin questions and/or support requests are best directed to the Koyotecoin StackExchange at https://koyotecoin.stackexchange.com.
 
-For reporting security issues, please read instructions at https://koyotecoin.org/contact/.
-
 If the node is "stuck" during sync or giving "block checksum mismatch" errors, please ensure your hardware is stable by running memtest and observe CPU temperature with a load-test tool such as linpack before creating an issue!
 
 Any report, issue or feature request related to the GUI should be reported at
-https://github.com/koyotecoin/gui/issues/
+https://github.com/koyotecoin/issues/
 -->
 
 <!-- Describe the issue -->
