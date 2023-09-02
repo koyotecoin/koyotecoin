@@ -1,4 +1,4 @@
-Modify the optimihowlion flags for FastFixedDtoa.
+Modify the optimisation flags for FastFixedDtoa.
 This fixes a non-determinism issue in the asm produced for
 this function when cross-compiling on x86_64 and aarch64 for
 the arm-linux-gnueabihf HOST.

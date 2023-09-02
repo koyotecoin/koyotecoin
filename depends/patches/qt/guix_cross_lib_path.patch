@@ -1,7 +1,5 @@
 Facilitate guix building with CROSS_LIBRARY_PATH
 
-See discussion in https://github.com/koyotecoin/koyotecoin/pull/15277.
-
 --- a/qtbase/mkspecs/features/toolchain.prf
 +++ b/qtbase/mkspecs/features/toolchain.prf
 @@ -236,8 +236,8 @@ isEmpty($${target_prefix}.INCDIRS) {
