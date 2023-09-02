@@ -37,7 +37,7 @@
     <ClCompile Include="..\..\src\qt\peertablemodel.cpp" />
     <ClCompile Include="..\..\src\qt\peertablesortproxy.cpp" />
     <ClCompile Include="..\..\src\qt\platformstyle.cpp" />
-    <ClCompile Include="..\..\src\qt\psbtoperationsdialog.cpp" />
+    <ClCompile Include="..\..\src\qt\psktoperationsdialog.cpp" />
     <ClCompile Include="..\..\src\qt\qrimagewidget.cpp" />
     <ClCompile Include="..\..\src\qt\qvalidatedlineedit.cpp" />
     <ClCompile Include="..\..\src\qt\qvaluecombobox.cpp" />
@@ -93,7 +93,7 @@
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_peertablemodel.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_peertablesortproxy.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_platformstyle.cpp" />
-    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_psbtoperationsdialog.cpp" />
+    <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_psktoperationsdialog.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_qrimagewidget.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_qvalidatedlineedit.cpp" />
     <ClCompile Include="$(GeneratedFilesOutDir)\moc\moc_qvaluecombobox.cpp" />
