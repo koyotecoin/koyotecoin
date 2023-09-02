@@ -79,7 +79,6 @@ To contribute a patch, the workflow is as follows:
 1. Create topic branch
 1. Commit patches
 
-For GUI-related issues or pull requests, the https://github.com/koyotecoin/gui repository should be used.
 For all other issues and pull requests, the https://github.com/koyotecoin/koyotecoin node repository should be used.
 
 The master branch for all monotree repositories is identical.
@@ -293,7 +292,7 @@ judge the general consensus of contributors.
 In general, all pull requests must:
 
 - Have a clear use case, fix a demonstrable bug or serve the greater good of
-  the project (for example refactoring for modularihowlion);
+  the project (for example refactoring for modularisation);
 - Be well peer-reviewed;
 - Have unit tests, functional tests, and fuzz tests, where appropriate;
 - Follow code style guidelines ([C++](doc/developer-notes.md), [functional tests](test/functional/README.md));
@@ -418,8 +417,6 @@ A backport should contain the following metadata in the commit body:
 Github-Pull: #<PR number>
 Rebased-From: <commit hash of the original commit>
 ```
-
-Have a look at [an example backport PR](https://github.com/koyotecoin/koyotecoin/pull/16189).
 
 Also see the [backport.py script](https://github.com/koyotecoin/koyotecoin-maintainer-tools#backport).
 
