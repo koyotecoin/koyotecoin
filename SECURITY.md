@@ -13,8 +13,6 @@ The following keys may be used to communicate sensitive information to developer
 
 | Name | Fingerprint |
 |------|-------------|
-| Pieter Wuille | 133E AC17 9436 F14A 5CF1  B794 860F EB80 4E66 9320 |
-| Michael Ford | E777 299F C265 DD04 7930  70EB 944D 35F9 AC3D B76A |
-| Andrew Chow | 1528 1230 0785 C964 44D3  334D 1756 5732 E08E 5E41 |
+| Eduardo Doege | 565E 96FA 9DA0 26C7 3820 C695 379F 1A7B CF4F 6BE0 |
 
 You can import a key by running the following command with that individual’s fingerprint: `gpg --keyserver hkps://keys.openpgp.org --recv-keys "<fingerprint>"` Ensure that you put quotes around fingerprints containing spaces.
