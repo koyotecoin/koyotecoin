@@ -6,7 +6,7 @@
 #include <coins.h>
 #include <consensus/amount.h>
 #include <consensus/tx_verify.h>
-#include <node/psbt.h>
+#include <node/pskt.h>
 #include <policy/policy.h>
 #include <policy/settings.h>
 #include <tinyformat.h>
@@ -14,58 +14,58 @@
 #include <numeric>
 
 namespace node {
-PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx)
+PSKTAnalysis AnalyzePSKT(PartiallySignedTransaction psktx)
 {
     // Go through each input and build status
-    PSBTAnalysis result;
+    PSKTAnalysis result;
 
     bool calc_fee = true;
 
     CAmount in_amt = 0;
 
-    result.inputs.resize(psbtx.tx->vin.size());
+    result.inputs.resize(psktx.tx->vin.size());
 
-    const PrecomputedTransactionData txdata = PrecomputePSBTData(psbtx);
+    const PrecomputedTransactionData txdata = PrecomputePSKTData(psktx);
 
-    for (unsigned int i = 0; i < psbtx.tx->vin.size(); ++i) {
-        PSBTInput& input = psbtx.inputs[i];
-        PSBTInputAnalysis& input_analysis = result.inputs[i];
+    for (unsigned int i = 0; i < psktx.tx->vin.size(); ++i) {
+        PSKTInput& input = psktx.inputs[i];
+        PSKTInputAnalysis& input_analysis = result.inputs[i];
 
         // We set next role here and ratchet backwards as required
-        input_analysis.next = PSBTRole::EXTRACTOR;
+        input_analysis.next = PSKTRole::EXTRACTOR;
 
         // Check for a UTXO
         CTxOut utxo;
-        if (psbtx.GetInputUTXO(utxo, i)) {
+        if (psktx.GetInputUTXO(utxo, i)) {
             if (!MoneyRange(utxo.nValue) || !MoneyRange(in_amt + utxo.nValue)) {
-                result.SetInvalid(strprintf("PSBT is not valid. Input %u has invalid value", i));
+                result.SetInvalid(strprintf("PSKT is not valid. Input %u has invalid value", i));
                 return result;
             }
             in_amt += utxo.nValue;
             input_analysis.has_utxo = true;
         } else {
-            if (input.non_witness_utxo && psbtx.tx->vin[i].prevout.n >= input.non_witness_utxo->vout.size()) {
-                result.SetInvalid(strprintf("PSBT is not valid. Input %u specifies invalid prevout", i));
+            if (input.non_witness_utxo && psktx.tx->vin[i].prevout.n >= input.non_witness_utxo->vout.size()) {
+                result.SetInvalid(strprintf("PSKT is not valid. Input %u specifies invalid prevout", i));
                 return result;
             }
             input_analysis.has_utxo = false;
             input_analysis.is_final = false;
-            input_analysis.next = PSBTRole::UPDATER;
+            input_analysis.next = PSKTRole::UPDATER;
             calc_fee = false;
         }
 
         if (!utxo.IsNull() && utxo.scriptPubKey.IsUnspendable()) {
-            result.SetInvalid(strprintf("PSBT is not valid. Input %u spends unspendable output", i));
+            result.SetInvalid(strprintf("PSKT is not valid. Input %u spends unspendable output", i));
             return result;
         }
 
         // Check if it is final
-        if (!utxo.IsNull() && !PSBTInputSigned(input)) {
+        if (!utxo.IsNull() && !PSKTInputSigned(input)) {
             input_analysis.is_final = false;
 
             // Figure out what is missing
             SignatureData outdata;
-            bool complete = SignPSBTInput(DUMMY_SIGNING_PROVIDER, psbtx, i, &txdata, 1, &outdata);
+            bool complete = SignPSKTInput(DUMMY_SIGNING_PROVIDER, psktx, i, &txdata, 1, &outdata);
 
             // Things are missing
             if (!complete) {
@@ -76,29 +76,29 @@ PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx)
 
                 // If we are only missing signatures and nothing else, then next is signer
                 if (outdata.missing_pubkeys.empty() && outdata.missing_redeem_script.IsNull() && outdata.missing_witness_script.IsNull() && !outdata.missing_sigs.empty()) {
-                    input_analysis.next = PSBTRole::SIGNER;
+                    input_analysis.next = PSKTRole::SIGNER;
                 } else {
-                    input_analysis.next = PSBTRole::UPDATER;
+                    input_analysis.next = PSKTRole::UPDATER;
                 }
             } else {
-                input_analysis.next = PSBTRole::FINALIZER;
+                input_analysis.next = PSKTRole::FINALIZER;
             }
         } else if (!utxo.IsNull()){
             input_analysis.is_final = true;
         }
     }
 
-    // Calculate next role for PSBT by grabbing "minimum" PSBTInput next role
-    result.next = PSBTRole::EXTRACTOR;
-    for (unsigned int i = 0; i < psbtx.tx->vin.size(); ++i) {
-        PSBTInputAnalysis& input_analysis = result.inputs[i];
+    // Calculate next role for PSKT by grabbing "minimum" PSKTInput next role
+    result.next = PSKTRole::EXTRACTOR;
+    for (unsigned int i = 0; i < psktx.tx->vin.size(); ++i) {
+        PSKTInputAnalysis& input_analysis = result.inputs[i];
         result.next = std::min(result.next, input_analysis.next);
     }
-    assert(result.next > PSBTRole::CREATOR);
+    assert(result.next > PSKTRole::CREATOR);
 
     if (calc_fee) {
         // Get the output amount
-        CAmount out_amt = std::accumulate(psbtx.tx->vout.begin(), psbtx.tx->vout.end(), CAmount(0),
+        CAmount out_amt = std::accumulate(psktx.tx->vout.begin(), psktx.tx->vout.end(), CAmount(0),
             [](CAmount a, const CTxOut& b) {
                 if (!MoneyRange(a) || !MoneyRange(b.nValue) || !MoneyRange(a + b.nValue)) {
                     return CAmount(-1);
@@ -107,7 +107,7 @@ PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx)
             }
         );
         if (!MoneyRange(out_amt)) {
-            result.SetInvalid("PSBT is not valid. Output amount invalid");
+            result.SetInvalid("PSKT is not valid. Output amount invalid");
             return result;
         }
 
@@ -116,23 +116,23 @@ PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx)
         result.fee = fee;
 
         // Estimate the size
-        CMutableTransaction mtx(*psbtx.tx);
+        CMutableTransaction mtx(*psktx.tx);
         CCoinsView view_dummy;
         CCoinsViewCache view(&view_dummy);
         bool success = true;
 
-        for (unsigned int i = 0; i < psbtx.tx->vin.size(); ++i) {
-            PSBTInput& input = psbtx.inputs[i];
+        for (unsigned int i = 0; i < psktx.tx->vin.size(); ++i) {
+            PSKTInput& input = psktx.inputs[i];
             Coin newcoin;
 
-            if (!SignPSBTInput(DUMMY_SIGNING_PROVIDER, psbtx, i, nullptr, 1) || !psbtx.GetInputUTXO(newcoin.out, i)) {
+            if (!SignPSKTInput(DUMMY_SIGNING_PROVIDER, psktx, i, nullptr, 1) || !psktx.GetInputUTXO(newcoin.out, i)) {
                 success = false;
                 break;
             } else {
                 mtx.vin[i].scriptSig = input.final_script_sig;
                 mtx.vin[i].scriptWitness = input.final_script_witness;
                 newcoin.nHeight = 1;
-                view.AddCoin(psbtx.tx->vin[i].prevout, std::move(newcoin), true);
+                view.AddCoin(psktx.tx->vin[i].prevout, std::move(newcoin), true);
             }
         }
 
