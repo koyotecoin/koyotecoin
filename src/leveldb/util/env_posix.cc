@@ -393,7 +393,6 @@ class PosixWritableFile final : public WritableFile {
       return Status::OK();
     }
     // Do not crash if filesystem can't fsync directories
-    // (see https://github.com/koyotecoin/koyotecoin/pull/10000)
     if (syncing_dir && errno == EINVAL) {
       return Status::OK();
     }
