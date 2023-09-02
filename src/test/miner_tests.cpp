@@ -516,8 +516,8 @@ void MinerTestingSetup::TestPrioritisedMining(const CChainParams& chainparams, c
     // parents get included in a block. Create a transaction with two prioritised ancestors, each
     // included by itself: FreeParent <- FreeChild <- FreeGrandchild.
     // When FreeParent is added, a modified entry will be created for FreeChild + FreeGrandchild
-    // FreeParent's prioritihowlion should not be included in that entry.
-    // When FreeChild is included, FreeChild's prioritihowlion should also not be included.
+    // FreeParent's prioritisation should not be included in that entry.
+    // When FreeChild is included, FreeChild's prioritisation should also not be included.
     tx.vin[0].prevout.hash = txFirst[3]->GetHash();
     tx.vout[0].nValue = 5000000000LL; // 0 fee
     uint256 hashFreeParent = tx.GetHash();
@@ -543,7 +543,7 @@ void MinerTestingSetup::TestPrioritisedMining(const CChainParams& chainparams, c
     BOOST_CHECK(pblocktemplate->block.vtx[4]->GetHash() == hashPrioritsedChild);
     BOOST_CHECK(pblocktemplate->block.vtx[5]->GetHash() == hashFreeChild);
     for (size_t i=0; i<pblocktemplate->block.vtx.size(); ++i) {
-        // The FreeParent and FreeChild's prioritihowlions should not impact the child.
+        // The FreeParent and FreeChild's prioritisations should not impact the child.
         BOOST_CHECK(pblocktemplate->block.vtx[i]->GetHash() != hashFreeGrandchild);
         // De-prioritised transaction should not be included.
         BOOST_CHECK(pblocktemplate->block.vtx[i]->GetHash() != hashMediumFeeTx);

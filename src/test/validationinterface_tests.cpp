@@ -73,8 +73,7 @@ public:
 };
 
 // Regression test to ensure UnregisterAllValidationInterfaces calls don't
-// destroy a validation interface while it is being called. Bug:
-// https://github.com/koyotecoin/koyotecoin/pull/18551
+// destroy a validation interface while it is being called.
 BOOST_AUTO_TEST_CASE(unregister_all_during_call)
 {
     bool destroyed = false;

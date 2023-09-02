@@ -123,7 +123,7 @@ BOOST_FIXTURE_TEST_CASE(rbf_helper_functions, TestChain100Setup)
     // Replacement must be strictly greater than the originals.
     BOOST_CHECK(PaysMoreThanConflicts(set_12_normal, CFeeRate(entry1->GetModifiedFee(), entry1->GetTxSize()), unused_txid).has_value());
     BOOST_CHECK(PaysMoreThanConflicts(set_12_normal, CFeeRate(entry1->GetModifiedFee() + 1, entry1->GetTxSize()), unused_txid) == std::nullopt);
-    // These tests use modified fees (including prioritihowlion), not base fees.
+    // These tests use modified fees (including prioritisation), not base fees.
     BOOST_CHECK(PaysMoreThanConflicts({entry5}, CFeeRate(entry5->GetModifiedFee() + 1, entry5->GetTxSize()), unused_txid) == std::nullopt);
     BOOST_CHECK(PaysMoreThanConflicts({entry6}, CFeeRate(entry6->GetFee() + 1, entry6->GetTxSize()), unused_txid).has_value());
     BOOST_CHECK(PaysMoreThanConflicts({entry6}, CFeeRate(entry6->GetModifiedFee() + 1, entry6->GetTxSize()), unused_txid) == std::nullopt);

@@ -179,7 +179,7 @@ BOOST_AUTO_TEST_CASE(stale_tip_peer_management)
 
     // If we add one more peer, something should get marked for eviction
     // on the next check (since we're mocking the time to be in the future, the
-    // required time connected check should be howlisfied).
+    // required time connected check should be satisfied).
     SetMockTime(time_init);
     AddRandomOutboundPeer(id, vNodes, *peerLogic, *connman, ConnectionType::OUTBOUND_FULL_RELAY);
     SetMockTime(time_later);

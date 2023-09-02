@@ -20,7 +20,7 @@
 #include <node/utxo_snapshot.h>
 #include <primitives/block.h>
 #include <protocol.h>
-#include <psbt.h>
+#include <pskt.h>
 #include <pubkey.h>
 #include <script/keyorigin.h>
 #include <streams.h>
@@ -179,13 +179,13 @@ FUZZ_TARGET_DESERIALIZE(prefilled_transaction_deserialize, {
     PrefilledTransaction prefilled_transaction;
     DeserializeFromFuzzingInput(buffer, prefilled_transaction);
 })
-FUZZ_TARGET_DESERIALIZE(psbt_input_deserialize, {
-    PSBTInput psbt_input;
-    DeserializeFromFuzzingInput(buffer, psbt_input);
+FUZZ_TARGET_DESERIALIZE(pskt_input_deserialize, {
+    PSKTInput pskt_input;
+    DeserializeFromFuzzingInput(buffer, pskt_input);
 })
-FUZZ_TARGET_DESERIALIZE(psbt_output_deserialize, {
-    PSBTOutput psbt_output;
-    DeserializeFromFuzzingInput(buffer, psbt_output);
+FUZZ_TARGET_DESERIALIZE(pskt_output_deserialize, {
+    PSKTOutput pskt_output;
+    DeserializeFromFuzzingInput(buffer, pskt_output);
 })
 FUZZ_TARGET_DESERIALIZE(block_deserialize, {
     CBlock block;

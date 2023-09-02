@@ -651,8 +651,8 @@ BOOST_FIXTURE_TEST_CASE(package_cpfp_tests, TestChain100Setup)
                                       submit_cpfp_deprio.m_package_feerate.value().ToString()));
     }
 
-    // Clear the prioritihowlion of the parent transaction.
-    WITH_LOCK(m_node.mempool->cs, m_node.mempool->ClearPrioritihowlion(tx_parent->GetHash()));
+    // Clear the prioritisation of the parent transaction.
+    WITH_LOCK(m_node.mempool->cs, m_node.mempool->ClearPrioritisation(tx_parent->GetHash()));
 
     // Package CPFP: Even though the parent pays 0 absolute fees, the child pays 1 KYC which is
     // enough for the package feerate to meet the threshold.

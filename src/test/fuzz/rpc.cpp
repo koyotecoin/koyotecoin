@@ -10,7 +10,7 @@
 #include <node/context.h>
 #include <primitives/block.h>
 #include <primitives/transaction.h>
-#include <psbt.h>
+#include <pskt.h>
 #include <rpc/blockchain.h>
 #include <rpc/client.h>
 #include <rpc/request.h>
@@ -71,7 +71,7 @@ const std::vector<std::string> RPC_COMMANDS_NOT_SAFE_FOR_FUZZING{
     "addconnection",  // avoid DNS lookups
     "addnode",        // avoid DNS lookups
     "addpeeraddress", // avoid DNS lookups
-    "analyzepsbt",    // avoid signed integer overflow in CFeeRate::GetFee(unsigned long) (https://github.com/koyotecoin/koyotecoin/issues/20607)
+    "analyzepskt",    // avoid signed integer overflow in CFeeRate::GetFee(unsigned long)
     "dumptxoutset",   // avoid writing to disk
     "dumpwallet", // avoid writing to disk
     "echoipc",              // avoid assertion failure (Assertion `"EnsureAnyNodeContext(request.context).init" && check' failed.)
@@ -80,7 +80,7 @@ const std::vector<std::string> RPC_COMMANDS_NOT_SAFE_FOR_FUZZING{
     "gettxoutproof",        // avoid prohibitively slow execution
     "importwallet", // avoid reading from disk
     "loadwallet",   // avoid reading from disk
-    "prioritisetransaction", // avoid signed integer overflow in CTxMemPool::PrioritiseTransaction(uint256 const&, long const&) (https://github.com/koyotecoin/koyotecoin/issues/20626)
+    "prioritisetransaction", // avoid signed integer overflow in CTxMemPool::PrioritiseTransaction(uint256 const&, long const&)
     "savemempool",           // disabled as a precautionary measure: may take a file path argument in the future
     "setban",                // avoid DNS lookups
     "stop",                  // avoid shutdown state
@@ -89,13 +89,13 @@ const std::vector<std::string> RPC_COMMANDS_NOT_SAFE_FOR_FUZZING{
 // RPC commands which are safe for fuzzing.
 const std::vector<std::string> RPC_COMMANDS_SAFE_FOR_FUZZING{
     "clearbanned",
-    "combinepsbt",
+    "combinepskt",
     "combinerawtransaction",
-    "converttopsbt",
+    "converttopskt",
     "createmultisig",
-    "createpsbt",
+    "createpskt",
     "createrawtransaction",
-    "decodepsbt",
+    "decodepskt",
     "decoderawtransaction",
     "decodescript",
     "deriveaddresses",
@@ -104,7 +104,7 @@ const std::vector<std::string> RPC_COMMANDS_SAFE_FOR_FUZZING{
     "echojson",
     "estimaterawfee",
     "estimatesmartfee",
-    "finalizepsbt",
+    "finalizepskt",
     "generate",
     "generateblock",
     "getaddednodeinfo",
@@ -144,7 +144,7 @@ const std::vector<std::string> RPC_COMMANDS_SAFE_FOR_FUZZING{
     "gettxoutsetinfo",
     "help",
     "invalidateblock",
-    "joinpsbts",
+    "joinpskts",
     "listbanned",
     "logging",
     "mockscheduler",
@@ -164,7 +164,7 @@ const std::vector<std::string> RPC_COMMANDS_SAFE_FOR_FUZZING{
     "syncwithvalidationinterfacequeue",
     "testmempoolaccept",
     "uptime",
-    "utxoupdatepsbt",
+    "utxoupdatepskt",
     "validateaddress",
     "verifychain",
     "verifymessage",
@@ -268,13 +268,13 @@ std::string ConsumeScalarRPCArgument(FuzzedDataProvider& fuzzed_data_provider)
             r = HexStr(data_stream);
         },
         [&] {
-            // base64 encoded psbt
-            std::optional<PartiallySignedTransaction> opt_psbt = ConsumeDeserializable<PartiallySignedTransaction>(fuzzed_data_provider);
-            if (!opt_psbt) {
+            // base64 encoded pskt
+            std::optional<PartiallySignedTransaction> opt_pskt = ConsumeDeserializable<PartiallySignedTransaction>(fuzzed_data_provider);
+            if (!opt_pskt) {
                 return;
             }
             CDataStream data_stream{SER_NETWORK, PROTOCOL_VERSION};
-            data_stream << *opt_psbt;
+            data_stream << *opt_pskt;
             r = EncodeBase64(data_stream);
         },
         [&] {

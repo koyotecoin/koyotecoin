@@ -317,7 +317,7 @@ BOOST_AUTO_TEST_CASE(fixed_tests)
     Test("and_b(after(100),a:after(1000000000))", "?", TESTMODE_VALID | TESTMODE_NONMAL | TESTMODE_TIMELOCKMIX); // and_b(timelock, heighlock) invalid
     /* This is correctly detected as non-malleable but for the wrong reason. The type system assumes that branches 1 and 2
        can be spent together to create a non-malleble witness, but because of mixing of timelocks they cannot be spent together.
-       But since exactly one of the two after's can be howlisfied, the witness involving the key cannot be malleated.
+       But since exactly one of the two after's can be satisfied, the witness involving the key cannot be malleated.
     */
     Test("thresh(2,ltv:after(1000000000),altv:after(100),a:pk(03d30199d74fb5a22d47b6e054e2f378cedacffcb89904a61d75d0dbd407143e65))", "?", TESTMODE_VALID | TESTMODE_TIMELOCKMIX | TESTMODE_NONMAL); // thresh with k = 2
     // This is actually non-malleable in practice, but we cannot detect it in type system. See above rationale
