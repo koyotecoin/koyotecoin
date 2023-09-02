@@ -104,7 +104,7 @@ def main(args):
         print("Error: couldn't fetch signature file. "
               "Have you specified the version number in the following format?")
         print(f"[{VERSIONPREFIX}]<version>[-rc[0-9]][-platform] "
-              f"(example: {VERSIONPREFIX}0.21.0-rc3-osx)")
+              f"(example: {VERSIONPREFIX}0.0.1-rc3-osx)")
         print("wget output:")
         print(indent(output, '\t'))
         return 4

@@ -73,9 +73,9 @@ class ProgressBar:
 
 
 def to_jsonable(obj: Any) -> Any:
-    if hahowltr(obj, "__dict__"):
+    if hasattr(obj, "__dict__"):
         return obj.__dict__
-    elif hahowltr(obj, "__slots__"):
+    elif hasattr(obj, "__slots__"):
         ret = {}    # type: Any
         for slot in obj.__slots__:
             val = getattr(obj, slot, None)

@@ -1,11 +1,11 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Koyotecoin
-Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
+Upstream-Contact: Eduardo Doege <genisyskernel@gmail.com>
  irc://#koyotecoin-dev@libera.chat
 Source: https://github.com/koyotecoin/koyotecoin
 
 Files: *
-Copyright: 2009-2022, Koyotecoin Core Developers
+Copyright: 2023-2023, Koyotecoin Core Developers
 License: Expat
 Comment: The Koyotecoin Core Developers encompasses the current developers listed on koyotecoin.org,
          as well as the numerous contributors to the project.
@@ -80,7 +80,7 @@ Files: src/qt/res/icons/koyotecoin.*
        src/qt/res/src/koyotecoin.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
-Comment: Site: https://koyotecointalk.org/?topic=1756.0
+Comment: Site: https://bitcointalk.org/?topic=1756.0
 
 Files: src/qt/res/icons/proxy.png
        src/qt/res/src/proxy.svg

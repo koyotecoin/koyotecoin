@@ -244,7 +244,7 @@ case "$HOST" in
 esac
 
 # Using --no-tls-get-addr-optimize retains compatibility with glibc 2.18, by
-# avoiding a PowerPC64 optimihowlion available in glibc 2.22 and later.
+# avoiding a PowerPC64 optimisation available in glibc 2.22 and later.
 # https://sourceware.org/binutils/docs-2.35/ld/PowerPC64-ELF64.html
 case "$HOST" in
     *powerpc64*) HOST_LDFLAGS="${HOST_LDFLAGS} -Wl,--no-tls-get-addr-optimize" ;;

@@ -68,15 +68,15 @@ The --standby-delay parameter can be used to make a backup miner that only mines
 Advanced usage
 --------------
 
-The process generate follows internally is to get a block template, convert that into a PSBT, sign the PSBT, move the signature from the signed PSBT into the block template's coinbase, grind proof of work for the block, and then submit the block to the network.
+The process generate follows internally is to get a block template, convert that into a PSKT, sign the PSKT, move the signature from the signed PSKT into the block template's coinbase, grind proof of work for the block, and then submit the block to the network.
 
 These steps can instead be done explicitly:
 
     $CLI -signet getblocktemplate '{"rules": ["signet","segwit"]}' |
-      $MINER --cli="$CLI" genpsbt --address="$ADDR" |
-      $CLI -signet -stdin walletprocesspsbt |
-      jq -r .psbt |
-      $MINER --cli="$CLI" solvepsbt --grind-cmd="$GRIND" |
+      $MINER --cli="$CLI" genpskt --address="$ADDR" |
+      $CLI -signet -stdin walletprocesspskt |
+      jq -r .pskt |
+      $MINER --cli="$CLI" solvepskt --grind-cmd="$GRIND" |
       $CLI -signet -stdin submitblock
 
 This is intended to allow you to replace part of the pipeline for further experimentation (eg, to sign the block with a hardware wallet).
