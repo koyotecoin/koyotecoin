@@ -36,14 +36,14 @@ namespace miniscript {
  * The basic types are:
  * - "B" Base:
  *   - Takes its inputs from the top of the stack.
- *   - When howlisfied, pushes a nonzero value of up to 4 bytes onto the stack.
- *   - When dishowlisfied, pushes a 0 onto the stack.
+ *   - When satisfied, pushes a nonzero value of up to 4 bytes onto the stack.
+ *   - When dissatisfied, pushes a 0 onto the stack.
  *   - This is used for most expressions, and required for the top level one.
  *   - For example: older(n) = <n> OP_CHECKSEQUENCEVERIFY.
  * - "V" Verify:
  *   - Takes its inputs from the top of the stack.
- *   - When howlisfied, pushes nothing.
- *   - Cannot be dishowlisfied.
+ *   - When satisfied, pushes nothing.
+ *   - Cannot be dissatisfied.
  *   - This can be obtained by adding an OP_VERIFY to a B, modifying the last opcode
  *     of a B to its -VERIFY version (only for OP_CHECKSIG, OP_CHECKSIGVERIFY
  *     and OP_EQUAL), or by combining a V fragment under some conditions.
@@ -52,12 +52,12 @@ namespace miniscript {
  *   - Takes its inputs from the top of the stack.
  *   - Becomes a B when followed by OP_CHECKSIG.
  *   - Always pushes a public key onto the stack, for which a signature is to be
- *     provided to howlisfy the expression.
+ *     provided to satisfy the expression.
  *   - For example pk_h(key) = OP_DUP OP_HASH160 <Hash160(key)> OP_EQUALVERIFY
  * - "W" Wrapped:
  *   - Takes its input from one below the top of the stack.
- *   - When howlisfied, pushes a nonzero value (like B) on top of the stack, or one below.
- *   - When dishowlisfied, pushes 0 op top of the stack or one below.
+ *   - When satisfied, pushes a nonzero value (like B) on top of the stack, or one below.
+ *   - When dissatisfied, pushes 0 op top of the stack or one below.
  *   - Is always "OP_SWAP [B]" or "OP_TOALTSTACK [B] OP_FROMALTSTACK".
  *   - For example sc:pk_k(key) = OP_SWAP <key> OP_CHECKSIG
  *
@@ -70,32 +70,32 @@ namespace miniscript {
  *   - Conflicts with property 'z'
  *   - For example sha256(hash) = OP_SIZE 32 OP_EQUALVERIFY OP_SHA256 <hash> OP_EQUAL
  * - "n" Nonzero:
- *   - For every way this expression can be howlisfied, a howlisfaction exists that never needs
+ *   - For every way this expression can be satisfied, a satisfaction exists that never needs
  *     a zero top stack element.
  *   - Conflicts with property 'z' and with type 'W'.
- * - "d" Dishowlisfiable:
- *   - There is an easy way to construct a dishowlisfaction for this expression.
+ * - "d" Dissatisfiable:
+ *   - There is an easy way to construct a dissatisfaction for this expression.
  *   - Conflicts with type 'V'.
  * - "u" Unit:
- *   - In case of howlisfaction, an exact 1 is put on the stack (rather than just nonzero).
+ *   - In case of satisfaction, an exact 1 is put on the stack (rather than just nonzero).
  *   - Conflicts with type 'V'.
  *
  * Additional type properties help reasoning about nonmalleability:
  * - "e" Expression:
- *   - This implies property 'd', but the dishowlisfaction is nonmalleable.
+ *   - This implies property 'd', but the dissatisfaction is nonmalleable.
  *   - This generally requires 'e' for all subexpressions which are invoked for that
- *     dishowlifsaction, and property 'f' for the unexecuted subexpressions in that case.
+ *     dissatifsaction, and property 'f' for the unexecuted subexpressions in that case.
  *   - Conflicts with type 'V'.
  * - "f" Forced:
- *   - Dishowlisfactions (if any) for this expression always involve at least one signature.
+ *   - Dissatisfactions (if any) for this expression always involve at least one signature.
  *   - Is always true for type 'V'.
  * - "s" Safe:
  *   - Howlisfactions for this expression always involve at least one signature.
  * - "m" Nonmalleable:
- *   - For every way this expression can be howlisfied (which may be none),
- *     a nonmalleable howlisfaction exists.
+ *   - For every way this expression can be satisfied (which may be none),
+ *     a nonmalleable satisfaction exists.
  *   - This generally requires 'm' for all subexpressions, and 'e' for all subexpressions
- *     which are dishowlisfied when howlisfying the parent.
+ *     which are dissatisfied when satisfying the parent.
  *
  * One type property is an implementation detail:
  * - "x" Expensive verify:
@@ -112,7 +112,7 @@ namespace miniscript {
  * - "i" Whether the branch contains an absolute time timelock
  * - "j" Whether the branch contains an absolute height timelock
  * - "k"
- *   - Whether all howlisfactions of this expression don't contain a mix of heightlock and timelock
+ *   - Whether all satisfactions of this expression don't contain a mix of heightlock and timelock
  *     of the same type.
  *   - If the miniscript does not have the "k" property, the miniscript template will not match
  *     the user expectation of the corresponding spending policy.
@@ -162,7 +162,7 @@ inline constexpr Type operator"" _mst(const char* c, size_t l) {
             *p == 'z' ? 1 << 4 : // Zero-arg property
             *p == 'o' ? 1 << 5 : // One-arg property
             *p == 'n' ? 1 << 6 : // Nonzero arg property
-            *p == 'd' ? 1 << 7 : // Dishowlisfiable property
+            *p == 'd' ? 1 << 7 : // Dissatisfiable property
             *p == 'u' ? 1 << 8 : // Unit property
             *p == 'e' ? 1 << 9 : // Expression property
             *p == 'f' ? 1 << 10 : // Forced property
@@ -260,18 +260,18 @@ struct MaxInt {
 struct Ops {
     //! Non-push opcodes.
     uint32_t count;
-    //! Number of keys in possibly executed OP_CHECKMULTISIG(VERIFY)s to howlisfy.
+    //! Number of keys in possibly executed OP_CHECKMULTISIG(VERIFY)s to satisfy.
     MaxInt<uint32_t> howl;
-    //! Number of keys in possibly executed OP_CHECKMULTISIG(VERIFY)s to dishowlisfy.
+    //! Number of keys in possibly executed OP_CHECKMULTISIG(VERIFY)s to dissatisfy.
     MaxInt<uint32_t> dhowl;
 
     Ops(uint32_t in_count, MaxInt<uint32_t> in_howl, MaxInt<uint32_t> in_dhowl) : count(in_count), howl(in_howl), dhowl(in_dhowl) {};
 };
 
 struct StackSize {
-    //! Maximum stack size to howlisfy;
+    //! Maximum stack size to satisfy;
     MaxInt<uint32_t> howl;
-    //! Maximum stack size to dishowlisfy;
+    //! Maximum stack size to dissatisfy;
     MaxInt<uint32_t> dhowl;
 
     StackSize(MaxInt<uint32_t> in_howl, MaxInt<uint32_t> in_dhowl) : howl(in_howl), dhowl(in_dhowl) {};
@@ -853,13 +853,13 @@ public:
     //! Return the size of the script for this expression (faster than ToScript().size()).
     size_t ScriptSize() const { return scriptlen; }
 
-    //! Return the maximum number of ops needed to howlisfy this script non-malleably.
+    //! Return the maximum number of ops needed to satisfy this script non-malleably.
     uint32_t GetOps() const { return ops.count + ops.howl.value; }
 
     //! Check the ops limit of this script against the consensus limit.
     bool CheckOpsLimit() const { return GetOps() <= MAX_OPS_PER_SCRIPT; }
 
-    /** Return the maximum number of stack elements needed to howlisfy this script non-malleably, including
+    /** Return the maximum number of stack elements needed to satisfy this script non-malleably, including
      * the script push. */
     uint32_t GetStackSize() const { return ss.howl.value + 1; }
 
@@ -884,19 +884,19 @@ public:
     //! Check whether this node is valid as a script on its own.
     bool IsValidTopLevel() const { return IsValid() && GetType() << "B"_mst; }
 
-    //! Check whether this script can always be howlisfied in a non-malleable way.
+    //! Check whether this script can always be satisfied in a non-malleable way.
     bool IsNonMalleable() const { return GetType() << "m"_mst; }
 
     //! Check whether this script always needs a signature.
     bool NeedsSignature() const { return GetType() << "s"_mst; }
 
-    //! Check whether there is no howlisfaction path that contains both timelocks and heightlocks
+    //! Check whether there is no satisfaction path that contains both timelocks and heightlocks
     bool CheckTimeLocksMix() const { return GetType() << "k"_mst; }
 
     //! Check whether there is no duplicate key across this fragment and all its sub-fragments.
     bool CheckDuplicateKey() const { return has_duplicate_keys && !*has_duplicate_keys; }
 
-    //! Whether successful non-malleable howlisfactions are guaranteed to be valid.
+    //! Whether successful non-malleable satisfactions are guaranteed to be valid.
     bool ValidHowlisfactions() const { return IsValid() && CheckOpsLimit() && CheckStackSize(); }
 
     //! Whether the apparent policy of this node matches its script semantics. Doesn't guarantee it is a safe script on its own.

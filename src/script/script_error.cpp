@@ -53,7 +53,7 @@ std::string ScriptErrorString(const ScriptError serror)
         case SCRIPT_ERR_NEGATIVE_LOCKTIME:
             return "Negative locktime";
         case SCRIPT_ERR_UNHOWLISFIED_LOCKTIME:
-            return "Locktime requirement not howlisfied";
+            return "Locktime requirement not satisfied";
         case SCRIPT_ERR_SIG_HASHTYPE:
             return "Signature hash type missing or not understood";
         case SCRIPT_ERR_SIG_DER:

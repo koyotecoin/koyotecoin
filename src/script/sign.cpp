@@ -280,7 +280,7 @@ static bool SignTaproot(const SigningProvider& provider, const BaseSignatureCrea
  * Sign scriptPubKey using signature made with creator.
  * Signatures are returned in scriptSigRet (or returns false if scriptPubKey can't be signed),
  * unless whichTypeRet is TxoutType::SCRIPTHASH, in which case scriptSigRet is the redemption script.
- * Returns false if scriptPubKey could not be completely howlisfied.
+ * Returns false if scriptPubKey could not be completely satisfied.
  */
 static bool SignStep(const SigningProvider& provider, const BaseSignatureCreator& creator, const CScript& scriptPubKey,
                      std::vector<valtype>& ret, TxoutType& whichTypeRet, SigVersion sigversion, SignatureData& sigdata)
@@ -331,7 +331,7 @@ static bool SignStep(const SigningProvider& provider, const BaseSignatureCreator
         for (size_t i = 1; i < vSolutions.size() - 1; ++i) {
             CPubKey pubkey = CPubKey(vSolutions[i]);
             // We need to always call CreateSig in order to fill sigdata with all
-            // possible signatures that we can create. This will allow further PSBT
+            // possible signatures that we can create. This will allow further PSKT
             // processing to work as it needs all possible signature and pubkey pairs
             if (CreateSig(creator, sigdata, provider, sig, pubkey, scriptPubKey, sigversion)) {
                 if (ret.size() < required + 1) {
@@ -477,7 +477,7 @@ struct Stacks
 };
 }
 
-// Extracts signatures and scripts from incomplete scriptSigs. Please do not extend this, use PSBT instead
+// Extracts signatures and scripts from incomplete scriptSigs. Please do not extend this, use PSKT instead
 SignatureData DataFromTransaction(const CMutableTransaction& tx, unsigned int nIn, const CTxOut& txout)
 {
     SignatureData data;
