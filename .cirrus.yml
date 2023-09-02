@@ -16,10 +16,10 @@ persistent_worker_template_env: &PERSISTENT_WORKER_TEMPLATE_ENV
 persistent_worker_template: &PERSISTENT_WORKER_TEMPLATE
   persistent_worker: {}  # https://cirrus-ci.org/guide/persistent-workers/
 
-# https://cirrus-ci.org/guide/tips-and-tricks/#sharing-configuration-between-tasks
-filter_template: &FILTER_TEMPLATE
-  skip: $CIRRUS_REPO_FULL_NAME == "koyotecoin/gui" && $CIRRUS_PR == ""  # No need to run on the read-only mirror, unless it is a PR. https://cirrus-ci.org/guide/writing-tasks/#conditional-task-execution
-  stateful: false  # https://cirrus-ci.org/guide/writing-tasks/#stateful-tasks
+# # https://cirrus-ci.org/guide/tips-and-tricks/#sharing-configuration-between-tasks
+# filter_template: &FILTER_TEMPLATE
+#   skip: $CIRRUS_REPO_FULL_NAME == "koyotecoin/gui" && $CIRRUS_PR == ""  # No need to run on the read-only mirror, unless it is a PR. https://cirrus-ci.org/guide/writing-tasks/#conditional-task-execution
+#   stateful: false  # https://cirrus-ci.org/guide/writing-tasks/#stateful-tasks
 
 base_template: &BASE_TEMPLATE
   << : *FILTER_TEMPLATE
