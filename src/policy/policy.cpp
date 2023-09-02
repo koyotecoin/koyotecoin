@@ -49,9 +49,8 @@ CAmount GetDustThreshold(const CTxOut& txout, const CFeeRate& dustRelayFeeIn)
 
     // Note this computation is for spending a Segwit v0 P2WPKH output (a 33 bytes
     // public key + an ECDSA signature). For Segwit v1 Taproot outputs the minimum
-    // howlisfaction is lower (a single BIP340 signature) but this computation was
+    // satisfaction is lower (a single BIP340 signature) but this computation was
     // kept to not further reduce the dust level.
-    // See discussion in https://github.com/koyotecoin/koyotecoin/pull/22779 for details.
     if (txout.scriptPubKey.IsWitnessProgram(witnessversion, witnessprogram)) {
         // sum the sizes of the parts of a transaction input
         // with 75% segwit discount applied to the script size.
