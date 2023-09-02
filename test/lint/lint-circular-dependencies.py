@@ -25,7 +25,7 @@ EXPECTED_CIRCULAR_DEPENDENCIES = (
     "kernel/coinstats -> validation -> kernel/coinstats",
     "kernel/mempool_persist -> validation -> kernel/mempool_persist",
 
-    # Temporary, removed in followup https://github.com/koyotecoin/koyotecoin/pull/24230
+    # Temporary, removed
     "index/base -> node/context -> net_processing -> index/blockfilterindex -> index/base",
 )
 
