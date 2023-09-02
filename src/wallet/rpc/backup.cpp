@@ -723,8 +723,7 @@ RPCHelpMan dumpwallet()
     filepath = fs::absolute(filepath);
 
     /* Prevent arbitrary files from being overwritten. There have been reports
-     * that users have overwritten wallet files this way:
-     * https://github.com/koyotecoin/koyotecoin/issues/9934
+     * that users have overwritten wallet files.
      * It may also avoid other security issues.
      */
     if (fs::exists(filepath)) {

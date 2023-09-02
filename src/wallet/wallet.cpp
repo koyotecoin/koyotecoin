@@ -21,7 +21,7 @@
 #include <policy/policy.h>
 #include <primitives/block.h>
 #include <primitives/transaction.h>
-#include <psbt.h>
+#include <pskt.h>
 #include <random.h>
 #include <script/descriptor.h>
 #include <script/script.h>
@@ -1024,10 +1024,7 @@ CWalletTx* CWallet::AddToWallet(CTransactionRef tx, const TxState& state, const 
         }
 #ifndef WIN32
         // Substituting the wallet name isn't currently supported on windows
-        // because windows shell escaping has not been implemented yet:
-        // https://github.com/koyotecoin/koyotecoin/pull/13339#issuecomment-537384875
-        // A few ways it could be implemented in the future are described in:
-        // https://github.com/koyotecoin/koyotecoin/pull/13339#issuecomment-461288094
+        // because windows shell escaping has not been implemented yet.
         ReplaceAll(strCmd, "%w", ShellEscape(GetName()));
 #endif
         std::thread t(runCommand, strCmd);
@@ -1307,16 +1304,14 @@ void CWallet::transactionRemovedFromMempool(const CTransactionRef& tx, MemPoolRe
         // 1. The transactionRemovedFromMempool callback does not currently
         //    provide the conflicting block's hash and height, and for backwards
         //    compatibility reasons it may not be not safe to store conflicted
-        //    wallet transactions with a null block hash. See
-        //    https://github.com/koyotecoin/koyotecoin/pull/18600#discussion_r420195993.
+        //    wallet transactions with a null block hash.
         // 2. For most of these transactions, the wallet's internal conflict
         //    detection in the blockConnected handler will subsequently call
         //    MarkConflicted and update them with CONFLICTED status anyway. This
         //    applies to any wallet transaction that has inputs spent in the
         //    block, or that has ancestors in the wallet with inputs spent by
         //    the block.
-        // 3. Longstanding behavior since the sync implementation in
-        //    https://github.com/koyotecoin/koyotecoin/pull/9371 and the prior sync
+        // 3. Longstanding behavior since the sync implementation, and the prior sync
         //    implementation before that was to mark these transactions
         //    unconfirmed rather than conflicted.
         //
@@ -2015,18 +2010,18 @@ bool CWallet::SignTransaction(CMutableTransaction& tx, const std::map<COutPoint,
     return false;
 }
 
-TransactionError CWallet::FillPSBT(PartiallySignedTransaction& psbtx, bool& complete, int sighash_type, bool sign, bool bip32derivs, size_t* n_signed, bool finalize) const
+TransactionError CWallet::FillPSKT(PartiallySignedTransaction& psktx, bool& complete, int sighash_type, bool sign, bool bip32derivs, size_t* n_signed, bool finalize) const
 {
     if (n_signed) {
         *n_signed = 0;
     }
     LOCK(cs_wallet);
     // Get all of the previous transactions
-    for (unsigned int i = 0; i < psbtx.tx->vin.size(); ++i) {
-        const CTxIn& txin = psbtx.tx->vin[i];
-        PSBTInput& input = psbtx.inputs.at(i);
+    for (unsigned int i = 0; i < psktx.tx->vin.size(); ++i) {
+        const CTxIn& txin = psktx.tx->vin[i];
+        PSKTInput& input = psktx.inputs.at(i);
 
-        if (PSBTInputSigned(input)) {
+        if (PSKTInputSigned(input)) {
             continue;
         }
 
@@ -2043,12 +2038,12 @@ TransactionError CWallet::FillPSBT(PartiallySignedTransaction& psbtx, bool& comp
         }
     }
 
-    const PrecomputedTransactionData txdata = PrecomputePSBTData(psbtx);
+    const PrecomputedTransactionData txdata = PrecomputePSKTData(psktx);
 
     // Fill in information from ScriptPubKeyMans
     for (ScriptPubKeyMan* spk_man : GetAllScriptPubKeyMans()) {
         int n_signed_this_spkm = 0;
-        TransactionError res = spk_man->FillPSBT(psbtx, txdata, sighash_type, sign, bip32derivs, &n_signed_this_spkm, finalize);
+        TransactionError res = spk_man->FillPSKT(psktx, txdata, sighash_type, sign, bip32derivs, &n_signed_this_spkm, finalize);
         if (res != TransactionError::OK) {
             return res;
         }
@@ -2062,8 +2057,8 @@ TransactionError CWallet::FillPSBT(PartiallySignedTransaction& psbtx, bool& comp
     if ((sighash_type & 0x80) != SIGHASH_ANYONECANPAY) {
         // Figure out if any non_witness_utxos should be dropped
         std::vector<unsigned int> to_drop;
-        for (unsigned int i = 0; i < psbtx.inputs.size(); ++i) {
-            const auto& input = psbtx.inputs.at(i);
+        for (unsigned int i = 0; i < psktx.inputs.size(); ++i) {
+            const auto& input = psktx.inputs.at(i);
             int wit_ver;
             std::vector<unsigned char> wit_prog;
             if (input.witness_utxo.IsNull() || !input.witness_utxo.scriptPubKey.IsWitnessProgram(wit_ver, wit_prog)) {
@@ -2083,14 +2078,14 @@ TransactionError CWallet::FillPSBT(PartiallySignedTransaction& psbtx, bool& comp
 
         // Drop the non_witness_utxos that we can drop
         for (unsigned int i : to_drop) {
-            psbtx.inputs.at(i).non_witness_utxo = nullptr;
+            psktx.inputs.at(i).non_witness_utxo = nullptr;
         }
     }
 
     // Complete if every input is now signed
     complete = true;
-    for (const auto& input : psbtx.inputs) {
-        complete &= PSBTInputSigned(input);
+    for (const auto& input : psktx.inputs) {
+        complete &= PSKTInputSigned(input);
     }
 
     return TransactionError::OK;
@@ -2632,9 +2627,7 @@ void CWallet::GetKeyBirthTimes(std::map<CKeyID, int64_t>& mapKeyBirth) const
  *   transaction, assign all its (not already known) transactions' timestamps to
  *   the block time.
  *
- * For more information see CWalletTx::nTimeSmart,
- * https://koyotecointalk.org/?topic=54527, or
- * https://github.com/koyotecoin/koyotecoin/pull/1393.
+ * For more information see CWalletTx::nTimeSmart.
  */
 unsigned int CWallet::ComputeTimeSmart(const CWalletTx& wtx, bool rescanning_old_block) const
 {
@@ -3092,10 +3085,10 @@ bool CWallet::AttachChain(const std::shared_ptr<CWallet>& walletInstance, interf
 
                 error = chain.hasAssumedValidChain() ?
                             _(
-                                "Assumed-valid: last wallet synchronihowlion goes beyond "
+                                "Assumed-valid: last wallet synchronisation goes beyond "
                                 "available block data. You need to wait for the background "
                                 "validation chain to download more blocks.") :
-                            _("Prune: last wallet synchronihowlion goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)");
+                            _("Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)");
                 return false;
             }
         }

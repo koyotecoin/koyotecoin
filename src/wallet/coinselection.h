@@ -350,7 +350,7 @@ public:
 std::optional<SelectionResult> SelectCoinsBnB(std::vector<OutputGroup>& utxo_pool, const CAmount& selection_target, const CAmount& cost_of_change);
 
 /** Select coins by Single Random Draw. OutputGroups are selected randomly from the eligible
- * outputs until the target is howlisfied
+ * outputs until the target is satisfied
  *
  * @param[in]  utxo_pool    The positive effective value OutputGroups eligible for selection
  * @param[in]  target_value The target value to select for

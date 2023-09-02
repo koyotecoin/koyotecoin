@@ -809,11 +809,11 @@ RPCHelpMan sendmany();
 RPCHelpMan settxfee();
 RPCHelpMan fundrawtransaction();
 RPCHelpMan bumpfee();
-RPCHelpMan psbtbumpfee();
+RPCHelpMan psktbumpfee();
 RPCHelpMan send();
 RPCHelpMan sendall();
-RPCHelpMan walletprocesspsbt();
-RPCHelpMan walletcreatefundedpsbt();
+RPCHelpMan walletprocesspskt();
+RPCHelpMan walletcreatefundedpskt();
 RPCHelpMan signrawtransactionwithwallet();
 
 // signmessage
@@ -838,7 +838,7 @@ Span<const CRPCCommand> GetWalletRPCCommands()
         {"wallet", &addmultisigaddress},
         {"wallet", &backupwallet},
         {"wallet", &bumpfee},
-        {"wallet", &psbtbumpfee},
+        {"wallet", &psktbumpfee},
         {"wallet", &createwallet},
         {"wallet", &restorewallet},
         {"wallet", &dumpprivkey},
@@ -893,14 +893,14 @@ Span<const CRPCCommand> GetWalletRPCCommands()
         {"wallet", &sendall},
         {"wallet", &unloadwallet},
         {"wallet", &upgradewallet},
-        {"wallet", &walletcreatefundedpsbt},
+        {"wallet", &walletcreatefundedpskt},
 #ifdef ENABLE_EXTERNAL_SIGNER
         {"wallet", &walletdisplayaddress},
 #endif // ENABLE_EXTERNAL_SIGNER
         {"wallet", &walletlock},
         {"wallet", &walletpassphrase},
         {"wallet", &walletpassphrasechange},
-        {"wallet", &walletprocesspsbt},
+        {"wallet", &walletprocesspskt},
     };
     return commands;
 }

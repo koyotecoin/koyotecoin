@@ -20,9 +20,7 @@ class CWallet;
 
 /**
  * IsMine() return codes, which depend on ScriptPubKeyMan implementation.
- * Not every ScriptPubKeyMan covers all types, please refer to
- * https://github.com/koyotecoin/koyotecoin/blob/master/doc/release-notes/release-notes-0.21.0.md#ismine-semantics
- * for better understanding.
+ * Not every ScriptPubKeyMan covers all types.
  *
  * For LegacyScriptPubKeyMan,
  * ISMINE_NO: the scriptPubKey is not in the wallet;
