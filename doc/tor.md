@@ -7,7 +7,7 @@ configure Tor.
 
 ## Compatibility
 
-- Starting with version 22.0, Koyotecoin Core only supports Tor version 3 hidden
+- Koyotecoin Core only supports Tor version 3 hidden
   services (Tor v3). Tor v2 addresses are ignored by Koyotecoin Core and neither
   relayed nor stored.
 

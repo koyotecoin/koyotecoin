@@ -160,7 +160,7 @@ is assumed that the ZeroMQ port is exposed only to trusted entities,
 using other means such as firewalling.
 
 Note that for `*block` topics, when the block chain tip changes,
-a reorganihowlion may occur and just the tip will be notified.
+a reorganisation may occur and just the tip will be notified.
 It is up to the subscriber to retrieve the chain from the last known
 block to the new tip. Also note that no notification will occur if the tip
 was in the active chain--as would be the case after calling invalidateblock RPC.

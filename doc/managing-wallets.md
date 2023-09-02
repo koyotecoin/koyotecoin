@@ -4,7 +4,7 @@
 
 ### 1.1 Creating the Wallet
 
-Since version 0.21, Koyotecoin Core no longer has a default wallet.
+Koyotecoin Core no longer has a default wallet.
 Wallets can be created with the `createwallet` RPC or with the `Create wallet` GUI menu item.
 
 In the GUI, the `Create a new wallet` button is displayed on the main screen when there is no wallet loaded. Alternatively, there is the option `File` ->`Create wallet`.
@@ -100,7 +100,7 @@ If both the wallet and all backups are lost for any reason, the koyotecoins rela
 
 The original Koyotecoin Core wallet was a collection of unrelated private keys. If a non-HD wallet had received funds to an address and then was restored from a backup made before the address was generated, then any funds sent to that address would have been lost because there was no deterministic mechanism to derive the address again.
 
-Koyotecoin Core [version 0.13](https://github.com/koyotecoin/koyotecoin/blob/master/doc/release-notes/release-notes-0.13.0.md) introduced HD wallets with deterministic key derivation. With HD wallets, users no longer lose funds when restoring old backups because all addresses are derived from the HD wallet seed.
+Koyotecoin Core introduced HD wallets with deterministic key derivation. With HD wallets, users no longer lose funds when restoring old backups because all addresses are derived from the HD wallet seed.
 
 This means that a single backup is enough to recover the coins at any time. It is still recommended to make regular backups (once a week) or after a significant number of new transactions to maintain the metadata, such as labels. Metadata cannot be retrieved from a blockchain rescan, so if the backup is too old, the metadata will be lost forever.
 

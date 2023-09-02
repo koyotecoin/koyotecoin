@@ -51,9 +51,3 @@ More benchmarks are needed for, in no particular order:
 - Memory pool
 - Cuckoo Cache
 - P2P throughput
-
-## Going Further
-
-To monitor Koyotecoin Core performance more in depth (like reindex or IBD): https://github.com/chaincodelabs/koyotecoinperf
-
-To generate Flame Graphs for Koyotecoin Core: https://github.com/eklitzke/koyotecoin/blob/flamegraphs/doc/flamegraphs.md

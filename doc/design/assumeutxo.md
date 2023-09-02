@@ -10,8 +10,6 @@ be of use.
 ## General background
 
 - [assumeutxo proposal](https://github.com/jamesob/assumeutxo-docs/tree/2019-04-proposal/proposal)
-- [Github issue](https://github.com/koyotecoin/koyotecoin/issues/15605)
-- [draft PR](https://github.com/koyotecoin/koyotecoin/pull/15606)
 
 ## Design notes
 

@@ -1,6 +1,6 @@
 # Translations
 
-The Koyotecoin-Core project has been designed to support multiple localihowlions. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations.
+The Koyotecoin-Core project has been designed to support multiple localisations. This makes adding new phrases, and completely new languages easily achievable. For managing all application translations.
 
 ### Helping to translate
 

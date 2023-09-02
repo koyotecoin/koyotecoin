@@ -27,11 +27,11 @@ Drag Koyotecoin Core to your applications folder, and then run Koyotecoin Core.
 
 ### Need Help?
 
-- See the documentation at the [Koyotecoin Wiki](https://en.koyotecoin.it/wiki/Main_Page)
+- See the documentation at the [Koyotecoin Wiki](https://wiki.koyotecoin.org)
   for help and more information.
 - Ask for help on [Koyotecoin StackExchange](https://koyotecoin.stackexchange.com).
 - Ask for help on #koyotecoin on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#koyotecoin).
-- Ask for help on the [KoyotecoinTalk](https://koyotecointalk.org/) forums, in the [Technical Support board](https://koyotecointalk.org/index.php?board=4.0).
+- Ask for help on the [KoyotecoinTalk](https://talk.koyotecoin.org/) forums, in the [Technical Support board](https://talk.koyotecoin.org/index.php?board=4.0).
 
 ## Building
 
@@ -59,14 +59,14 @@ The Koyotecoin repo's [root README](/README.md) contains relevant information on
 - [JSON-RPC Interface](JSON-RPC-interface.md)
 - [Unauthenticated REST Interface](REST-interface.md)
 - [Shared Libraries](shared-libraries.md)
-- [BIPS](bips.md)
+- [KIPS](kips.md)
 - [Dnsseed Policy](dnsseed-policy.md)
 - [Benchmarking](benchmarking.md)
 - [Internal Design Docs](design/)
 
 ### Resources
 
-- Discuss on the [KoyotecoinTalk](https://koyotecointalk.org/) forums, in the [Development & Technical Discussion board](https://koyotecointalk.org/index.php?board=6.0).
+- Discuss on the [KoyotecoinTalk](https://talk.koyotecoin.org/) forums, in the [Development & Technical Discussion board](https://talk.koyotecoin.org/index.php?board=6.0).
 - Discuss project-specific development on #koyotecoin-dev on Libera Chat. If you don't have an IRC client, you can use [web.libera.chat](https://web.libera.chat/#koyotecoin-dev).
 
 ### Miscellaneous
@@ -81,7 +81,7 @@ The Koyotecoin repo's [root README](/README.md) contains relevant information on
 - [Managing Wallets](managing-wallets.md)
 - [Multisig Tutorial](multisig-tutorial.md)
 - [P2P bad ports definition and list](p2p-bad-ports.md)
-- [PSBT support](psbt.md)
+- [PSKT support](pskt.md)
 - [Reduce Memory](reduce-memory.md)
 - [Reduce Traffic](reduce-traffic.md)
 - [Tor Support](tor.md)

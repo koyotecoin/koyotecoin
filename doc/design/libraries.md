@@ -100,5 +100,4 @@ class koyotecoin-qt,koyotecoind,koyotecoin-cli,koyotecoin-wallet bold
 
 ## Work in progress
 
-- Validation code is moving from *libkoyotecoin_node* to *libkoyotecoin_kernel* as part of [The libkoyotecoinkernel Project #24303](https://github.com/koyotecoin/koyotecoin/issues/24303)
-- Source code organization is discussed in general in [Library source code organization #15732](https://github.com/koyotecoin/koyotecoin/issues/15732)
+- Validation code is moving from *libkoyotecoin_node* to *libkoyotecoin_kernel*.

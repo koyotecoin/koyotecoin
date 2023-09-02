@@ -11,7 +11,7 @@
 
 ### Before every major and minor release
 
-- Update [bips.md](bips.md) to account for changes since the last release (don't forget to bump the version number on the first line).
+- Update [kips.md](kips.md) to account for changes since the last release (don't forget to bump the version number on the first line).
 - Update version in `configure.ac` (don't forget to set `CLIENT_VERSION_RC` to `0`).
 - Update manpages (see previous section)
 - Write release notes (see "Write the release notes" below).
@@ -20,22 +20,21 @@
 
 - On both the master branch and the new release branch:
   - update `CLIENT_VERSION_MAJOR` in [`configure.ac`](../configure.ac)
-- On the new release branch in [`configure.ac`](../configure.ac)(see [this commit](https://github.com/koyotecoin/koyotecoin/commit/742f7dd)):
+- On the new release branch in [`configure.ac`](../configure.ac):
   - set `CLIENT_VERSION_MINOR` to `0`
   - set `CLIENT_VERSION_BUILD` to `0`
   - set `CLIENT_VERSION_IS_RELEASE` to `true`
 
 #### Before branch-off
 
-- Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/koyotecoin/koyotecoin/pull/7415) for an example.
+- Update hardcoded [seeds](/contrib/seeds/README.md).
 - Update the following variables in [`src/chainparams.cpp`](/src/chainparams.cpp) for mainnet, testnet, and signet:
   - `m_assumed_blockchain_size` and `m_assumed_chain_state_size` with the current size plus some overhead (see
     [this](#how-to-calculate-assumed-blockchain-and-chain-state-size) for information on how to calculate them).
   - The following updates should be reviewed with `reindex-chainstate` and `assumevalid=0` to catch any defect
     that causes rejection of blocks in the past history.
   - `chainTxData` with statistics about the transaction count and rate. Use the output of the `getchaintxstats` RPC with an
-    `nBlocks` of 4096 (28 days) and a `bestblockhash` of RPC `getbestblockhash`; see
-    [this pull request](https://github.com/koyotecoin/koyotecoin/pull/20263) for an example. Reviewers can verify the results by running
+    `nBlocks` of 4096 (28 days) and a `bestblockhash` of RPC `getbestblockhash`. Reviewers can verify the results by running
     `getchaintxstats <window_block_count> <window_final_block_hash>` with the `window_block_count` and `window_final_block_hash` from your output.
   - `defaultAssumeValid` with the output of RPC `getblockhash` using the `height` of `window_final_block_height` above
     (and update the block height comment with that height), taking into account the following:
@@ -52,7 +51,7 @@
 - Update the versions.
 - Create the draft, named "_version_ Release Notes Draft", as a [collaborative wiki](https://github.com/koyotecoin/koyotecoin-devwiki/wiki/_new).
 - Clear the release notes: `cp doc/release-notes-empty-template.md doc/release-notes.md`
-- Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/koyotecoin/koyotecoin/issues/17079) for an example) and provide a link to it in the release announcements where useful.
+- Create a pinned meta-issue for testing the release candidate and provide a link to it in the release announcements where useful.
 - Translations
   - Change the auto-update URL for the new major version's resource away from `master` and to the branch, e.g. `https://raw.githubusercontent.com/koyotecoin/koyotecoin/<branch>/src/qt/locale/koyotecoin_en.xlf`. Do not forget this or it will keep tracking the translations on master instead, drifting away from the specific major release.
 
@@ -65,7 +64,7 @@
 
 To tag the version (or release candidate) in git, use the `make-tag.py` script from [koyotecoin-maintainer-tools](https://github.com/koyotecoin/koyotecoin-maintainer-tools). From the root of the repository run:
 
-    ../koyotecoin-maintainer-tools/make-tag.py v(new version, e.g. 23.0)
+    ../koyotecoin-maintainer-tools/make-tag.py v(new version, e.g. 1.0)
 
 This will perform a few last-minute consistency checks in the build system files, and if they pass, create a signed tag.
 
@@ -93,7 +92,7 @@ Generate the change log. As this is a huge amount of work to do manually, there 
 
 Generate list of authors:
 
-    git log --format='- %aN' v(current version, e.g. 0.20.0)..v(new version, e.g. 0.20.1) | sort -fiu
+    git log --format='- %aN' v(current version, e.g. 1.0.0)..v(new version, e.g. 1.0.1) | sort -fiu
 
 ### Setup and perform Guix builds
 
@@ -102,7 +101,7 @@ Checkout the Koyotecoin Core version you'd like to build:
 ```sh
 pushd ./koyotecoin
 SIGNER='(your builder key, ie bluematt, sipa, etc)'
-VERSION='(new version without v-prefix, e.g. 0.20.0)'
+VERSION='(new version without v-prefix, e.g. 1.0.0)'
 git fetch origin "v${VERSION}"
 git checkout "v${VERSION}"
 popd

@@ -12,17 +12,17 @@ Before starting this tutorial, start the koyotecoin node on the signet network.
 ./src/koyotecoind -signet -daemon
 ```
 
-This tutorial also uses the default WPKH derivation path to get the xpubs and does not conform to [BIP 45](https://github.com/koyotecoin/bips/blob/master/bip-0045.mediawiki) or [BIP 87](https://github.com/koyotecoin/bips/blob/master/bip-0087.mediawiki).
+This tutorial also uses the default WPKH derivation path to get the xpubs and does not conform to BIP 45 or BIP 87.
 
 At the time of writing, there is no way to extract a specific path from wallets in Koyotecoin Core. For this, an external signer/xpub can be used.
 
-[PR #22341](https://github.com/koyotecoin/koyotecoin/pull/22341), which is still under development, introduces a new wallet RPC `getxpub`. It takes a BIP32 path as an argument and returns the xpub, along with the master key fingerprint.
+Which is still under development, introduces a new wallet RPC `getxpub`. It takes a BIP32 path as an argument and returns the xpub, along with the master key fingerprint.
 
 ## 1.1 Basic Multisig Workflow
 
 ### 1.1 Create the Descriptor Wallets
 
-For a 2-of-3 multisig, create 3 descriptor wallets. It is important that they are of the descriptor type in order to retrieve the wallet descriptors. These wallets contain HD seed and private keys, which will be used to sign the PSBTs and derive the xpub.
+For a 2-of-3 multisig, create 3 descriptor wallets. It is important that they are of the descriptor type in order to retrieve the wallet descriptors. These wallets contain HD seed and private keys, which will be used to sign the PSKTs and derive the xpub.
 
 These three wallets should not be used directly for privacy reasons (public key reuse). They should only be used to sign transactions for the (watch-only) multisig wallet.
 
@@ -63,7 +63,7 @@ The following command can be used to verify if the xpub was generated correctly.
 for x in "${!xpubs[@]}"; do printf "[%s]=%s\n" "$x" "${xpubs[$x]}" ; done
 ```
 
-As previously mentioned, this step extracts the `m/84'/1'/0'` account instead of the path defined in [BIP 45](https://github.com/koyotecoin/bips/blob/master/bip-0045.mediawiki) or [BIP 87](https://github.com/koyotecoin/bips/blob/master/bip-0087.mediawiki), since there is no way to extract a specific path in Koyotecoin Core at the time of writing.
+As previously mentioned, this step extracts the `m/84'/1'/0'` account instead of the path defined in BIP 45 or BIP 87, since there is no way to extract a specific path in Koyotecoin Core at the time of writing.
 
 ### 1.2 Define the Multisig Descriptors
 
@@ -82,9 +82,9 @@ multisig_int_desc="{\"desc\": $internal_desc_sum, \"active\": true, \"internal\"
 multisig_desc="[$multisig_ext_desc, $multisig_int_desc]"
 ```
 
-`external_desc` and `internal_desc` specify the output type (`wsh`, in this case) and the xpubs involved. They also use BIP 67 (`sortedmulti`), so the wallet can be recreated without worrying about the order of xpubs. Conceptually, descriptors describe a list of scriptPubKey (along with information for spending from it) [[source](https://github.com/koyotecoin/koyotecoin/issues/21199#issuecomment-780772418)].
+`external_desc` and `internal_desc` specify the output type (`wsh`, in this case) and the xpubs involved. They also use BIP 67 (`sortedmulti`), so the wallet can be recreated without worrying about the order of xpubs. Conceptually, descriptors describe a list of scriptPubKey (along with information for spending from it).
 
-Note that at least two descriptors are usually used, one for internal derivation paths and external ones. There are discussions about eliminating this redundancy, as can been seen in the issue [#17190](https://github.com/koyotecoin/koyotecoin/issues/17190).
+Note that at least two descriptors are usually used, one for internal derivation paths and external ones. There are discussions about eliminating this redundancy.
 
 After creating the descriptors, it is necessary to add the checksum, which is required by the `importdescriptors` RPC.
 
@@ -150,17 +150,17 @@ The `getbalances` RPC may be used to check the balance. Coins with `trusted` sta
 ./src/koyotecoin-cli -signet -rpcwallet="multisig_wallet_01" getbalances
 ```
 
-### 1.5 Create a PSBT
+### 1.5 Create a PSKT
 
-Unlike singlesig wallets, multisig wallets cannot create and sign transactions directly because they require the signatures of the co-signers. Instead they create a Partially Signed Koyotecoin Transaction (PSBT).
+Unlike singlesig wallets, multisig wallets cannot create and sign transactions directly because they require the signatures of the co-signers. Instead they create a Partially Signed Koyotecoin Transaction (PSKT).
 
-PSBT is a data format that allows wallets and other tools to exchange information about a Koyotecoin transaction and the signatures necessary to complete it. [[source](https://koyotecoinops.org/en/topics/psbt/)]
+PSKT is a data format that allows wallets and other tools to exchange information about a Koyotecoin transaction and the signatures necessary to complete it.
 
-The current PSBT version (v0) is defined in [BIP 174](https://github.com/koyotecoin/bips/blob/master/bip-0174.mediawiki).
+The current PSKT version (v0) is defined in BIP 174.
 
 For simplicity, the destination address is taken from the `participant_1` wallet in the code above, but it can be any valid koyotecoin address.
 
-The `walletcreatefundedpsbt` RPC is used to create and fund a transaction in the PSBT format. It is the first step in creating the PSBT.
+The `walletcreatefundedpskt` RPC is used to create and fund a transaction in the PSKT format. It is the first step in creating the PSKT.
 
 ```bash
 balance=$(./src/koyotecoin-cli -signet -rpcwallet="multisig_wallet_01" getbalance)
@@ -169,73 +169,73 @@ amount=$(echo "$balance * 0.8" | bc -l | sed -e 's/^\./0./' -e 's/^-\./-0./')
 
 destination_addr=$(./src/koyotecoin-cli -signet -rpcwallet="participant_1" getnewaddress)
 
-funded_psbt=$(./src/koyotecoin-cli -signet -named -rpcwallet="multisig_wallet_01" walletcreatefundedpsbt outputs="{\"$destination_addr\": $amount}" | jq -r '.psbt')
+funded_pskt=$(./src/koyotecoin-cli -signet -named -rpcwallet="multisig_wallet_01" walletcreatefundedpskt outputs="{\"$destination_addr\": $amount}" | jq -r '.pskt')
 ```
 
-There is also the `createpsbt` RPC, which serves the same purpose, but it has no access to the wallet or to the UTXO set. It is functionally the same as `createrawtransaction` and just drops the raw transaction into an otherwise blank PSBT. [[source](https://koyotecointalk.org/index.php?topic=5131043.msg50573609#msg50573609)] In most cases, `walletcreatefundedpsbt` solves the problem.
+There is also the `createpskt` RPC, which serves the same purpose, but it has no access to the wallet or to the UTXO set. It is functionally the same as `createrawtransaction` and just drops the raw transaction into an otherwise blank PSKT. In most cases, `walletcreatefundedpskt` solves the problem.
 
-The `send` RPC can also return a PSBT if more signatures are needed to sign the transaction.
+The `send` RPC can also return a PSKT if more signatures are needed to sign the transaction.
 
-### 1.6 Decode or Analyze the PSBT
+### 1.6 Decode or Analyze the PSKT
 
-Optionally, the PSBT can be decoded to a JSON format using `decodepsbt` RPC.
+Optionally, the PSKT can be decoded to a JSON format using `decodepskt` RPC.
 
-The `analyzepsbt` RPC analyzes and provides information about the current status of a PSBT and its inputs, e.g. missing signatures.
+The `analyzepskt` RPC analyzes and provides information about the current status of a PSKT and its inputs, e.g. missing signatures.
 
 ```bash
-./src/koyotecoin-cli -signet decodepsbt $funded_psbt
+./src/koyotecoin-cli -signet decodepskt $funded_pskt
 
-./src/koyotecoin-cli -signet analyzepsbt $funded_psbt
+./src/koyotecoin-cli -signet analyzepskt $funded_pskt
 ```
 
-### 1.7 Update the PSBT
+### 1.7 Update the PSKT
 
-In the code above, two PSBTs are created. One signed by `participant_1` wallet and other, by the `participant_2` wallet.
+In the code above, two PSKTs are created. One signed by `participant_1` wallet and other, by the `participant_2` wallet.
 
-The `walletprocesspsbt` is used by the wallet to sign a PSBT.
+The `walletprocesspskt` is used by the wallet to sign a PSKT.
 
 ```bash
-psbt_1=$(./src/koyotecoin-cli -signet -rpcwallet="participant_1" walletprocesspsbt $funded_psbt | jq '.psbt')
+pskt_1=$(./src/koyotecoin-cli -signet -rpcwallet="participant_1" walletprocesspskt $funded_pskt | jq '.pskt')
 
-psbt_2=$(./src/koyotecoin-cli -signet -rpcwallet="participant_2" walletprocesspsbt $funded_psbt | jq '.psbt')
+pskt_2=$(./src/koyotecoin-cli -signet -rpcwallet="participant_2" walletprocesspskt $funded_pskt | jq '.pskt')
 ```
 
-### 1.8 Combine the PSBT
+### 1.8 Combine the PSKT
 
-The PSBT, if signed separately by the co-signers, must be combined into one transaction before being finalized. This is done by `combinepsbt` RPC.
+The PSKT, if signed separately by the co-signers, must be combined into one transaction before being finalized. This is done by `combinepskt` RPC.
 
 ```bash
-combined_psbt=$(./src/koyotecoin-cli -signet combinepsbt "[$psbt_1, $psbt_2]")
+combined_pskt=$(./src/koyotecoin-cli -signet combinepskt "[$pskt_1, $pskt_2]")
 ```
 
-There is an RPC called `joinpsbts`, but it has a different purpose than `combinepsbt`. `joinpsbts` joins the inputs from multiple distinct PSBTs into one PSBT.
+There is an RPC called `joinpskts`, but it has a different purpose than `combinepskt`. `joinpskts` joins the inputs from multiple distinct PSKTs into one PSKT.
 
-In the example above, the PSBTs are the same, but signed by different participants. If the user tries to merge them using `joinpsbts`, the error `Input txid:pos exists in multiple PSBTs` is returned. To be able to merge different PSBTs into one, they must have different inputs and outputs.
+In the example above, the PSKTs are the same, but signed by different participants. If the user tries to merge them using `joinpskts`, the error `Input txid:pos exists in multiple PSKTs` is returned. To be able to merge different PSKTs into one, they must have different inputs and outputs.
 
-### 1.9 Finalize and Broadcast the PSBT
+### 1.9 Finalize and Broadcast the PSKT
 
-The `finalizepsbt` RPC is used to produce a network serialized transaction which can be broadcast with `sendrawtransaction`.
+The `finalizepskt` RPC is used to produce a network serialized transaction which can be broadcast with `sendrawtransaction`.
 
 It checks that all inputs have complete scriptSigs and scriptWitnesses and, if so, encodes them into network serialized transactions.
 
 ```bash
-finalized_psbt_hex=$(./src/koyotecoin-cli -signet finalizepsbt $combined_psbt | jq -r '.hex')
+finalized_pskt_hex=$(./src/koyotecoin-cli -signet finalizepskt $combined_pskt | jq -r '.hex')
 
-./src/koyotecoin-cli -signet sendrawtransaction $finalized_psbt_hex
+./src/koyotecoin-cli -signet sendrawtransaction $finalized_pskt_hex
 ```
 
-### 1.10 Alternative Workflow (PSBT sequential signatures)
+### 1.10 Alternative Workflow (PSKT sequential signatures)
 
-Instead of each wallet signing the original PSBT and combining them later, the wallets can also sign the PSBTs sequentially. This is less scalable than the previously presented parallel workflow, but it works.
+Instead of each wallet signing the original PSKT and combining them later, the wallets can also sign the PSKTs sequentially. This is less scalable than the previously presented parallel workflow, but it works.
 
-After that, the rest of the process is the same: the PSBT is finalized and transmitted to the network.
+After that, the rest of the process is the same: the PSKT is finalized and transmitted to the network.
 
 ```bash
-psbt_1=$(./src/koyotecoin-cli -signet -rpcwallet="participant_1" walletprocesspsbt $funded_psbt | jq -r '.psbt')
+pskt_1=$(./src/koyotecoin-cli -signet -rpcwallet="participant_1" walletprocesspskt $funded_pskt | jq -r '.pskt')
 
-psbt_2=$(./src/koyotecoin-cli -signet -rpcwallet="participant_2" walletprocesspsbt $psbt_1 | jq -r '.psbt')
+pskt_2=$(./src/koyotecoin-cli -signet -rpcwallet="participant_2" walletprocesspskt $pskt_1 | jq -r '.pskt')
 
-finalized_psbt_hex=$(./src/koyotecoin-cli -signet finalizepsbt $psbt_2 | jq -r '.hex')
+finalized_pskt_hex=$(./src/koyotecoin-cli -signet finalizepskt $pskt_2 | jq -r '.hex')
 
-./src/koyotecoin-cli -signet sendrawtransaction $finalized_psbt_hex
+./src/koyotecoin-cli -signet sendrawtransaction $finalized_pskt_hex
 ```

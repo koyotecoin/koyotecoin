@@ -103,10 +103,6 @@ incoming connections.
 
 For further information see:
 
-[pull/23306](https://github.com/koyotecoin/koyotecoin/pull/23306#issuecomment-947516736)
-
-[pull/23542](https://github.com/koyotecoin/koyotecoin/pull/23542)
-
 [fetch.spec.whatwg.org](https://fetch.spec.whatwg.org/#port-blocking)
 
 [chromium.googlesource.com](https://chromium.googlesource.com/chromium/src.git/+/refs/heads/main/net/base/port_util.cc)

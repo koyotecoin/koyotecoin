@@ -1,20 +1,18 @@
-# PSBT Howto for Koyotecoin Core
+# PSKT Howto for Koyotecoin Core
 
-Since Koyotecoin Core 0.17, an RPC interface exists for Partially Signed Koyotecoin
-Transactions (PSBTs, as specified in
-[BIP 174](https://github.com/koyotecoin/bips/blob/master/bip-0174.mediawiki)).
+RPC interface exists for Partially Signed Koyotecoin
+Transactions (PSKTs, as specified in BIP 174).
 
 This document describes the overall workflow for producing signed transactions
-through the use of PSBT, and the specific RPC commands used in typical
+through the use of PSKT, and the specific RPC commands used in typical
 scenarios.
 
-## PSBT in general
+## PSKT in general
 
-PSBT is an interchange format for Koyotecoin transactions that are not fully signed
+PSKT is an interchange format for Koyotecoin transactions that are not fully signed
 yet, together with relevant metadata to help entities work towards signing it.
 It is intended to simplify workflows where multiple parties need to cooperate to
-produce a transaction. Examples include hardware wallets, multisig setups, and
-[CoinJoin](https://koyotecointalk.org/?topic=279249) transactions.
+produce a transaction. Examples include hardware wallets, multisig setups, and transactions.
 
 ### Overall workflow
 
@@ -22,10 +20,10 @@ Overall, the construction of a fully signed Koyotecoin transaction goes through 
 following steps:
 
 - A **Creator** proposes a particular transaction to be created. They construct
-  a PSBT that contains certain inputs and outputs, but no additional metadata.
+  a PSKT that contains certain inputs and outputs, but no additional metadata.
 - For each input, an **Updater** adds information about the UTXOs being spent by
-  the transaction to the PSBT. They also add information about the scripts and
-  public keys involved in each of the inputs (and possibly outputs) of the PSBT.
+  the transaction to the PSKT. They also add information about the scripts and
+  public keys involved in each of the inputs (and possibly outputs) of the PSKT.
 - **Signers** inspect the transaction and its metadata to decide whether they
   agree with the transaction. They can use amount information from the UTXOs
   to assess the values and fees involved. If they agree, they produce a
@@ -33,56 +31,56 @@ following steps:
 - A **Finalizer** is run for each input to convert the partial signatures and
   possibly script information into a final `scriptSig` and/or `scriptWitness`.
 - An **Extractor** produces a valid Koyotecoin transaction (in network format)
-  from a PSBT for which all inputs are finalized.
+  from a PSKT for which all inputs are finalized.
 
 Generally, each of the above (excluding Creator and Extractor) will simply
-add more and more data to a particular PSBT, until all inputs are fully signed.
-In a naive workflow, they all have to operate sequentially, passing the PSBT
+add more and more data to a particular PSKT, until all inputs are fully signed.
+In a naive workflow, they all have to operate sequentially, passing the PSKT
 from one to the next, until the Extractor can convert it to a real transaction.
 In order to permit parallel operation, **Combiners** can be employed which merge
-metadata from different PSBTs for the same unsigned transaction.
+metadata from different PSKTs for the same unsigned transaction.
 
 The names above in bold are the names of the roles defined in BIP174. They're
 useful in understanding the underlying steps, but in practice, software and
 hardware implementations will typically implement multiple roles simultaneously.
 
-## PSBT in Koyotecoin Core
+## PSKT in Koyotecoin Core
 
 ### RPCs
 
-- **`converttopsbt` (Creator)** is a utility RPC that converts an
-  unsigned raw transaction to PSBT format. It ignores existing signatures.
-- **`createpsbt` (Creator)** is a utility RPC that takes a list of inputs and
-  outputs and converts them to a PSBT with no additional information. It is
-  equivalent to calling `createrawtransaction` followed by `converttopsbt`.
-- **`walletcreatefundedpsbt` (Creator, Updater)** is a wallet RPC that creates a
-  PSBT with the specified inputs and outputs, adds additional inputs and change
+- **`converttopskt` (Creator)** is a utility RPC that converts an
+  unsigned raw transaction to PSKT format. It ignores existing signatures.
+- **`createpskt` (Creator)** is a utility RPC that takes a list of inputs and
+  outputs and converts them to a PSKT with no additional information. It is
+  equivalent to calling `createrawtransaction` followed by `converttopskt`.
+- **`walletcreatefundedpskt` (Creator, Updater)** is a wallet RPC that creates a
+  PSKT with the specified inputs and outputs, adds additional inputs and change
   to it to balance it out, and adds relevant metadata. In particular, for inputs
   that the wallet knows about (counting towards its normal or watch-only
   balance), UTXO information will be added. For outputs and inputs with UTXO
   information present, key and script information will be added which the wallet
   knows about. It is equivalent to running `createrawtransaction`, followed by
-  `fundrawtransaction`, and `converttopsbt`.
-- **`walletprocesspsbt` (Updater, Signer, Finalizer)** is a wallet RPC that takes as
-  input a PSBT, adds UTXO, key, and script data to inputs and outputs that miss
+  `fundrawtransaction`, and `converttopskt`.
+- **`walletprocesspskt` (Updater, Signer, Finalizer)** is a wallet RPC that takes as
+  input a PSKT, adds UTXO, key, and script data to inputs and outputs that miss
   it, and optionally signs inputs. Where possible it also finalizes the partial
   signatures.
-- **`utxoupdatepsbt` (Updater)** is a node RPC that takes a PSBT and updates it
+- **`utxoupdatepskt` (Updater)** is a node RPC that takes a PSKT and updates it
   to include information available from the UTXO set (works only for SegWit
   inputs).
-- **`finalizepsbt` (Finalizer, Extractor)** is a utility RPC that finalizes any
+- **`finalizepskt` (Finalizer, Extractor)** is a utility RPC that finalizes any
   partial signatures, and if all inputs are finalized, converts the result to a
   fully signed transaction which can be broadcast with `sendrawtransaction`.
-- **`combinepsbt` (Combiner)** is a utility RPC that implements a Combiner. It
+- **`combinepskt` (Combiner)** is a utility RPC that implements a Combiner. It
   can be used at any point in the workflow to merge information added to
-  different versions of the same PSBT. In particular it is useful to combine the
+  different versions of the same PSKT. In particular it is useful to combine the
   output of multiple Updaters or Signers.
-- **`joinpsbts`** (Creator) is a utility RPC that joins multiple PSBTs together,
+- **`joinpskts`** (Creator) is a utility RPC that joins multiple PSKTs together,
   concatenating the inputs and outputs. This can be used to construct CoinJoin
   transactions.
-- **`decodepsbt`** is a diagnostic utility RPC which will show all information in
-  a PSBT in human-readable form, as well as compute its eventual fee if known.
-- **`analyzepsbt`** is a utility RPC that examines a PSBT and reports the
+- **`decodepskt`** is a diagnostic utility RPC which will show all information in
+  a PSKT in human-readable form, as well as compute its eventual fee if known.
+- **`analyzepskt`** is a utility RPC that examines a PSKT and reports the
   current status of its inputs, the next step in the workflow if known, and if
   possible, computes the fee of the resulting transaction and estimates the
   final weight and feerate.
@@ -92,7 +90,7 @@ hardware implementations will typically implement multiple roles simultaneously.
 
 #### Multisig with multiple Koyotecoin Core instances
 
-For a quick start see [Basic M-of-N multisig example using descriptor wallets and PSBTs](./descriptors.md#basic-multisig-example).
+For a quick start see [Basic M-of-N multisig example using descriptor wallets and PSKTs](./descriptors.md#basic-multisig-example).
 If you are using legacy wallets feel free to continue with the example provided here.
 
 Alice, Bob, and Carol want to create a 2-of-3 multisig address. They're all using
@@ -125,22 +123,22 @@ Later, when *V* KYC has been received on *Amulti*, and Bob and Carol want to
 move the coins in their entirety to address *Asend*, with no change. Alice
 does not need to be involved.
 - One of them - let's assume Carol here - initiates the creation. She runs
-  `walletcreatefundedpsbt [] {"Asend":V} 0 {"subtractFeeFromOutputs":[0], "includeWatching":true}`.
-  We call the resulting PSBT *P*. *P* does not contain any signatures.
+  `walletcreatefundedpskt [] {"Asend":V} 0 {"subtractFeeFromOutputs":[0], "includeWatching":true}`.
+  We call the resulting PSKT *P*. *P* does not contain any signatures.
 - Carol needs to sign the transaction herself. In order to do so, she runs
-  `walletprocesspsbt "P"`, and gives the resulting PSBT *P2* to Bob.
-- Bob inspects the PSBT using `decodepsbt "P2"` to determine if the transaction
+  `walletprocesspskt "P"`, and gives the resulting PSKT *P2* to Bob.
+- Bob inspects the PSKT using `decodepskt "P2"` to determine if the transaction
   has indeed just the expected input, and an output to *Asend*, and the fee is
-  reasonable. If he agrees, he calls `walletprocesspsbt "P2"` to sign. The
-  resulting PSBT *P3* contains both Carol's and Bob's signature.
-- Now anyone can call `finalizepsbt "P3"` to extract a fully signed transaction
+  reasonable. If he agrees, he calls `walletprocesspskt "P2"` to sign. The
+  resulting PSKT *P3* contains both Carol's and Bob's signature.
+- Now anyone can call `finalizepskt "P3"` to extract a fully signed transaction
   *T*.
 - Finally anyone can broadcast the transaction using `sendrawtransaction "T"`.
 
 In case there are more signers, it may be advantageous to let them all sign in
-parallel, rather than passing the PSBT from one signer to the next one. In the
+parallel, rather than passing the PSKT from one signer to the next one. In the
 above example this would translate to Carol handing a copy of *P* to each signer
-separately. They can then all invoke `walletprocesspsbt "P"`, and end up with
-their individually-signed PSBT structures. They then all send those back to
-Carol (or anyone) who can combine them using `combinepsbt`. The last two steps
-(`finalizepsbt` and `sendrawtransaction`) remain unchanged.
+separately. They can then all invoke `walletprocesspskt "P"`, and end up with
+their individually-signed PSKT structures. They then all send those back to
+Carol (or anyone) who can combine them using `combinepskt`. The last two steps
+(`finalizepskt` and `sendrawtransaction`) remain unchanged.

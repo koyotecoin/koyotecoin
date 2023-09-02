@@ -1,6 +1,6 @@
 # Support for Output Descriptors in Koyotecoin Core
 
-Since Koyotecoin Core v0.17, there is support for Output Descriptors. This is a
+Since Koyotecoin Core v1.0.0, there is support for Output Descriptors. This is a
 simple language which can be used to describe collections of output scripts.
 Supporting RPCs are:
 - `scantxoutset` takes as input descriptors to scan for, and also reports
@@ -10,17 +10,14 @@ Supporting RPCs are:
 - `deriveaddresses` takes as input a descriptor and computes the corresponding
   addresses.
 - `listunspent` outputs a specialized descriptor for the reported unspent outputs.
-- `getaddressinfo` outputs a descriptor for solvable addresses (since v0.18).
-- `importmulti` takes as input descriptors to import into a legacy wallet
-  (since v0.18).
+- `getaddressinfo` outputs a descriptor for solvable addresses.
+- `importmulti` takes as input descriptors to import into a legacy wallet.
 - `generatetodescriptor` takes as input a descriptor and generates coins to it
-  (`regtest` only, since v0.19).
-- `utxoupdatepsbt` takes as input descriptors to add information to the psbt
-  (since v0.19).
-- `createmultisig` and `addmultisigaddress` return descriptors as well (since v0.20).
-- `importdescriptors` takes as input descriptors to import into a descriptor wallet
-  (since v0.21).
-- `listdescriptors` outputs descriptors imported into a descriptor wallet (since v22).
+  (`regtest`).
+- `utxoupdatepskt` takes as input descriptors to add information to the pskt.
+- `createmultisig` and `addmultisigaddress` return descriptors as well.
+- `importdescriptors` takes as input descriptors to import into a descriptor wallet.
+- `listdescriptors` outputs descriptors imported into a descriptor wallet.
 
 This document describes the language. For the specifics on usage, see the RPC
 documentation for the functions mentioned above.
@@ -92,8 +89,8 @@ Descriptors consist of several types of expressions. The top level expression is
   - Hex encoded public keys (either 66 characters starting with `02` or `03` for a compressed pubkey, or 130 characters starting with `04` for an uncompressed pubkey).
     - Inside `wpkh` and `wsh`, only compressed public keys are permitted.
     - Inside `tr` and `rawtr`, x-only pubkeys are also permitted (64 hex characters).
-  - [WIF](https://en.koyotecoin.it/wiki/Wallet_import_format) encoded private keys may be specified instead of the corresponding public key, with the same meaning.
-  - `xpub` encoded extended public key or `xprv` encoded extended private key (as defined in [BIP 32](https://github.com/koyotecoin/bips/blob/master/bip-0032.mediawiki)).
+  - WIF (Wallet Import Format) encoded private keys may be specified instead of the corresponding public key, with the same meaning.
+  - `xpub` encoded extended public key or `xprv` encoded extended private key (as defined in BIP 32).
     - Followed by zero or more `/NUM` unhardened and `/NUM'` hardened BIP32 derivation steps.
     - Optionally followed by a single `/*` or `/*'` final step to denote all (direct) unhardened or hardened children.
     - The usage of hardened derivation steps requires providing the private key.
@@ -106,8 +103,8 @@ Descriptors consist of several types of expressions. The top level expression is
 
 `ADDR` expressions are any type of supported address:
 - P2PKH addresses (base58, of the form `1...` for mainnet or `[nm]...` for testnet). Note that P2PKH addresses in descriptors cannot be used for P2PK outputs (use the `pk` function instead).
-- P2SH addresses (base58, of the form `3...` for mainnet or `2...` for testnet, defined in [BIP 13](https://github.com/koyotecoin/bips/blob/master/bip-0013.mediawiki)).
-- Segwit addresses (bech32 and bech32m, of the form `bc1...` for mainnet or `tb1...` for testnet, defined in [BIP 173](https://github.com/koyotecoin/bips/blob/master/bip-0173.mediawiki) and [BIP 350](https://github.com/koyotecoin/bips/blob/master/bip-0350.mediawiki)).
+- P2SH addresses (base58, of the form `3...` for mainnet or `2...` for testnet, defined in BIP 13).
+- Segwit addresses (bech32 and bech32m, of the form `bc1...` for mainnet or `tb1...` for testnet, defined in BIP 173 and BIP 350).
 
 ## Explanation
 
@@ -150,7 +147,7 @@ are lexicographically ordered as described in BIP67.
 #### Basic multisig example
 
 For a good example of a basic M-of-N multisig between multiple participants using descriptor
-wallets and PSBTs, as well as a signing flow, see [this functional test](/test/functional/wallet_multisig_descriptor_psbt.py).
+wallets and PSKTs, as well as a signing flow, see [this functional test](/test/functional/wallet_multisig_descriptor_pskt.py).
 
 Disclaimers: It is important to note that this example serves as a quick-start and is kept basic for readability. A downside of the approach
 outlined here is that each participant must maintain (and backup) two separate wallets: a signer and the corresponding multisig.
@@ -171,21 +168,21 @@ The basic steps are:
   3. A receiving address is generated for the multisig. As a check to ensure step 2 was done correctly, every participant
      should verify they get the same addresses
   4. Funds are sent to the resulting address
-  5. A sending transaction from the multisig is created using `walletcreatefundedpsbt` (anyone can initiate this). It is simple to do
-     this in the GUI by going to the `Send` tab in the multisig wallet and creating an unsigned transaction (PSBT)
-  6. At least `M` participants check the PSBT with their multisig using `decodepsbt` to verify the transaction is OK before signing it.
-  7. (If OK) the participant signs the PSBT with their signer wallet using `walletprocesspsbt`. It is simple to do this in the GUI by
-     loading the PSBT from file and signing it
-  8. The signed PSBTs are collected with `combinepsbt`, finalized w/ `finalizepsbt`, and then the resulting transaction is broadcasted
+  5. A sending transaction from the multisig is created using `walletcreatefundedpskt` (anyone can initiate this). It is simple to do
+     this in the GUI by going to the `Send` tab in the multisig wallet and creating an unsigned transaction (PSKT)
+  6. At least `M` participants check the PSKT with their multisig using `decodepskt` to verify the transaction is OK before signing it.
+  7. (If OK) the participant signs the PSKT with their signer wallet using `walletprocesspskt`. It is simple to do this in the GUI by
+     loading the PSKT from file and signing it
+  8. The signed PSKTs are collected with `combinepskt`, finalized w/ `finalizepskt`, and then the resulting transaction is broadcasted
      to the network. Note that any wallet (eg one of the signers or multisig) is capable of doing this.
   9. Checks that balances are correct after the transaction has been included in a block
 
-You may prefer a daisy chained signing flow where each participant signs the PSBT one after another until
-the PSBT has been signed `M` times and is "complete." For the most part, the steps above remain the same, except (6, 7)
-change slightly from signing the original PSBT in parallel to signing it in series. `combinepsbt` is not necessary with
-this signing flow and the last (`m`th) signer can just broadcast the PSBT after signing. Note that a parallel signing flow may be
+You may prefer a daisy chained signing flow where each participant signs the PSKT one after another until
+the PSKT has been signed `M` times and is "complete." For the most part, the steps above remain the same, except (6, 7)
+change slightly from signing the original PSKT in parallel to signing it in series. `combinepskt` is not necessary with
+this signing flow and the last (`m`th) signer can just broadcast the PSKT after signing. Note that a parallel signing flow may be
 preferable in cases where there are more signers. This signing flow is also included in the test / Python example.
-[The test](/test/functional/wallet_multisig_descriptor_psbt.py) is meant to be documentation as much as it is a functional test, so
+[The test](/test/functional/wallet_multisig_descriptor_pskt.py) is meant to be documentation as much as it is a functional test, so
 it is kept as simple and readable as possible.
 
 ### BIP32 derived keys and chains
@@ -219,7 +216,7 @@ Instead, it should be written as `xpub.../1/*`, where xpub corresponds to
 `m/44'/0'/0'`.
 
 When interacting with a hardware device, it may be necessary to include
-the entire path from the master down. [BIP174](https://github.com/koyotecoin/bips/blob/master/bip-0174.mediawiki) standardizes this by
+the entire path from the master down. BIP174 standardizes this by
 providing the master key *fingerprint* (first 32 bit of the Hash160 of
 the master pubkey), plus all derivation steps. To support constructing
 these, we permit providing this key origin information inside the

@@ -330,7 +330,6 @@ $ FUZZ=bech32 dotnet Eclipser/build/Eclipser.dll fuzz -p src/test/fuzz/fuzz -t 3
 
 Note that fuzzing with Eclipser on certain targets (those that create 'full nodes', e.g. `process_message*`) will,
 for now, slowly fill `/tmp/` with improperly cleaned-up files, which will cause spurious crashes.
-See [this proposed patch](https://github.com/koyotecoin/koyotecoin/pull/22472) for more information.
 
 Read the [Eclipser documentation for v1.x](https://github.com/SoftSec-KAIST/Eclipser/tree/v1.x) for more details on using Eclipser.
 

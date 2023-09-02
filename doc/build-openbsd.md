@@ -120,7 +120,6 @@ data(kbytes)         1572864
 ```
 
 This is, unfortunately, in some cases not enough to compile some `.cpp` files in the project,
-(see issue [#6658](https://github.com/koyotecoin/koyotecoin/issues/6658)).
 If your user is in the `staff` group the limit can be raised with:
 ```bash
 ulimit -d 3000000

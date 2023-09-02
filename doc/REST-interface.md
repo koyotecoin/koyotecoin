@@ -52,7 +52,7 @@ With the /notxdetails/ option JSON response will only contain the transaction ha
 Given a block hash: returns <COUNT> amount of blockheaders in upward direction.
 Returns empty if the block doesn't exist or it isn't in the active chain.
 
-*Deprecated (but not removed) since 24.0:*
+*Deprecated (but not removed):*
 `GET /rest/headers/<COUNT>/<BLOCK-HASH>.<bin|hex|json>`
 
 #### Blockfilter Headers
@@ -62,7 +62,7 @@ Given a block hash: returns <COUNT> amount of blockfilter headers in upward
 direction for the filter type <FILTERTYPE>.
 Returns empty if the block doesn't exist or it isn't in the active chain.
 
-*Deprecated (but not removed) since 24.0:*
+*Deprecated (but not removed):*
 `GET /rest/blockfilterheaders/<FILTERTYPE>/<COUNT>/<BLOCK-HASH>.<bin|hex|json>`
 
 #### Blockfilters
@@ -88,8 +88,7 @@ Refer to the `getblockchaininfo` RPC help for details.
 `GET /rest/getutxos/<checkmempool>/<txid>-<n>/<txid>-<n>/.../<txid>-<n>.<bin|hex|json>`
 
 The getutxo command allows querying of the UTXO set given a set of outpoints.
-See BIP64 for input and output serialihowlion:
-https://github.com/koyotecoin/bips/blob/master/bip-0064.mediawiki
+See BIP64 for input and output serialisation.
 
 Example:
 ```

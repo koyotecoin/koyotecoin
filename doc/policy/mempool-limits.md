@@ -38,10 +38,7 @@ of the following conditions are met:
    exceed the limit by 1.
 
 *Rationale*: this rule was introduced to prevent pinning by domination of a transaction's descendant
-limits in two-party contract protocols such as LN.  Also see the [mailing list
-post](https://lists.linuxfoundation.org/pipermail/koyotecoin-dev/2018-November/016518.html).
-
-This rule was introduced in [PR #15681](https://github.com/koyotecoin/koyotecoin/pull/15681).
+limits in two-party contract protocols such as LN.
 
 ### Single-Conflict RBF Carve Out
 

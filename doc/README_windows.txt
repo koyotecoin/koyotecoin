@@ -20,5 +20,5 @@ However, it downloads and stores the entire history of Koyotecoin transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.
 
-See the koyotecoin wiki at: https://wiki.koyotecoin.com
+See the koyotecoin wiki at: https://wiki.koyotecoin.org
 for more help and information.

@@ -583,7 +583,6 @@ Additional resources:
 - [UndefinedBehaviorSanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html)
 - [GCC Instrumentation Options](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html)
 - [Google Sanitizers Wiki](https://github.com/google/sanitizers/wiki)
-- [Issue #12691: Enable -fsanitize flags in Travis](https://github.com/koyotecoin/koyotecoin/issues/12691)
 
 ## Locking/mutex usage notes
 
@@ -603,54 +602,54 @@ and its `cs_KeyStore` lock for example).
 
 ## Threads
 
-- [Main thread (`koyotecoind`)](https://doxygen.koyotecoin.org/koyotecoind_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97)
+- [Main thread (`koyotecoind`)]
   : Started from `main()` in `koyotecoind.cpp`. Responsible for starting up and
   shutting down the application.
 
-- [ThreadImport (`b-loadblk`)](https://doxygen.koyotecoin.org/namespacenode.html#ab4305679079866f0f420f7dbf278381d)
+- [ThreadImport (`b-loadblk`)]
   : Loads blocks from `blk*.dat` files or `-loadblock=<file>` on startup.
 
-- [CCheckQueue::Loop (`b-scriptch.x`)](https://doxygen.koyotecoin.org/class_c_check_queue.html#a6e7fa51d3a25e7cb65446d4b50e6a987)
+- [CCheckQueue::Loop (`b-scriptch.x`)]
   : Parallel script validation threads for transactions in blocks.
 
-- [ThreadHTTP (`b-http`)](https://doxygen.koyotecoin.org/httpserver_8cpp.html#abb9f6ea8819672bd9a62d3695070709c)
+- [ThreadHTTP (`b-http`)]
   : Libevent thread to listen for RPC and REST connections.
 
-- [HTTP worker threads(`b-httpworker.x`)](https://doxygen.koyotecoin.org/httpserver_8cpp.html#aa6a7bc27265043bc0193220c5ae3a55f)
+- [HTTP worker threads(`b-httpworker.x`)]
   : Threads to service RPC and REST requests.
 
-- [Indexer threads (`b-txindex`, etc)](https://doxygen.koyotecoin.org/class_base_index.html#a96a7407421fbf877509248bbe64f8d87)
+- [Indexer threads (`b-txindex`, etc)]
   : One thread per indexer.
 
-- [SchedulerThread (`b-scheduler`)](https://doxygen.koyotecoin.org/class_c_scheduler.html#a14d2800815da93577858ea078aed1fba)
+- [SchedulerThread (`b-scheduler`)]
   : Does asynchronous background tasks like dumping wallet contents, dumping
   addrman and running asynchronous validationinterface callbacks.
 
-- [TorControlThread (`b-torcontrol`)](https://doxygen.koyotecoin.org/torcontrol_8cpp.html#a52a3efff23634500bb42c6474f306091)
+- [TorControlThread (`b-torcontrol`)]
   : Libevent thread for tor connections.
 
 - Net threads:
 
-  - [ThreadMessageHandler (`b-msghand`)](https://doxygen.koyotecoin.org/class_c_connman.html#aacdbb7148575a31bb33bc345e2bf22a9)
+  - [ThreadMessageHandler (`b-msghand`)]
     : Application level message handling (sending and receiving). Almost
     all net_processing and validation logic runs on this thread.
 
-  - [ThreadDNSAddressSeed (`b-dnsseed`)](https://doxygen.koyotecoin.org/class_c_connman.html#aa7c6970ed98a4a7bafbc071d24897d13)
+  - [ThreadDNSAddressSeed (`b-dnsseed`)]
     : Loads addresses of peers from the DNS.
 
   - ThreadMapPort (`b-mapport`)
     : Universal plug-and-play startup/shutdown.
 
-  - [ThreadSocketHandler (`b-net`)](https://doxygen.koyotecoin.org/class_c_connman.html#a765597cbfe99c083d8fa3d61bb464e34)
+  - [ThreadSocketHandler (`b-net`)]
     : Sends/Receives data from peers on port 8111.
 
-  - [ThreadOpenAddedConnections (`b-addcon`)](https://doxygen.koyotecoin.org/class_c_connman.html#a0b787caf95e52a346a2b31a580d60a62)
+  - [ThreadOpenAddedConnections (`b-addcon`)]
     : Opens network connections to added nodes.
 
-  - [ThreadOpenConnections (`b-opencon`)](https://doxygen.koyotecoin.org/class_c_connman.html#a55e9feafc3bab78e5c9d408c207faa45)
+  - [ThreadOpenConnections (`b-opencon`)]
     : Initiates new connections to peers.
 
-  - [ThreadI2PAcceptIncoming (`b-i2paccept`)](https://doxygen.koyotecoin.org/class_c_connman.html#a57787b4f9ac847d24065fbb0dd6e70f8)
+  - [ThreadI2PAcceptIncoming (`b-i2paccept`)]
     : Listens for and accepts incoming I2P connections through the I2P SAM proxy.
 
 ## Ignoring IDE/editor files
@@ -1250,13 +1249,13 @@ introduce accidental changes.
 
 Some good examples of scripted-diff:
 
-- [scripted-diff: Rename InitInterfaces to NodeContext](https://github.com/koyotecoin/koyotecoin/commit/301bd41a2e6765b185bd55f4c541f9e27aeea29d)
+- [scripted-diff: Rename InitInterfaces to NodeContext]
   uses an elegant script to replace occurrences of multiple terms in all source files.
 
-- [scripted-diff: Remove g_connman, g_banman globals](https://github.com/koyotecoin/koyotecoin/commit/8922d7f6b751a3e6b3b9f6fb7961c442877fb65a)
+- [scripted-diff: Remove g_connman, g_banman globals]
   replaces specific terms in a list of specific source files.
 
-- [scripted-diff: Replace fprintf with tfm::format](https://github.com/koyotecoin/koyotecoin/commit/fac03ec43a15ad547161e37e53ea82482cc508f9)
+- [scripted-diff: Replace fprintf with tfm::format]
   does a global replacement but excludes certain directories.
 
 To find all previous uses of scripted diffs in the repository, do:
@@ -1497,5 +1496,4 @@ communication:
   ```
 
   Note: This last convention isn't generally followed outside of
-  [`src/interfaces/`](../src/interfaces/), though it did come up for discussion
-  before in [#14635](https://github.com/koyotecoin/koyotecoin/pull/14635).
+  [`src/interfaces/`](../src/interfaces/).

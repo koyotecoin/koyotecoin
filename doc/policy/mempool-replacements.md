@@ -13,8 +13,6 @@ other consensus and policy rules, each of the following conditions are met:
 1. The directly conflicting transactions all signal replaceability explicitly. A transaction is
    signaling replaceability if any of its inputs have an nSequence number less than (0xffffffff - 1).
 
-   _Rationale_: See [BIP125
-   explanation](https://github.com/koyotecoin/bips/blob/master/bip-0125.mediawiki#motivation).
    Use the (`-mempoolfullrbf`) configuration option to allow transaction replacement without enforcement of the
    opt-in signaling rule.
 
@@ -63,19 +61,3 @@ other consensus and policy rules, each of the following conditions are met:
 This set of rules is similar but distinct from BIP125.
 
 ## History
-
-- Opt-in full replace-by-fee (without inherited signaling) honoured in mempool and mining as of
-  **v0.12.0** ([PR 6871](https://github.com/koyotecoin/koyotecoin/pull/6871)).
-
-- [BIP125](https://github.com/koyotecoin/bips/blob/master/bip-0125.mediawiki) defined based on
-  Koyotecoin Core implementation.
-
-- The incremental relay feerate used to calculate the required additional fees is distinct from
-  `-minrelaytxfee` and configurable using `-incrementalrelayfee`
-  ([PR #9380](https://github.com/koyotecoin/koyotecoin/pull/9380)).
-
-- RBF enabled by default in the wallet GUI as of **v0.18.1** ([PR
-  #11605](https://github.com/koyotecoin/koyotecoin/pull/11605)).
-
-- Full replace-by-fee enabled as a configurable mempool policy as of **v24.0** ([PR
-  #25353](https://github.com/koyotecoin/koyotecoin/pull/25353)).

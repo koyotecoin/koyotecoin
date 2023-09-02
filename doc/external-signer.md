@@ -53,7 +53,7 @@ Replace `<address>` with the result of `getnewaddress`.
 
 ### Spending
 
-Under the hood this uses a [Partially Signed Koyotecoin Transaction](psbt.md).
+Under the hood this uses a [Partially Signed Koyotecoin Transaction](pskt.md).
 
 ```sh
 $ koyotecoin-cli -rpcwallet=<wallet> sendtoaddress <address> <amount>
@@ -73,7 +73,7 @@ In order to be compatible with Koyotecoin Core any signer command should conform
 Prerequisite knowledge:
 
 - [Output Descriptors](descriptors.md)
-- Partially Signed Koyotecoin Transaction ([PSBT](psbt.md))
+- Partially Signed Koyotecoin Transaction ([PSKT](pskt.md))
 
 ### `enumerate` (required)
 
@@ -99,13 +99,13 @@ A future extension could add an optional return field `reachable`, in case `<cmd
 Usage:
 
 ```
-$ <cmd> --fingerprint=<fingerprint> (--testnet) signtransaction <psbt>
-base64_encode_signed_psbt
+$ <cmd> --fingerprint=<fingerprint> (--testnet) signtransaction <pskt>
+base64_encode_signed_pskt
 ```
 
-The command returns a psbt with any signatures.
+The command returns a pskt with any signatures.
 
-The `psbt` SHOULD include bip32 derivations. The command SHOULD fail if none of the bip32 derivations match a key owned by the device.
+The `pskt` SHOULD include bip32 derivations. The command SHOULD fail if none of the bip32 derivations match a key owned by the device.
 
 The command SHOULD fail if the user cancels.
 
@@ -172,4 +172,4 @@ It then imports descriptors for all support address types, in a BIP44/49/84 comp
 
 The `walletdisplayaddress` RPC reuses some code from `getaddressinfo` on the provided address and obtains the inferred descriptor. It then calls `<cmd> --fingerprint=00000000 displayaddress --desc=<descriptor>`.
 
-`sendtoaddress` and `sendmany` check `inputs->bip32_derivs` to see if any inputs have the same `master_fingerprint` as the signer. If so, it calls `<cmd> --fingerprint=00000000 signtransaction <psbt>`. It waits for the device to return a (partially) signed psbt, tries to finalize it and broadcasts the transaction.
+`sendtoaddress` and `sendmany` check `inputs->bip32_derivs` to see if any inputs have the same `master_fingerprint` as the signer. If so, it calls `<cmd> --fingerprint=00000000 signtransaction <pskt>`. It waits for the device to return a (partially) signed pskt, tries to finalize it and broadcasts the transaction.

@@ -97,7 +97,6 @@ brew install qt@5
 ```
 
 Note: Building with Qt binaries downloaded from the Qt website is not officially supported.
-See the notes in [#7714](https://github.com/koyotecoin/koyotecoin/issues/7714).
 
 ###### qrencode
 
