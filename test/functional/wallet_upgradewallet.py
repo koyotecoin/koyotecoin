@@ -206,7 +206,7 @@ class UpgradeWalletTest(KoyotecoinTestFramework):
         self.log.info('Wallets cannot be downgraded')
         copy_non_hd()
         self.test_upgradewallet_error(wallet, previous_version=100, requested_version=40000,
-            msg="Cannot downgrade wallet from version 100 to version 40000. Wallet version unchanged.")
+            msg="Cannot downgrade wallet from version 10000 to version 40000. Wallet version unchanged.")
         wallet.unloadwallet()
         assert_equal(before_checksum, sha256sum_file(node_master_wallet))
         node_master.loadwallet('')

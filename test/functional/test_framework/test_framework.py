@@ -456,7 +456,7 @@ class KoyotecoinTestFramework(metaclass=KoyotecoinTestMetaClass):
             if not version:
                 return bin_default
             if version > 100:
-                # Starting at client version 100 the first two digits represent
+                # Starting at client version 10000 the first two digits represent
                 # the major version, e.g. v1.0.0 instead of v1.0.0.
                 version *= 100
             return os.path.join(
