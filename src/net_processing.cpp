@@ -3193,6 +3193,13 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
             return;
         }
 
+        if (nVersion < MIN_VERSION) {
+            // disconnect from peers older than this proto version
+            LogPrint(BCLog::NET, "peer=%d using unknown version %i; disconnecting\n", pfrom.GetId(), nVersion);
+            pfrom.fDisconnect = true;
+            return;
+        }
+
         if (!vRecv.empty()) {
             // The version message includes information about the sending node which we don't use:
             //   - 8 bytes (service bits)
