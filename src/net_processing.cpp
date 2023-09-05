@@ -3186,16 +3186,9 @@ void PeerManagerImpl::ProcessMessage(CNode& pfrom, const std::string& msg_type, 
             return;
         }
 
-        if (nVersion < MIN_PEER_PROTO_VERSION) {
-            // disconnect from peers older than this proto version
-            LogPrint(BCLog::NET, "peer=%d using obsolete version %i; disconnecting\n", pfrom.GetId(), nVersion);
-            pfrom.fDisconnect = true;
-            return;
-        }
-
-        if (nVersion < MIN_VERSION) {
-            // disconnect from peers older than this proto version
-            LogPrint(BCLog::NET, "peer=%d using unknown version %i; disconnecting\n", pfrom.GetId(), nVersion);
+        if (nVersion < MIN_PEER_PROTO_VERSION || nVersion < MIN_VERSION) {
+            // disconnect from peers with an obsolete or unknown version
+            LogPrint(BCLog::NET, "peer=%d using %s version %i; disconnecting\n", pfrom.GetId(), (nVersion < MIN_PEER_PROTO_VERSION) ? "obsolete" : "unknown", nVersion);
             pfrom.fDisconnect = true;
             return;
         }
