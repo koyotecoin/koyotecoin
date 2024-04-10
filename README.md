@@ -18,8 +18,7 @@ Further information about Koyotecoin Core is available in the [doc folder](/doc)
 License
 -------
 
-Koyotecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/licenses/MIT.
+Koyotecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
@@ -35,17 +34,13 @@ Testing and code review is the bottleneck for development; we get more pull requ
 
 ### Automated Testing
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to submit new unit tests for old code. Unit tests can be compiled and run (assuming they weren't disabled in configure) with: `make check`. Further details on running and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
 
 There are also [regression and integration tests](/test), written
 in Python.
 These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
 
-The CI (Continuous Integration) systems make sure that every pull request is built for Windows, Linux, and macOS,
-and that unit/sanity tests are run automatically.
+The CI (Continuous Integration) systems make sure that every pull request is built for Windows, Linux, and macOS, and that unit/sanity tests are run automatically.
 
 ### Manual Quality Assurance (QA) Testing
 
@@ -64,4 +59,4 @@ Project
 -------
 
 The Koyotecoin project is a fork of Bitcoin that was developed with the aim of providing an educational and fun experience of the real functioning of cryptocurrencies. Based on a more educational approach, with fun, meme and learning.
-See more in [Bitcoin Project](https://github.com/bitcoin/bitcoin).
+See more in [Bitcoin Project](https://github.com/bitcoin/bitcoin) | Fork in [Bitcoin 24.0.1](https://github.com/bitcoin/bitcoin/tree/v24.0.1).
